@@ -102,16 +102,16 @@ export function Hero() {
                         className="max-w-5xl mx-auto"
                     >
                         <h1 className="mb-8 leading-tight tracking-tighter text-[clamp(3.5rem,8vw,6rem)]">
-                            The Sovereign
+                            Unbridled AI.
                             <br />
                             <span className="text-[var(--color-brand-red)]">
-                                Shell
+                                Governed.
                             </span>
                         </h1>
                         <p className="text-2xl mb-10 opacity-70 max-w-3xl mx-auto leading-relaxed font-light text-balance">
-                            The Android Assistant for your workstation. <span className="text-white">Unbridled agentic intelligence</span> meeting <span className="text-white">committed safety</span>.
+                            <span className="text-white">Unbridled AI.</span> <span className="text-white">Unbound potential.</span> <span className="text-white">Committed to safety.</span>
                             <br />
-                            <span className="text-white font-medium">Unbound potential with full extensibility.</span>
+                            <span className="opacity-60">Always FOSS. Fully extensible.</span>
                         </p>
                         
                         <div className="flex flex-wrap justify-center gap-4">

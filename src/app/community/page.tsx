@@ -2,7 +2,7 @@
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { MessageSquare, Heart, Hash } from "lucide-react";
+import { MessageSquare, Hash, Lock, Zap, Cuboid, ShieldCheck } from "lucide-react";
 
 export default function CommunityPage() {
   return (
@@ -13,7 +13,7 @@ export default function CommunityPage() {
            <div className="text-center mb-16">
              <h1 className="text-5xl font-bold mb-6">Community</h1>
              <p className="text-xl opacity-70">
-               Builders, operators, and safety researchers building the sovereign shell.
+               Builders and operators building the sovereign shell.
              </p>
            </div>
 
@@ -42,28 +42,27 @@ export default function CommunityPage() {
            </div>
 
            <div className="text-center">
-             <h2 className="text-2xl font-bold mb-8 flex items-center justify-center gap-2">
-               <Heart className="text-brand-red" />
-               Principles
-             </h2>
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-               <div className="p-6 border border-white/10 rounded-xl">
-                 <h3 className="font-bold mb-2">Be Helpful</h3>
-                 <p className="text-sm opacity-60">
-                   We are building complex tools. Help others debug their PTY issues.
-                 </p>
+             <h2 className="text-2xl font-bold mb-8">Our Covenant</h2>
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+               <div className="p-5 border border-white/10 rounded-xl text-center">
+                 <Lock className="mx-auto mb-3 text-amber-400" size={24} />
+                 <h3 className="font-bold text-sm mb-1">Always FOSS</h3>
+                 <p className="text-xs opacity-50">Free and open source. Forever.</p>
                </div>
-               <div className="p-6 border border-white/10 rounded-xl">
-                 <h3 className="font-bold mb-2">Safety First</h3>
-                 <p className="text-sm opacity-60">
-                   Never encourage disabling the Policy Engine in production.
-                 </p>
+               <div className="p-5 border border-white/10 rounded-xl text-center">
+                 <Zap className="mx-auto mb-3 text-brand-red" size={24} />
+                 <h3 className="font-bold text-sm mb-1">Unbridled Intelligence</h3>
+                 <p className="text-xs opacity-50">Unfiltered AI to the users.</p>
                </div>
-               <div className="p-6 border border-white/10 rounded-xl">
-                 <h3 className="font-bold mb-2">Ship It</h3>
-                 <p className="text-sm opacity-60">
-                   Perfect is the enemy of merged.
-                 </p>
+               <div className="p-5 border border-white/10 rounded-xl text-center">
+                 <Cuboid className="mx-auto mb-3 text-blue-400" size={24} />
+                 <h3 className="font-bold text-sm mb-1">Full Extensibility</h3>
+                 <p className="text-xs opacity-50">Plug and play with the ecosystem.</p>
+               </div>
+               <div className="p-5 border border-white/10 rounded-xl text-center">
+                 <ShieldCheck className="mx-auto mb-3 text-emerald-400" size={24} />
+                 <h3 className="font-bold text-sm mb-1">Committed to Safety</h3>
+                 <p className="text-xs opacity-50">Do no evil. Cause no regrets.</p>
                </div>
              </div>
            </div>

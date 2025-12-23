@@ -3,6 +3,7 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Scroll, Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function RecipesPage() {
   return (
@@ -17,34 +18,18 @@ export default function RecipesPage() {
              </p>
            </div>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-             <div className="card">
-               <Scroll className="text-brand-red mb-4" size={32} />
-               <h3 className="text-xl font-bold mb-2">Laravel Deployer</h3>
-               <p className="opacity-70 text-sm mb-4">
-                 A set of prompts and safe-listed commands for deploying Laravel apps to Forge.
-               </p>
-               <div className="text-xs opacity-50">By @taylor</div>
-             </div>
-             
-             <div className="card">
-               <Scroll className="text-brand-red mb-4" size={32} />
-               <h3 className="text-xl font-bold mb-2">K8sDebugger</h3>
-               <p className="opacity-70 text-sm mb-4">
-                 Read-only kubectl access prompts for analyzing crash loops.
-               </p>
-               <div className="text-xs opacity-50">By @kelsey</div>
-             </div>
-           </div>
-
            <div className="text-center p-12 bg-white/5 rounded-2xl border border-dashed border-white/20">
+             <Scroll className="mx-auto mb-6 text-brand-red" size={48} />
              <h2 className="text-2xl font-bold mb-4 flex items-center justify-center gap-2">
-               <Plus /> Contribute a Recipe
+               <Plus size={20} /> Contribute a Recipe
              </h2>
-             <p className="opacity-70 mb-6">
-               Recipes are just TOML files. PRs open.
+             <p className="opacity-70 mb-6 max-w-lg mx-auto">
+               Recipes are TOML files that define prompts and policy rules. 
+               We&apos;re building out the spec—contribute yours as a PR.
              </p>
-             <button className="btn btn-outline">Read Recipe Spec</button>
+             <Link href="/contribute" className="btn btn-primary">
+               View Contributing Guide
+             </Link>
            </div>
         </div>
       </main>
