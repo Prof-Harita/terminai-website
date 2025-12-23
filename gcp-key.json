@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "terminai-web",
+  "private_key_id": "07ab283d82ef21601942398ecfd3be7ba8152601",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDx0l3PPnXgGLcq\np5cZHF4KqlzLt7ZX7L3++5rEs1N1e2BaGm5oBEBPgGzpODIZ8Qaii5q7jwBAGSjD\nN+6Z07RteqMnaaQ0XuMcl+eh4NQGYMqR5yJpmhb+HwhHp9k8JFWw4rqQbEcpXeHA\ngWrKNlDCIDveuSevcToPOf9AA9Q+9DtEgUT1qrT6XuuVnbhsonCIx1Hr+E3N+m6B\nODwqypbS0RydFX4fJqcrQWunKPCR/dlcKOLmnuHJ7XosQyHaxhMRmV3SFY/baTpg\nxOnbEff9kztYI7PFqIjQl5FRh34miomUUwGZm9uQy3G9JavZnVMFAW420AzTBS7v\nJsQJSFQjAgMBAAECggEABVdPoh2vjdEN7p+/+xqAyzyDCy7WFLASbDjTbMfHLp+Y\ne7T8vkhlwTvFbAtFNAR6UInD06OvbjsABvvLxdMCt65PPzYanduAqaeDQrSMCk4F\n+13/CRURr/AwhyCicC0fRWZkl38EvVmo/E7/dFLpyrfaiqtNQJdAIIj35cqP3AoO\n7Kz4Tc2vxELLvUxqxFP+7IgGMDD3xpx1odIoMIE4UQYKanDemis175zqiILdhRqW\nCHBLu6hwpBMxe5nFmmVszODpqcHEQG/omMjNk8j3EceWjb2V5YSVqHJZKLUjTr14\n8e5YXtbt6HCbvoqsXUmfySYRoN29dmma69ojifHe3QKBgQD+ZFDkx4FG/pZr51mS\nUtPTA9fU80mHNtA18I6Zvwt8Q2U29SyAAMz+PSOWAT1xzULpYf5cTWY6nAQccDp8\n6hchGJ31Kic8F651Udp5W0nItHePnmK9q0g3FuaVF/CBVffpkxgJP34Odu22yQe9\nRX+8cDy/89JRjSOH0s8Fvk0fHQKBgQDzWbVJfot79uiZIaMynUDolxKOLUUcFjHf\nBqnPObZK4zA3/GWrQSK6NHF2Py8jKYUPdAz12XpkD0GbfnFOsV0dP6/iNwU6hsYr\nxyEzd9DgXT3sCxVMNsPbwaYXAkUDBrrTwKBYFlPJf6TtPiVgZIsMrFDhB/G8Tp+2\n8mrGUzicPwKBgBjZr9VJb+WBhSwxQ1y53ptkarcQtQQSZLCAOU3njbWr171QofI3\nIc9MJafHozr0tC6cNf7KSMw85WHpzKzbKTtAbl2+qmqCXbZ0MoVcV47VokBTVo30\np29KO2ghGItp3HfiuJxeqW+8SmhqpujkWyALTsPpi4gP44KnIzYKavo5AoGAPaKQ\nBxBVFc3AteBOLGil4wM4gOg4Y9e/Q+S1J7ZPVIJcWSHFQm3Z9N2Ji1CPiNFgUTys\nd6xgkm1GybJp0mub0OerjZkv6tXt5XKnFxkWv2z+XQWlnEsWqldO0O8TOaP/t9hH\nBGiLSjLZO/mMj/CHQ2t1hLl1YaNsUnLt1lOHuBMCgYA+teB5t/meBsY6S+dp9EqK\n2YxRk66m56Rh3AsvPjRPAP1PsHowFH3FxHw5ADPqkr5iUdzFIsyZqu+nDWhfgANZ\nAxhxglBrHrtDlvtQBF7FQmMVaeD1l9Q7ionmGhw6sWPQ+7meEcVVRb7SEfZa27f2\nAuV0Ar190C2EjcJgA1RFWQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "github-deployer@terminai-web.iam.gserviceaccount.com",
+  "client_id": "115445599368787516020",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-deployer%40terminai-web.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
