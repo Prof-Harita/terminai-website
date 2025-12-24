@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Book, Shield, Workflow, Terminal, Globe } from "lucide-react";
+import { Book, Shield, Workflow, Terminal, Globe, Brain, HelpCircle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BrandText } from "@/components/BrandText";
@@ -17,6 +17,18 @@ const docSections = [
             </>
         ),
         href: "/docs/introduction",
+    },
+    {
+        icon: Brain,
+        title: "Sovereign Language",
+        description: "Understand the philosophy of a system-aware terminal operator.",
+        href: "/docs/sovereign-terminai",
+    },
+    {
+        icon: HelpCircle,
+        title: "Help Manual",
+        description: "Comprehensive guide to using terminaI for everyday tasks.",
+        href: "/docs/help",
     },
     {
         icon: Shield,
