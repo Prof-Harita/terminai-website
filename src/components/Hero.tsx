@@ -13,13 +13,13 @@ interface TerminalLine {
 }
 
 const terminalScript: TerminalLine[] = [
-    { type: "command", text: "fix the wifi driver, it keeps dropping", delay: 0 },
-    { type: "system", text: "[Policymaker] Critical Action: Modify System Config", delay: 1000, color: "text-yellow-400" },
-    { type: "input", text: "Requesting approval explicitly. Allow? [y/N]", delay: 1500 },
-    { type: "command", text: "y", delay: 3000 },
-    { type: "output", text: "Restarting NetworkManager...", delay: 50 },
-    { type: "output", text: "Reloading iwlwifi kernel module...", delay: 800 },
-    { type: "system", text: "✓ Action Audited (Log ID #9F2A)", delay: 1500, color: "text-green-400" },
+    { type: "command", text: "my wifi keeps dropping, can you fix it?", delay: 0 },
+    { type: "output", text: "Sure! Let me check your network configuration...", delay: 1000 },
+    { type: "output", text: "Found the issue: iwlwifi driver needs reloading", delay: 1500 },
+    { type: "output", text: "Restarting NetworkManager service...", delay: 2000 },
+    { type: "output", text: "Reloading kernel module...", delay: 500 },
+    { type: "output", text: "WiFi connection restored! 📶", delay: 1000, color: "text-green-400" },
+    { type: "output", text: "Want me to run a speed test to verify?", delay: 1500 },
 ];
 
 export function Hero() {
@@ -102,17 +102,17 @@ export function Hero() {
                         className="max-w-5xl mx-auto"
                     >
                         <h1 className="mb-8 leading-tight tracking-tighter text-[clamp(3.5rem,8vw,6rem)]">
-                            The Sovereign Shell
+                            Your AI Terminal Assistant
                         </h1>
                         <p className="text-lg md:text-xl mb-4 opacity-90 max-w-3xl mx-auto leading-relaxed">
                             <span className="font-semibold text-white">
-                                What if your computer could just do things for you—safely?
+                                Finally, a terminal that actually understands you.
                             </span>
                         </p>
                         <p className="text-lg opacity-60 max-w-2xl mx-auto leading-relaxed mb-10">
-                            Not suggest commands. Not generate scripts. Actually operate your system:
-                            diagnose issues, fix problems, orchestrate workflows—with guardrails that
-                            make it trustworthy.
+                            Stop wrestling with commands. Talk naturally, get things done automatically.
+                            From fixing your wifi to deploying apps—your AI assistant handles the complexity
+                            while you focus on what matters.
                         </p>
                         
                         <div className="flex flex-wrap justify-center gap-4">

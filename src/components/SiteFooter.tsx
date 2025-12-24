@@ -24,7 +24,7 @@ export function SiteFooter() {
                         <h4 className="font-bold opacity-100">Product</h4>
                         <Link href="/install" className="opacity-80 hover:opacity-100">Install</Link>
                         <Link href="/docs" className="opacity-80 hover:opacity-100">Docs</Link>
-                        <Link href="/safety" className="opacity-80 hover:opacity-100">Safety</Link>
+                        <Link href="/safety" className="opacity-80 hover:opacity-100">Security</Link>
                         <Link href="/enterprise" className="opacity-80 hover:opacity-100">Enterprise</Link>
                     </div>
 

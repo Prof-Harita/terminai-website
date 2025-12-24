@@ -6,47 +6,51 @@ import { Home, Zap, Wrench, TrendingUp } from "lucide-react";
 const audiences = [
   {
     icon: Home,
-    title: "For End Users",
-    tagline: '"Fix my computer"—for real.',
+    title: "For Everyday Users",
+    tagline: "Stop struggling with tech problems.",
     examples: [
-      "Why is my laptop slow? Fix it.",
-      "What's eating my disk space?",
-      "Back up my files before I update.",
+      "Fix my wifi that's dropping constantly",
+      "Clean up my slow computer automatically",
+      "Set up my development environment",
     ],
-    note: "No command-line knowledge needed.",
+    note: "Talk naturally, get results instantly.",
+    benefit: "Save 2 hours/week on tech issues"
   },
   {
     icon: Zap,
-    title: "For Power Users",
-    tagline: "Your terminal, supercharged.",
+    title: "For Developers",
+    tagline: "Code faster, deploy smarter.",
     examples: [
-      "Voice control (hold Space to talk)",
-      "Process orchestration (/sessions)",
-      "MCP extensions (GitHub, Slack, custom)",
+      "Debug complex issues with AI help",
+      "Automate repetitive deployment tasks",
+      "Analyze logs and find problems instantly",
     ],
-    note: "More power, more control.",
+    note: "Your AI coding companion.",
+    benefit: "60% faster debugging & deployment"
   },
   {
     icon: Wrench,
-    title: "For Developers",
-    tagline: "The primitives you want to build on.",
+    title: "For DevOps Engineers",
+    tagline: "Automate infrastructure like never before.",
     examples: [
-      "A2A Protocol: Agent control plane",
-      "MCP Ecosystem: Infinite extensibility",
-      "Policy Engine: Programmable trust",
+      "Monitor systems proactively",
+      "Handle incident response automatically",
+      "Scale deployments with confidence",
     ],
-    note: "Build trustworthy agentic automation.",
+    note: "Intelligent infrastructure management.",
+    benefit: "Reduce incidents by 70%"
   },
   {
     icon: TrendingUp,
-    title: "For Organizations",
-    tagline: "Agentic automation you can audit.",
+    title: "For Teams",
+    tagline: "Scale your productivity together.",
     examples: [
-      "Non-repudiable action logs",
-      "Approval workflows for sensitive ops",
-      "Fleet-ready, data stays local",
+      "Standardize workflows across your team",
+      "Share automation recipes",
+      "Maintain security while scaling",
     ],
-    note: "Enterprise-grade governance.",
+    note: "Enterprise-ready for growing teams.",
+    benefit: "Boost team productivity by 3x"
   },
 ];
 
@@ -89,7 +93,12 @@ export function AudienceCards() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs opacity-40">{audience.note}</p>
+                <p className="text-xs opacity-40 mb-3">{audience.note}</p>
+                {audience.benefit && (
+                  <div className="text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded">
+                    {audience.benefit}
+                  </div>
+                )}
               </motion.div>
             );
           })}

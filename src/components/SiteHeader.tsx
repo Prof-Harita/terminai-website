@@ -27,19 +27,19 @@ export function SiteHeader() {
                         href="/intelligence"
                         className="opacity-80 hover:opacity-100 transition-opacity"
                     >
-                        Intelligence
+                        How It Works
                     </Link>
                     <Link
                         href="/extensibility"
                         className="opacity-80 hover:opacity-100 transition-opacity"
                     >
-                        Extensibility
+                        Integrations
                     </Link>
                     <Link
                         href="/safety"
                         className="opacity-80 hover:opacity-100 transition-opacity"
                     >
-                        Safety
+                        Security
                     </Link>
                     <Link
                         href="/install"
@@ -104,21 +104,21 @@ export function SiteHeader() {
                             className="text-lg py-2 opacity-80"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Intelligence
+                            How It Works
                         </Link>
                         <Link
                             href="/extensibility"
                             className="text-lg py-2 opacity-80"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Extensibility
+                            Integrations
                         </Link>
                         <Link
                             href="/safety"
                             className="text-lg py-2 opacity-80"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Safety
+                            Security
                         </Link>
                         <Link
                             href="/install"

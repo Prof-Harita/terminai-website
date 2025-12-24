@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { IceCreamBar } from "@/components/IceCreamBar";
+import { Testimonials } from "@/components/Testimonials";
 import { AudienceCards } from "@/components/AudienceCards";
 import { Primitives } from "@/components/Primitives";
 import { ComparisonTable } from "@/components/ComparisonTable";
@@ -14,9 +15,10 @@ export default function Home() {
       <main>
         <Hero />
         <IceCreamBar />
+        <Testimonials />
         <AudienceCards />
-        <Primitives />
         <ComparisonTable />
+        <Primitives />
         <ContributeCTA />
       </main>
       <SiteFooter />
