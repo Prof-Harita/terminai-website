@@ -42,6 +42,12 @@ export function SiteHeader() {
                         Security
                     </Link>
                     <Link
+                        href="/capabilities"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
+                        Capabilities
+                    </Link>
+                    <Link
                         href="/install"
                         className="opacity-80 hover:opacity-100 transition-opacity"
                     >
@@ -119,6 +125,13 @@ export function SiteHeader() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Security
+                        </Link>
+                        <Link
+                            href="/capabilities"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Capabilities
                         </Link>
                         <Link
                             href="/install"
