@@ -45,7 +45,7 @@ export function SiteHeader() {
                         href="/capabilities"
                         className="opacity-80 hover:opacity-100 transition-opacity"
                     >
-                        Capabilities
+                        Examples
                     </Link>
                     <Link
                         href="/install"
@@ -131,7 +131,7 @@ export function SiteHeader() {
                             className="text-lg py-2 opacity-80"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Capabilities
+                            Examples
                         </Link>
                         <Link
                             href="/install"

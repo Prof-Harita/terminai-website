@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Capabilities | terminaI",
+  title: "Example Use Cases | terminaI",
   description: "See what you can do with terminaI - from file management to scientific research.",
 };
 
@@ -229,8 +229,8 @@ export default function CapabilitiesPage() {
         <section className="section pb-16">
           <div className="container text-center">
             <h1 className="mb-6">
-              What You Can{" "}
-              <span className="text-[var(--color-brand-red)]">Build</span>
+              Example{" "}
+              <span className="text-[var(--color-brand-red)]">Use Cases</span>
             </h1>
             <p className="text-2xl opacity-70 max-w-3xl mx-auto mb-4">
               From organizing your files to running scientific experiments
@@ -286,10 +286,10 @@ export default function CapabilitiesPage() {
         {/* CTA */}
         <section className="section border-t border-white/5">
           <div className="container text-center">
-            <h2 className="mb-6">Ready to build something amazing?</h2>
+            <h2 className="mb-6">Ready to try these examples yourself?</h2>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/install" className="btn btn-primary">
-                Start Building
+                Install terminaI
               </a>
               <a href="/docs" className="btn btn-outline">
                 Read the Docs
