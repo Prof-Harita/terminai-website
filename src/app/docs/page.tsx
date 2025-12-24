@@ -20,7 +20,7 @@ const docSections = [
     },
     {
         icon: Brain,
-        title: "Sovereign Language",
+        title: "The Sovereign Shell",
         description: "Understand the philosophy of a system-aware terminal operator.",
         href: "/docs/sovereign-terminai",
     },

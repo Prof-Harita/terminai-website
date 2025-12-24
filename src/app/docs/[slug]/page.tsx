@@ -9,7 +9,7 @@ const sections: DocSection[] = [
   {
     title: "Introduction",
     items: [
-      { title: "Sovereign Language", slug: "sovereign-terminai" },
+      { title: "The Sovereign Shell", slug: "sovereign-terminai" },
       { title: "Governance", slug: "governance" },
       { title: "Security Posture", slug: "security-posture" },
     ]

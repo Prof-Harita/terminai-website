@@ -46,7 +46,20 @@ Instead of `find . -name "*.log" -exec rm {} \;`, you can type:
 2.  **Verify**: Ask for confirmation (unless configured otherwise).
 3.  **Execute**: Run the command and show output.
 
-## 4. File Organization & Management
+## 4. Shell Integration
+
+**terminaI** does not replace your shell; it augments it. You can still use standard commands.
+
+### Mixing Modes
+You can switch between natural language and standard bash/zsh commands seamlessly.
+> `cd /var/log` (Standard command)
+>
+> "Show me the last 10 error lines in syslog" (Natural language)
+
+### System Awareness
+The agent knows your environment. If you ask it to "Check memory usage," it knows whether to run `top` (Linux/Mac) or `tasklist` (Windows).
+
+## 5. File Organization & Management
 
 One of **terminaI**'s most powerful capabilities is managing the chaos of your file system.
 
@@ -59,7 +72,7 @@ One of **terminaI**'s most powerful capabilities is managing the chaos of your f
 ### Finding Lost Files
 > "Find a PDF I downloaded last week about 'System Architecture'."
 
-## 5. Research & Summarization
+## 6. Research & Summarization
 
 **terminaI** can read and synthesize information from local files and the web (if enabled).
 
@@ -72,17 +85,40 @@ One of **terminaI**'s most powerful capabilities is managing the chaos of your f
 ### Web Research (Requires Internet Access)
 > "Find the latest documentation on 'Next.js 14 App Router' and summarize the breaking changes."
 
-## 6. Image & Media Processing
+## 7. Data & Databases
+
+You can interact with data files and local databases without writing complex queries.
+
+### Querying Databases (SQLite)
+> "Connect to @chinook.db. List the top 5 customers by total invoice amount."
+
+### Generating Data
+Need mock data for a project?
+> "Generate a CSV file named 'mock_users.csv' with 100 rows containing id, name, email, and sign_up_date."
+
+> "Create a JSON file with sample inventory data for a grocery store."
+
+## 8. Image & Media Processing
 
 **terminaI** is multi-modal. It can "see" images in your terminal.
 
 ### Extracting Data from Images
 > "Look at @invoice.png and extract the date, total amount, and vendor into a JSON format."
 
-### organizing Photos
+### Organizing Photos
 > "Sort these photos into folders based on the year they were taken (check the EXIF data)."
 
-## 7. Troubleshooting
+## 9. Extensibility (MCP)
+
+**terminaI** supports the **Model Context Protocol (MCP)**, allowing you to connect it to external tools and data sources.
+
+*   **GitHub**: Manage issues and PRs.
+*   **Postgres**: Connect to production databases safely.
+*   **Slack**: Send summaries to your team.
+
+*See the [MCP Guide](/docs/mcp) for full configuration details.*
+
+## 10. Troubleshooting
 
 ### Permission Denied
 If **terminaI** cannot execute a command, ensure:
