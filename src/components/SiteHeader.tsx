@@ -17,25 +17,40 @@ export function SiteHeader() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-6 text-sm">
-                    <Link href="/contribute" className="opacity-80 hover:opacity-100 transition-opacity">
-                        Contribute
+                    <Link
+                        href="/free"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
+                        Always Free
                     </Link>
-                    <Link href="/architecture" className="opacity-80 hover:opacity-100 transition-opacity">
-                        Architecture
+                    <Link
+                        href="/intelligence"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
+                        Intelligence
                     </Link>
-                    <div className="group relative flex items-center gap-1 cursor-pointer opacity-80 hover:opacity-100 transition-opacity">
-                        <span>Protocols</span>
-                        <div className="absolute top-full left-0 pt-2 hidden group-hover:block w-32">
-                            <div className="bg-black border border-white/10 rounded-md p-2 flex flex-col gap-2">
-                                <Link href="/protocols/a2a" className="hover:text-brand-red whitespace-nowrap">A2A</Link>
-                                <Link href="/protocols/mcp" className="hover:text-brand-red whitespace-nowrap">MCP</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <Link href="/safety" className="opacity-80 hover:opacity-100 transition-opacity">
+                    <Link
+                        href="/extensibility"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
+                        Extensibility
+                    </Link>
+                    <Link
+                        href="/safety"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
                         Safety
                     </Link>
-                    <Link href="/docs" className="opacity-80 hover:opacity-100 transition-opacity">
+                    <Link
+                        href="/install"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
+                        Install
+                    </Link>
+                    <Link
+                        href="/docs"
+                        className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
                         Docs
                     </Link>
                 </nav>
@@ -58,7 +73,7 @@ export function SiteHeader() {
                         Manifesto
                     </Link>
                     
-                    <Link href="/download" className="btn btn-primary text-sm py-2 px-4">
+                    <Link href="/install" className="btn btn-primary text-sm py-2 px-4">
                         Install
                     </Link>
                     
@@ -77,35 +92,72 @@ export function SiteHeader() {
             {mobileMenuOpen && (
                 <div className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-md">
                     <nav className="container py-6 flex flex-col gap-4">
-                        <Link href="/manifesto" className="text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
-                            Manifesto
+                        <Link
+                            href="/free"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Always Free
                         </Link>
-                        <Link href="/contribute" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                            Contribute
+                        <Link
+                            href="/intelligence"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Intelligence
                         </Link>
-                        <Link href="/architecture" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                            Architecture
+                        <Link
+                            href="/extensibility"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Extensibility
                         </Link>
-                        <Link href="/safety" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                        <Link
+                            href="/safety"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             Safety
                         </Link>
-                        <Link href="/docs" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                        <Link
+                            href="/install"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Install
+                        </Link>
+                        <Link
+                            href="/docs"
+                            className="text-lg py-2 opacity-80"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             Docs
                         </Link>
-                        <Link href="/protocols/a2a" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                            A2A Protocol
-                        </Link>
-                        <Link href="/protocols/mcp" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                            MCP Protocol
-                        </Link>
+                        <div className="pt-4 border-t border-white/10 flex flex-col gap-2">
+                            <Link
+                                href="/contribute"
+                                className="text-lg py-2 opacity-60"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Contribute
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="text-lg py-2 opacity-60"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Contact
+                            </Link>
+                        </div>
                         <div className="pt-4 border-t border-white/10">
-                            <a 
-                                href="https://github.com/Prof-Harita/terminaI" 
-                                target="_blank" 
+                            <a
+                                href="https://github.com/Prof-Harita/terminaI/stargazers"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-outline w-full justify-center"
                             >
-                                Star on GitHub
+                                ★ Star on GitHub
                             </a>
                         </div>
                     </nav>

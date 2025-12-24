@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { IceCreamBar } from "@/components/IceCreamBar";
+import { AudienceCards } from "@/components/AudienceCards";
 import { Primitives } from "@/components/Primitives";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContributeCTA } from "@/components/ContributeCTA";
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <IceCreamBar />
+        <AudienceCards />
         <Primitives />
         <ComparisonTable />
         <ContributeCTA />

@@ -102,26 +102,36 @@ export function Hero() {
                         className="max-w-5xl mx-auto"
                     >
                         <h1 className="mb-8 leading-tight tracking-tighter text-[clamp(3.5rem,8vw,6rem)]">
-                            Unbridled AI.
-                            <br />
-                            <span className="text-[var(--color-brand-red)]">
-                                Governed.
-                            </span>
+                            The Sovereign Shell
                         </h1>
-                        <p className="text-2xl mb-10 opacity-70 max-w-3xl mx-auto leading-relaxed font-light text-balance">
-                            <span className="text-white">Unbridled AI.</span> <span className="text-white">Unbound potential.</span> <span className="text-white">Committed to safety.</span>
-                            <br />
-                            <span className="opacity-60">Always FOSS. Fully extensible.</span>
+                        <p className="text-lg md:text-xl mb-4 opacity-90 max-w-3xl mx-auto leading-relaxed">
+                            <span className="font-semibold text-white">
+                                What if your computer could just do things for you—safely?
+                            </span>
+                        </p>
+                        <p className="text-lg opacity-60 max-w-2xl mx-auto leading-relaxed mb-10">
+                            Not suggest commands. Not generate scripts. Actually operate your system:
+                            diagnose issues, fix problems, orchestrate workflows—with guardrails that
+                            make it trustworthy.
                         </p>
                         
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link href="/contribute" className="btn btn-primary text-lg px-8 py-4 flex items-center gap-2">
+                            <Link
+                                href="/install"
+                                className="btn btn-primary text-lg px-8 py-4 flex items-center gap-2"
+                            >
+                                Install terminaI
+                                <ArrowRight size={20} />
+                            </Link>
+                            <a
+                                href="https://github.com/Prof-Harita/terminaI/stargazers"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-outline text-lg px-8 py-4 flex items-center gap-2"
+                            >
                                 <Github size={20} />
-                                Start Contributing
-                            </Link>
-                            <Link href="/download" className="btn btn-outline text-lg px-8 py-4 flex items-center gap-2">
-                                Install <ArrowRight size={20} />
-                            </Link>
+                                Star on GitHub
+                            </a>
                         </div>
                     </motion.div>
                 </div>

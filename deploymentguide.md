@@ -5,7 +5,7 @@ This guide details how to set up an automated deployment pipeline. Every time yo
 ## Prerequisites
 
 1.  **Google Cloud Platform (GCP) Account**: You need an active billing account (you have credits).
-2.  **GitHub Repository**: Your code must be hosted on GitHub.
+2.  **GitHub Repository**: Your code must behttps://console.cloud.google.com/run/domains?project=terminhttps://console.cloud.google.com/run/domains?project=terminai-webai-web&authuser=1 hosted on GitHub.
 3.  **Cloudflare Account**: For domain management (`terminai.org`).
 
 ---
