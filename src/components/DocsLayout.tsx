@@ -22,6 +22,7 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
   const [sidebarData, setSidebarData] = useState<SidebarSection[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+  const [sidebarError, setSidebarError] = useState(false);
 
   useEffect(() => {
     fetch('/docs/sidebar.json')
@@ -31,7 +32,10 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
         // Auto-expand all sections initially
         setExpandedSections(new Set(data.map(s => s.label)));
       })
-      .catch(err => console.error('Failed to load sidebar:', err));
+      .catch(err => {
+        console.error('Failed to load sidebar:', err);
+        setSidebarError(true);
+      });
 
     // Cmd+K search shortcut
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -69,22 +73,22 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
       <SiteHeader />
       
       {/* Main docs container - uses container padding to align sidebar with header logo */}
-      <div className="min-h-screen pt-20" style={{ backgroundColor: '#FDFCF8' }}>
+      <div className="min-h-screen pt-20 bg-[#050505] text-white">
         <div className="container flex">
         
         {/* Left Sidebar - Cream/Sand background */}
-        <aside className="w-64 flex-shrink-0 hidden lg:block border-r border-neutral-200" style={{ backgroundColor: '#FDFCF8' }}>
+        <aside className="w-64 flex-shrink-0 hidden lg:block border-r border-white/10 bg-black">
           <div className="sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto py-6 pr-4">
             
             {/* Search */}
             <div className="mb-6">
               <div className="relative">
-                <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400" />
+                <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40" />
                 <input
                   id="docs-search"
                   type="text"
                   placeholder="Search docs... (⌘K)"
-                  className="w-full bg-white border border-neutral-200 rounded-md px-3 py-2 pl-9 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full bg-black/60 border border-white/10 rounded-md px-3 py-2 pl-9 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -93,18 +97,28 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
 
             {/* Navigation */}
             <nav className="space-y-1">
-              {filteredSidebar.map((section) => (
+              {sidebarError && (
+                <div className="text-sm text-white/60">
+                  <p className="mb-3">Sidebar unavailable.</p>
+                  <div className="flex flex-col gap-2">
+                    <Link href="/docs" className="text-white/80 hover:text-white">Docs Home</Link>
+                    <Link href="/install" className="text-white/80 hover:text-white">Install</Link>
+                    <Link href="/contact" className="text-white/80 hover:text-white">Contact</Link>
+                  </div>
+                </div>
+              )}
+              {!sidebarError && filteredSidebar.map((section) => (
                 <div key={section.label} className="mb-4">
                   {/* Section header - collapsible */}
                   <button
                     onClick={() => toggleSection(section.label)}
-                    className="flex items-center justify-between w-full py-2 text-sm font-bold text-red-600 hover:text-red-700"
+                    className="flex items-center justify-between w-full py-2 text-sm font-bold text-[var(--color-brand-red)] hover:text-red-400"
                   >
                     <span>{section.label}</span>
                     {expandedSections.has(section.label) ? (
-                      <ChevronDown size={14} className="text-neutral-400" />
+                      <ChevronDown size={14} className="text-white/40" />
                     ) : (
-                      <ChevronRight size={14} className="text-neutral-400" />
+                      <ChevronRight size={14} className="text-white/40" />
                     )}
                   </button>
                   
@@ -119,8 +133,8 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
                               href={`/${item.slug}`}
                               className={`block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px ${
                                 isActive
-                                  ? "text-red-600 border-red-600 font-medium bg-red-50"
-                                  : "text-neutral-600 border-transparent hover:text-neutral-900 hover:border-neutral-300"
+                                  ? "text-[var(--color-brand-red)] border-[var(--color-brand-red)] font-medium bg-red-500/10"
+                                  : "text-white/60 border-transparent hover:text-white hover:border-white/40"
                               }`}
                             >
                               {item.label}
@@ -137,7 +151,7 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
         </aside>
 
         {/* Main Content - White background */}
-        <main className="flex-1 bg-white">
+        <main className="flex-1 bg-black">
           <div className="max-w-4xl px-12 py-12">
             <article className="docs-content">
               {children}

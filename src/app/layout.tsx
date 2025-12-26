@@ -1,12 +1,28 @@
 import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
-import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "terminaI",
+      url: "https://terminai.org",
+      logo: "https://terminai.org/banner.svg",
+      sameAs: ["https://github.com/Prof-Harita/terminaI"],
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "terminaI",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "Linux, macOS, Windows (WSL)",
+      description:
+        "Open source AI terminal operator with voice control, web remote, and governed autonomy.",
+      url: "https://terminai.org",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "terminaI | The Universal System Operator",
@@ -38,8 +54,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${GeistMono.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${GeistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {children}
       </body>
     </html>

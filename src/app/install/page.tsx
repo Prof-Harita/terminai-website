@@ -8,6 +8,7 @@ import {
   CheckCircle,
   AlertCircle,
 } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Install | terminaI",
@@ -150,7 +151,7 @@ export default function InstallPage() {
                   </div>
                 </div>
                 <div className="code-block">
-                  <code>curl -fsSL https://terminaI.org/install.sh | bash</code>
+                  <code>curl -fsSL https://terminai.org/install.sh | bash</code>
                 </div>
                 <p className="text-xs opacity-40 mt-2">
                   (Coming soon - currently build from source for latest
@@ -219,7 +220,7 @@ export default function InstallPage() {
                       <span className="text-[var(--color-brand-red)]">
                         &gt;
                       </span>{" "}
-                      What's using my disk space?
+                      What&apos;s using my disk space?
                     </div>
                     <div className="text-green-400 mt-2">
                       Scanning file system...
@@ -263,7 +264,7 @@ export default function InstallPage() {
                   API error: 429 - Resource exhausted
                 </summary>
                 <div className="px-4 pb-4 text-sm opacity-70">
-                  You've exceeded rate limits. Check usage in Google AI Studio,
+                  You&apos;ve exceeded rate limits. Check usage in Google AI Studio,
                   optimize prompts, or upgrade to Google AI Pro/Ultra.
                 </div>
               </details>
@@ -272,8 +273,12 @@ export default function InstallPage() {
                   ERR_REQUIRE_ESM error
                 </summary>
                 <div className="px-4 pb-4 text-sm opacity-70">
-                  Ensure package.json has "type": "module". Delete node_modules
-                  and package-lock.json, then npm install again.
+                  Ensure package.json has{" "}
+                  <code className="bg-white/5 px-1 rounded">
+                    &quot;type&quot;: &quot;module&quot;
+                  </code>
+                  . Delete node_modules and package-lock.json, then npm install
+                  again.
                 </div>
               </details>
               <details className="group rounded-xl bg-white/[0.02] border border-white/10">
@@ -288,12 +293,9 @@ export default function InstallPage() {
             </div>
             <p className="text-sm opacity-50 mt-6">
               More help:{" "}
-              <a
-                href="/docs/troubleshooting"
-                className="text-[var(--color-brand-red)]"
-              >
+              <Link href="/docs/troubleshooting" className="text-[var(--color-brand-red)]">
                 Full Troubleshooting Guide
-              </a>{" "}
+              </Link>{" "}
               •
               <a
                 href="https://github.com/Prof-Harita/terminaI/issues"
@@ -310,15 +312,15 @@ export default function InstallPage() {
           <div className="container text-center">
             <div className="flex items-center justify-center gap-2 text-green-400 mb-4">
               <CheckCircle size={24} />
-              <span className="text-lg">You're ready to go!</span>
+              <span className="text-lg">You&apos;re ready to go!</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/docs" className="btn btn-primary">
+              <Link href="/docs" className="btn btn-primary">
                 Read the Docs
-              </a>
-              <a href="/free" className="btn btn-outline">
+              </Link>
+              <Link href="/free" className="btn btn-outline">
                 Learn about Free Tier →
-              </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -45,9 +45,9 @@ export default function DownloadPage() {
                                 <div className="space-y-4">
                                     <div className="code-block relative group">
                                         <pre className="text-sm overflow-x-auto">
-                                            <code>git clone https://github.com/Prof-Harita/termAI.git</code>
+                                            <code>git clone https://github.com/Prof-Harita/terminaI.git</code>
                                             <br />
-                                            <code>cd termAI</code>
+                                            <code>cd terminaI</code>
                                             <br />
                                             <code>npm ci && npm run build</code>
                                             <br />

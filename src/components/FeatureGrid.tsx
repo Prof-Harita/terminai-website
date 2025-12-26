@@ -11,7 +11,7 @@ const features = [
         description: (
             <>
                 Standard agents are text-in, text-out. <BrandText /> reads CPU, RAM, disk usage, and process
-                tables in real-time. It doesn't just guess; it investigates.
+                tables in real-time. It doesn&apos;t just guess; it investigates.
             </>
         ),
         colSpan: "md:col-span-2",

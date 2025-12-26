@@ -1,14 +1,8 @@
 import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import {
-  Shield,
-  Lock,
-  FileCheck,
-  AlertTriangle,
-  CheckCircle,
-  Key,
-} from "lucide-react";
+import { Shield, Lock, FileCheck, CheckCircle, Key } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Safety | terminaI",
@@ -53,7 +47,7 @@ export default function SafetyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
               <div>
                 <p className="text-lg opacity-70 mb-6 leading-relaxed">
-                  terminaI's safety model is built around one core principle:
+                  terminaI&apos;s safety model is built around one core principle:
                   <strong className="text-white">
                     {" "}
                     The model cannot lower safety minimums.
@@ -98,14 +92,14 @@ export default function SafetyPage() {
                     />
                     <span>
                       <strong>Provenance-aware</strong> — untrusted sources
-                      can't silently authorize
+                      can&apos;t silently authorize
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="code-block text-sm font-mono">
                 <div className="text-gray-500 mb-4">
-                  // Trust Pipeline (end-to-end)
+                  {"// Trust Pipeline (end-to-end)"}
                 </div>
                 <div className="space-y-2 text-xs">
                   <div className="p-2 rounded bg-white/5 border-l-2 border-gray-500">
@@ -286,7 +280,9 @@ export default function SafetyPage() {
                 </ul>
               </div>
               <div className="code-block text-xs">
-                <div className="text-gray-500 mb-2">// Audit log entry</div>
+                <div className="text-gray-500 mb-2">
+                  {"// Audit log entry"}
+                </div>
                 <pre className="text-green-400">{`{
   "timestamp": "2024-12-24T02:00:00Z",
   "logId": "#9F2A",
@@ -308,14 +304,14 @@ export default function SafetyPage() {
         {/* CTA */}
         <section className="section border-t border-white/5">
           <div className="container text-center">
-            <h2 className="mb-6">Governed autonomy. That's the promise.</h2>
+            <h2 className="mb-6">Governed autonomy. That&apos;s the promise.</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/install" className="btn btn-primary">
+              <Link href="/install" className="btn btn-primary">
                 Install terminaI
-              </a>
-              <a href="/docs/safety" className="btn btn-outline">
+              </Link>
+              <Link href="/docs/safety" className="btn btn-outline">
                 Read Safety Docs →
-              </a>
+              </Link>
             </div>
           </div>
         </section>

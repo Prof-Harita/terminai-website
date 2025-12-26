@@ -27,7 +27,7 @@ export function Hero() {
   const [copied, setCopied] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const installCommand = "npm install -g @prof-harita/terminai";
+  const installCommand = "npm i -g @google/gemini-cli";
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(installCommand);

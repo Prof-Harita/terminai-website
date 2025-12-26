@@ -14,7 +14,7 @@ const audiences = [
       "Set up my development environment",
     ],
     note: "Talk naturally, get results instantly.",
-    benefit: "Save 2 hours/week on tech issues"
+    benefit: "Spend less time on tech issues"
   },
   {
     icon: Zap,
@@ -26,7 +26,7 @@ const audiences = [
       "Analyze logs and find problems instantly",
     ],
     note: "Your AI coding companion.",
-    benefit: "60% faster debugging & deployment"
+    benefit: "Ship faster with fewer manual steps"
   },
   {
     icon: Wrench,
@@ -38,7 +38,7 @@ const audiences = [
       "Scale deployments with confidence",
     ],
     note: "Intelligent infrastructure management.",
-    benefit: "Reduce incidents by 70%"
+    benefit: "Reduce toil with governed automation"
   },
   {
     icon: TrendingUp,
@@ -50,7 +50,7 @@ const audiences = [
       "Maintain security while scaling",
     ],
     note: "Enterprise-ready for growing teams.",
-    benefit: "Boost team productivity by 3x"
+    benefit: "Scale workflows without chaos"
   },
 ];
 

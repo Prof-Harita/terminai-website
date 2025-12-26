@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   Server,
-  FileText,
   Users,
   Shield,
   Lock,
@@ -11,10 +10,11 @@ import {
   Cloud,
   CheckCircle,
   Building,
-  Zap
+  Zap,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import Link from "next/link";
 
 const features = [
     {
@@ -93,15 +93,15 @@ const pricingTiers = [
     },
     {
         name: "Professional",
-        price: "$49/user/month",
-        description: "Full enterprise deployment",
+        price: "Support & Services",
+        description: "Guided deployments and operational support",
         features: [
             "Unlimited users",
             "Advanced audit & SIEM integration",
             "Role-based access control",
             "Priority support",
             "Custom integrations",
-            "SLA guarantee"
+            "Service-level commitments"
         ],
         cta: "Contact Sales",
         popular: true
@@ -109,7 +109,7 @@ const pricingTiers = [
     {
         name: "Enterprise",
         price: "Custom",
-        description: "Large-scale deployments",
+        description: "Large-scale deployments and custom requirements",
         features: [
             "Everything in Professional",
             "Dedicated support team",
@@ -143,8 +143,8 @@ export default function EnterprisePage() {
                                 <span style={{ color: "var(--color-brand-red)" }}>Not Risk.</span>
                             </h1>
                             <p className="text-xl opacity-70 mb-8">
-                                Deploy terminaI enterprise-wide with Vertex AI governance, centralized audit logs,
-                                and private trust boundaries. AI assistance that scales safely.
+                                Deploy terminaI enterprise-wide with governed autonomy, centralized audit logs,
+                                and private trust boundaries. Open-source core with optional deployment services.
                             </p>
                             <div className="flex flex-wrap justify-center gap-4">
                                 <a
@@ -153,12 +153,9 @@ export default function EnterprisePage() {
                                 >
                                     Schedule Demo
                                 </a>
-                                <a
-                                    href="/docs"
-                                    className="btn btn-outline text-lg px-8 py-4"
-                                >
+                                <Link href="/docs" className="btn btn-outline text-lg px-8 py-4">
                                     View Enterprise Docs
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
@@ -241,10 +238,10 @@ export default function EnterprisePage() {
                 <section className="section border-t border-white/5">
                     <div className="container">
                         <div className="text-center mb-16">
-                            <h2 className="mb-4">Choose Your Enterprise Plan</h2>
+                            <h2 className="mb-4">Choose Your Enterprise Path</h2>
                             <p className="text-lg opacity-70 max-w-2xl mx-auto">
                                 Start with a pilot program, then scale to enterprise deployment.
-                                All plans include core enterprise features.
+                                The open-source core stays free; support and services are optional.
                             </p>
                         </div>
 
@@ -269,13 +266,16 @@ export default function EnterprisePage() {
                                         ))}
                                     </ul>
 
-                                    <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
+                                    <a
+                                        href="mailto:enterprise@terminai.org"
+                                        className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
                                         tier.popular
                                             ? 'bg-brand-red text-white hover:bg-brand-red/90'
                                             : 'border border-white/20 hover:bg-white/10'
-                                    }`}>
+                                    }`}
+                                    >
                                         {tier.cta}
-                                    </button>
+                                    </a>
                                 </div>
                             ))}
                         </div>
@@ -296,12 +296,9 @@ export default function EnterprisePage() {
                             >
                                 Contact Enterprise Sales
                             </a>
-                            <a
-                                href="/docs"
-                                className="btn btn-outline text-lg px-8 py-4"
-                            >
+                            <Link href="/docs" className="btn btn-outline text-lg px-8 py-4">
                                 View Documentation
-                            </a>
+                            </Link>
                         </div>
                         <p className="text-sm opacity-50 mt-4">enterprise@terminai.org</p>
                     </div>

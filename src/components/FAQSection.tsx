@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BrandText } from "./BrandText";
 
 const faqs = [
     {

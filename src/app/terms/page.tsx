@@ -84,11 +84,11 @@ export default function TermsPage() {
 
               <h2>6. Data and Privacy</h2>
               <p>
-                terminaI is designed with privacy in mind. When using Google's Gemini API:
+                terminaI is designed with privacy in mind. When using Google&apos;s Gemini API:
               </p>
               <ul>
-                <li>Your queries may be processed by Google's servers</li>
-                <li>You should review Google's privacy policy for their AI services</li>
+                <li>Your queries may be processed by Google&apos;s servers</li>
+                <li>You should review Google&apos;s privacy policy for their AI services</li>
                 <li>We recommend using API keys you control and understand the data flows</li>
                 <li>Local operations (like voice processing) stay on your device</li>
               </ul>
@@ -100,7 +100,7 @@ export default function TermsPage() {
 
               <h2>7. No Warranties</h2>
               <p>
-                terminaI is provided "as is" without warranty of any kind. We make no guarantees
+                terminaI is provided &quot;as is&quot; without warranty of any kind. We make no guarantees
                 about its suitability for any particular purpose. You use it at your own risk.
               </p>
 

@@ -1,38 +1,13 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { BrandText } from "./BrandText";
-import { Menu, X, ChevronDown, Github } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-    {
-        label: "Product",
-        items: [
-            { label: "Always Free", href: "/product#free", description: "FOSS, Gemini Free Tier, and Community" },
-            { label: "Intelligence", href: "/product#intelligence", description: "Agentic harness & SOTA models" },
-            { label: "Extensibility", href: "/product#extensibility", description: "MCP, A2A, and Configuration" },
-            { label: "Safety", href: "/product#safety", description: "Approval Ladder & Trust" },
-        ]
-    },
-];
 
 export function SiteHeader() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-    const handleMouseEnter = (label: string) => {
-        if (timeoutRef.current) clearTimeout(timeoutRef.current);
-        setActiveDropdown(label);
-    };
-
-    const handleMouseLeave = () => {
-        timeoutRef.current = setTimeout(() => {
-            setActiveDropdown(null);
-        }, 150);
-    };
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-white/10">
@@ -42,69 +17,24 @@ export function SiteHeader() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex flex-1 items-center justify-evenly text-xl font-medium px-8">
-                    {navItems.map((group) => (
-                        <div 
-                            key={group.label}
-                            className="relative py-4"
-                            onMouseEnter={() => handleMouseEnter(group.label)}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <button className="flex items-center gap-1 opacity-70 hover:opacity-100 transition-opacity px-4">
-                                {group.label}
-                                <ChevronDown size={18} className={`transition-transform duration-200 ${activeDropdown === group.label ? 'rotate-180' : ''}`} />
-                            </button>
-
-                            <AnimatePresence>
-                                {activeDropdown === group.label && (
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="absolute top-full left-1/2 -translate-x-1/2 w-80 pt-2"
-                                    >
-                                        <div className="bg-black/90 border border-white/10 rounded-xl shadow-2xl overflow-hidden backdrop-blur-xl p-2">
-                                            <div className="grid grid-cols-1 gap-1">
-                                                {group.items.map((item) => (
-                                                    <Link
-                                                        key={item.href}
-                                                        href={item.href}
-                                                        className="group flex flex-col p-3 rounded-lg hover:bg-white/5 transition-colors"
-                                                        onClick={() => setActiveDropdown(null)}
-                                                    >
-                                                        <span className="text-white group-hover:text-brand-red font-semibold transition-colors">
-                                                            {item.label}
-                                                        </span>
-                                                        <span className="text-xs opacity-50 mt-1 leading-relaxed">
-                                                            {item.description}
-                                                        </span>
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    ))}
-                    <Link
-                        href="/use-cases"
-                        className="opacity-70 hover:opacity-100 transition-opacity py-4 px-4"
-                    >
+                <nav className="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium px-6">
+                    <Link href="/free" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Always Free
+                    </Link>
+                    <Link href="/intelligence" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Intelligence
+                    </Link>
+                    <Link href="/extensibility" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Extensibility
+                    </Link>
+                    <Link href="/safety" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Safety
+                    </Link>
+                    <Link href="/use-cases" className="opacity-70 hover:opacity-100 transition-opacity">
                         Use Cases
                     </Link>
-                    <Link
-                        href="/docs"
-                        className="opacity-70 hover:opacity-100 transition-opacity py-4 px-4"
-                    >
+                    <Link href="/docs" className="opacity-70 hover:opacity-100 transition-opacity">
                         Docs
-                    </Link>
-                    <Link
-                        href="/recipes"
-                        className="opacity-70 hover:opacity-100 transition-opacity py-4 px-4"
-                    >
-                        Recipes
                     </Link>
                 </nav>
 
@@ -148,44 +78,35 @@ export function SiteHeader() {
                         className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-md overflow-hidden"
                     >
                         <nav className="container py-8 flex flex-col gap-6">
-                            {navItems.map((group) => (
-                                <div key={group.label} className="flex flex-col gap-3">
-                                    <h3 className="text-xs uppercase font-bold tracking-widest opacity-40 px-2">{group.label}</h3>
-                                    <div className="flex flex-col gap-1">
-                                        {group.items.map((item) => (
-                                            <Link
-                                                key={item.href}
-                                                href={item.href}
-                                                className="text-lg py-3 px-2 rounded-lg hover:bg-white/5"
-                                                onClick={() => setMobileMenuOpen(false)}
-                                            >
-                                                {item.label}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-                            <div className="pt-4 border-t border-white/10 flex flex-col gap-4">
-                                <Link
-                                    href="/docs"
-                                    className="text-lg py-2 opacity-80"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
+                            <div className="flex flex-col gap-2">
+                                <Link href="/free" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Always Free
+                                </Link>
+                                <Link href="/intelligence" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Intelligence
+                                </Link>
+                                <Link href="/extensibility" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Extensibility
+                                </Link>
+                                <Link href="/safety" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Safety
+                                </Link>
+                                <Link href="/use-cases" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Use Cases
+                                </Link>
+                                <Link href="/docs" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Docs
                                 </Link>
-                                <Link
-                                    href="/recipes"
-                                    className="text-lg py-2 opacity-80"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
+                            </div>
+                            <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+                                <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Recipes
                                 </Link>
-                                <Link
-                                    href="/manifesto"
-                                    className="text-lg py-2 opacity-80"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
+                                <Link href="/manifesto" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Manifesto
+                                </Link>
+                                <Link href="/contact" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Contact
                                 </Link>
                             </div>
                             <div className="pt-6">

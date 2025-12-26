@@ -35,7 +35,7 @@ export function SiteFooter() {
                         <h4 className="font-bold text-white tracking-widest uppercase text-xs">Community</h4>
                         <a href="https://github.com/Prof-Harita/terminaI" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity">GitHub</a>
                         <Link href="/roadmap" className="opacity-60 hover:opacity-100 transition-opacity">Roadmap</Link>
-                        <Link href="/roadmap" className="opacity-60 hover:opacity-100 transition-opacity">Contribute</Link>
+                        <Link href="/contribute" className="opacity-60 hover:opacity-100 transition-opacity">Contribute</Link>
                         <Link href="/contact" className="opacity-60 hover:opacity-100 transition-opacity">Contact</Link>
                     </div>
 

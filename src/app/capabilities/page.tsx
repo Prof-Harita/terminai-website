@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import Link from "next/link";
 import {
   HardDrive,
   BarChart3,
@@ -288,12 +289,12 @@ export default function CapabilitiesPage() {
           <div className="container text-center">
             <h2 className="mb-6">Ready to try these examples yourself?</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/install" className="btn btn-primary">
+              <Link href="/install" className="btn btn-primary">
                 Install terminaI
-              </a>
-              <a href="/docs" className="btn btn-outline">
+              </Link>
+              <Link href="/docs" className="btn btn-outline">
                 Read the Docs
-              </a>
+              </Link>
             </div>
           </div>
         </section>

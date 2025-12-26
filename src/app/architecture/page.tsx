@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Layers, Cpu, Shield, Globe, Terminal, Box } from "lucide-react";
+import { Cpu, Shield, Globe, Terminal, Box } from "lucide-react";
 
 const layers = [
     {

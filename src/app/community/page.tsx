@@ -18,7 +18,7 @@ export default function CommunityPage() {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-             <a href="#" className="card hover:bg-white/10 transition-colors">
+             <div className="card opacity-70 cursor-not-allowed">
                 <div className="flex items-center gap-3 mb-4 text-[#5865F2]">
                    <MessageSquare size={32} />
                    <h3 className="text-xl font-bold text-white">Discord</h3>
@@ -26,10 +26,10 @@ export default function CommunityPage() {
                 <p className="opacity-70 mb-4">
                   The active hub. Daily standups in #core-eng, support in #help.
                 </p>
-                <div className="text-sm font-bold text-[#5865F2]">Join Server &rarr;</div>
-             </a>
+                <div className="text-sm font-bold text-[#5865F2]">Invite coming soon</div>
+             </div>
 
-             <a href="#" className="card hover:bg-white/10 transition-colors">
+             <div className="card opacity-70 cursor-not-allowed">
                 <div className="flex items-center gap-3 mb-4 text-white">
                    <Hash size={32} />
                    <h3 className="text-xl font-bold">Matrix</h3>
@@ -37,8 +37,8 @@ export default function CommunityPage() {
                 <p className="opacity-70 mb-4">
                   Bridged to Discord. For those who prefer open protocols.
                 </p>
-                <div className="text-sm font-bold">Join Space &rarr;</div>
-             </a>
+                <div className="text-sm font-bold">Invite coming soon</div>
+             </div>
            </div>
 
            <div className="text-center">

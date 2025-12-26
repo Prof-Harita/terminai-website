@@ -27,7 +27,7 @@ const channels = [
     icon: Users,
     name: "Discord",
     description: "Real-time chat with the community",
-    link: "#", // Add actual Discord invite when available
+    link: "",
     buttonText: "Join Discord",
     comingSoon: true,
   },

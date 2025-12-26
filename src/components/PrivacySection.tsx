@@ -37,7 +37,7 @@ export function PrivacySection() {
                         </h2>
                         <p className="text-xl opacity-70 leading-relaxed mb-8 font-mono">
                             <BrandText /> is built for environments where data leaks are not an option.
-                            Your terminal history is yours. We don't want it.
+                            Your terminal history is yours. We don&apos;t want it.
                         </p>
                         <div className="p-6 border border-white/10 bg-white/5 font-mono text-sm leading-relaxed">
                             <span className="text-green-500">✔</span> No code storage<br />

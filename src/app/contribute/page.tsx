@@ -33,7 +33,7 @@ export default function ContributePage() {
                <p className="opacity-70 mb-6">
                  Work on `packages/cli` (Node/TS), the PTY bridge, or the Policy Engine.
                </p>
-               <a href="https://github.com/Prof-Harita/termAI" target="_blank" className="btn btn-outline w-full justify-center">
+               <a href="https://github.com/Prof-Harita/terminaI" target="_blank" className="btn btn-outline w-full justify-center">
                  View Issues
                </a>
              </div>
@@ -53,7 +53,7 @@ export default function ContributePage() {
            </div>
 
            <div className="text-center">
-             <a href="https://github.com/Prof-Harita/termAI" target="_blank" className="btn btn-primary px-8 py-3 text-lg inline-flex items-center gap-2">
+             <a href="https://github.com/Prof-Harita/terminaI" target="_blank" className="btn btn-primary px-8 py-3 text-lg inline-flex items-center gap-2">
                <Github size={20} />
                Star the Repo
              </a>

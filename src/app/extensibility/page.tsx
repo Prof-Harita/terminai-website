@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import Link from "next/link";
 import {
   Plug,
   FileCode,
@@ -186,7 +187,7 @@ export default function ExtensibilityPage() {
               </div>
               <div className="code-block text-sm">
                 <div className="text-gray-500 mb-2">
-                  // ~/.gemini/settings.json
+                  {"// ~/.gemini/settings.json"}
                 </div>
                 <pre className="text-green-400">{`{
   "model": "gemini-2.5-pro",
@@ -241,14 +242,11 @@ export default function ExtensibilityPage() {
                 <h3 className="mb-3">Multi-Agent Orchestration</h3>
                 <p className="text-sm opacity-60 mb-4">
                   Build complex workflows with multiple agents coordinating
-                  through terminaI's A2A protocol.
+                  through terminaI&apos;s A2A protocol.
                 </p>
-                <a
-                  href="/docs/a2a"
-                  className="text-sm text-[var(--color-brand-red)]"
-                >
+                <Link href="/docs/a2a" className="text-sm text-[var(--color-brand-red)]">
                   Read the spec →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -287,12 +285,12 @@ export default function ExtensibilityPage() {
           <div className="container text-center">
             <h2 className="mb-6">Start extending terminaI</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/install" className="btn btn-primary">
+              <Link href="/install" className="btn btn-primary">
                 Install terminaI
-              </a>
-              <a href="/docs" className="btn btn-outline">
+              </Link>
+              <Link href="/docs" className="btn btn-outline">
                 Read the docs →
-              </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { CheckCircle2, Circle, Clock } from "lucide-react";
 
 const roadmapItems = [
     {

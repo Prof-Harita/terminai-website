@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Shield, Unlock, Cpu, Globe } from "lucide-react";
+import Link from "next/link";
 
 const principles = [
     {
@@ -57,7 +58,7 @@ export default function ManifestoPage() {
                                 communication—is still stuck in the syntax of the 1970s.
                             </p>
                             <p className="opacity-70 leading-relaxed">
-                                We believe that AI shouldn't be just another SaaS subscription that watches 
+                                We believe that AI shouldn&apos;t be just another SaaS subscription that watches 
                                 you type. It should be an extension of your own agency—a powerful operator 
                                 that understands your intent and has the permission to act on it, locally.
                             </p>
@@ -102,7 +103,7 @@ export default function ManifestoPage() {
                         </p>
                         <div className="flex justify-center gap-4">
                             <a href="https://github.com/Prof-Harita/terminaI" className="btn btn-primary px-8">View the Code</a>
-                            <a href="/install" className="btn btn-outline px-8">Get Started</a>
+                            <Link href="/install" className="btn btn-outline px-8">Get Started</Link>
                         </div>
                     </div>
                 </div>

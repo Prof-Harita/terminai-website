@@ -39,7 +39,7 @@ export default function ProductPage() {
               
               <p className="text-xl opacity-70 mb-12 leading-relaxed max-w-3xl">
                 TerminaI is built on three pillars of freedom: open source code,
-                Gemini's generous free tier, and community-driven development.
+                Gemini&apos;s generous free tier, and community-driven development.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -60,7 +60,7 @@ export default function ProductPage() {
                   <Gift size={28} className="text-blue-400 mb-4" />
                   <h3 className="text-xl font-bold mb-2">Generous Free Tier</h3>
                   <p className="text-sm opacity-60 mb-4">
-                    Built on Google's Gemini API with substantial free usage. Most users will never need to pay.
+                    Built on Google&apos;s Gemini API with substantial free usage. Most users will never need to pay.
                   </p>
                   <ul className="text-xs space-y-1 opacity-50">
                     <li>✓ No credit card required</li>

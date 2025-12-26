@@ -25,8 +25,6 @@ let cleanCount = 0;
 
 files.forEach(file => {
   let content = fs.readFileSync(file, 'utf8');
-  const originalLength = content.length;
-  
   // Remove the specific pollution line
   // It starts with "Copy as Markdown Copied!" and contains "class i{"
   const lines = content.split('\n');

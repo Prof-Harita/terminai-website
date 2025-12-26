@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Brain, Cpu, Zap, Network, Mic, Terminal } from "lucide-react";
+import { Brain, Cpu, Zap, Network, Terminal } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Intelligence | terminaI",
@@ -47,7 +48,7 @@ export default function IntelligencePage() {
                 <p className="text-lg opacity-70 mb-6 leading-relaxed">
                   terminaI is a full agentic harness with real terminal
                   execution, multi-step planning, and graceful error recovery.
-                  It doesn't just generate text—it operates your system.
+                  It doesn&apos;t just generate text—it operates your system.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -125,7 +126,7 @@ export default function IntelligencePage() {
                   Theme 2
                 </span>
               </div>
-              <h2 className="mb-4">Built on Tomorrow's Stack</h2>
+              <h2 className="mb-4">Built on Tomorrow&apos;s Stack</h2>
               <p className="text-lg opacity-70 max-w-2xl mx-auto">
                 A2A for agent coordination, MCP for extensibility, offline voice
                 for accessibility.
@@ -138,12 +139,9 @@ export default function IntelligencePage() {
                   Agent-to-Agent communication. Control terminaI from IDEs,
                   desktop apps, mobile, or other agents.
                 </p>
-                <a
-                  href="/extensibility#a2a"
-                  className="text-sm text-[var(--color-brand-red)]"
-                >
+                <Link href="/extensibility#a2a" className="text-sm text-[var(--color-brand-red)]">
                   Learn more →
-                </a>
+                </Link>
               </div>
               <div className="card">
                 <h3 className="mb-3">MCP Integration</h3>
@@ -151,12 +149,9 @@ export default function IntelligencePage() {
                   Model Context Protocol for infinite extensibility. Connect to
                   GitHub, Slack, databases, and custom tools.
                 </p>
-                <a
-                  href="/extensibility#mcp"
-                  className="text-sm text-[var(--color-brand-red)]"
-                >
+                <Link href="/extensibility#mcp" className="text-sm text-[var(--color-brand-red)]">
                   Learn more →
-                </a>
+                </Link>
               </div>
               <div className="card">
                 <h3 className="mb-3">Offline Voice</h3>
@@ -164,12 +159,9 @@ export default function IntelligencePage() {
                   Whisper for STT, Piper for TTS. Download once, runs forever
                   offline. Your voice never leaves your device.
                 </p>
-                <a
-                  href="/docs/voice"
-                  className="text-sm text-[var(--color-brand-red)]"
-                >
+                <Link href="/docs/voice" className="text-sm text-[var(--color-brand-red)]">
                   Learn more →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -230,7 +222,7 @@ export default function IntelligencePage() {
                     Theme 3
                   </span>
                 </div>
-                <h2 className="mb-6">Powered by Google's Most Advanced AI</h2>
+                <h2 className="mb-6">Powered by Google&apos;s Most Advanced AI</h2>
                 <p className="text-lg opacity-70 mb-6 leading-relaxed">
                   Gemini 2.5 Pro delivers SOTA performance with a massive 2M
                   token context window. Reason over entire repositories, not
@@ -252,12 +244,12 @@ export default function IntelligencePage() {
           <div className="container text-center">
             <h2 className="mb-6">Experience unbridled intelligence</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/install" className="btn btn-primary">
+              <Link href="/install" className="btn btn-primary">
                 Install terminaI
-              </a>
-              <a href="/safety" className="btn btn-outline">
-                See how it's governed →
-              </a>
+              </Link>
+              <Link href="/safety" className="btn btn-outline">
+                See how it&apos;s governed →
+              </Link>
             </div>
           </div>
         </section>

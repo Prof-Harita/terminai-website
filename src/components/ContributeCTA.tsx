@@ -21,7 +21,7 @@ export function ContributeCTA() {
                   <Code2 size={20} />
                   Start Coding
                </Link>
-               <a href="https://github.com/Prof-Harita/termAI" target="_blank" rel="noopener noreferrer" className="btn btn-outline bg-black/50 text-lg px-8 py-4 flex items-center justify-center gap-2">
+               <a href="https://github.com/Prof-Harita/terminaI" target="_blank" rel="noopener noreferrer" className="btn btn-outline bg-black/50 text-lg px-8 py-4 flex items-center justify-center gap-2">
                   <Github size={20} />
                   Star on GitHub
                </a>

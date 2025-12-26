@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import Link from "next/link";
 import { Unlock, Gift, Users } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -74,7 +75,7 @@ export default function FreePage() {
             </p>
             <p className="text-lg opacity-50 max-w-2xl mx-auto">
               terminaI is built on three pillars of freedom: open source code,
-              Gemini's generous free tier, and community-driven development.
+              Gemini&apos;s generous free tier, and community-driven development.
             </p>
           </div>
         </section>
@@ -135,9 +136,9 @@ export default function FreePage() {
           <div className="container text-center">
             <h2 className="mb-6">Ready to experience true freedom?</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/install" className="btn btn-primary">
+              <Link href="/install" className="btn btn-primary">
                 Install terminaI
-              </a>
+              </Link>
               <a
                 href="https://github.com/Prof-Harita/terminaI"
                 target="_blank"
