@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
-import { Search, Copy, Check } from "lucide-react";
+import { Search, ChevronDown, ChevronRight } from "lucide-react";
+import { SiteHeader } from "@/components/SiteHeader";
 
 interface DocsLayoutProps {
   children: ReactNode;
@@ -20,40 +21,19 @@ interface SidebarSection {
 export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
   const [sidebarData, setSidebarData] = useState<SidebarSection[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [tocItems, setTocItems] = useState<Array<{id: string, text: string, level: number}>>([]);
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    // Load sidebar data
     fetch('/docs/sidebar.json')
       .then(res => res.json())
-      .then(data => setSidebarData(data))
+      .then((data: SidebarSection[]) => {
+        setSidebarData(data);
+        // Auto-expand all sections initially
+        setExpandedSections(new Set(data.map(s => s.label)));
+      })
       .catch(err => console.error('Failed to load sidebar:', err));
 
-    // Generate table of contents from headings
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const tocData = Array.from(headings).map(heading => ({
-      id: heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '') || '',
-      text: heading.textContent || '',
-      level: parseInt(heading.tagName.charAt(1))
-    })).filter(item => item.text);
-    setTocItems(tocData);
-
-    // Add copy functionality to code blocks
-    const codeBlocks = document.querySelectorAll('pre code');
-    codeBlocks.forEach((block, index) => {
-      const pre = block.parentElement;
-      if (pre && !pre.querySelector('.copy-button')) {
-        const button = document.createElement('button');
-        button.className = 'copy-button absolute top-2 right-2 p-1 rounded bg-black/50 hover:bg-black/70 transition-colors';
-        button.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-        button.onclick = () => copyToClipboard(block.textContent || '', `code-${index}`);
-        pre.style.position = 'relative';
-        pre.appendChild(button);
-      }
-    });
-
-    // Add Cmd+K search shortcut
+    // Cmd+K search shortcut
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
@@ -65,14 +45,16 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const copyToClipboard = async (text: string, id: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedCode(id);
-      setTimeout(() => setCopiedCode(null), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
+  const toggleSection = (label: string) => {
+    setExpandedSections(prev => {
+      const next = new Set(prev);
+      if (next.has(label)) {
+        next.delete(label);
+      } else {
+        next.add(label);
+      }
+      return next;
+    });
   };
 
   const filteredSidebar = sidebarData.map(section => ({
@@ -84,38 +66,25 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
 
   return (
     <>
-      {/* Search Modal */}
-      {searchQuery && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-start justify-center pt-20">
-          <div className="bg-black border border-white/20 rounded-lg p-4 w-full max-w-2xl mx-4">
-            <input
-              id="docs-search"
-              type="text"
-              placeholder="Search documentation... (Cmd+K)"
-              className="w-full bg-transparent border-none outline-none text-white"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Escape') setSearchQuery('');
-              }}
-            />
-          </div>
-        </div>
-      )}
-
-      <div className="container pt-24 pb-24 min-h-screen flex gap-8">
-        {/* Sidebar */}
-        <aside className="w-64 flex-shrink-0 hidden lg:block">
-          <div className="fixed top-24 w-64 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4">
+      <SiteHeader />
+      
+      {/* Main docs container - uses container padding to align sidebar with header logo */}
+      <div className="min-h-screen pt-20" style={{ backgroundColor: '#FDFCF8' }}>
+        <div className="container flex">
+        
+        {/* Left Sidebar - Cream/Sand background */}
+        <aside className="w-64 flex-shrink-0 hidden lg:block border-r border-neutral-200" style={{ backgroundColor: '#FDFCF8' }}>
+          <div className="sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto py-6 pr-4">
+            
             {/* Search */}
             <div className="mb-6">
               <div className="relative">
-                <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50" />
+                <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400" />
                 <input
                   id="docs-search"
                   type="text"
                   placeholder="Search docs... (⌘K)"
-                  className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 pl-9 text-sm focus:outline-none focus:border-brand-red"
+                  className="w-full bg-white border border-neutral-200 rounded-md px-3 py-2 pl-9 text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -123,70 +92,59 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
             </div>
 
             {/* Navigation */}
-            {filteredSidebar.map((section) => (
-              <div key={section.label} className="mb-8">
-                <h4 className="font-bold text-sm mb-4 opacity-100">{section.label}</h4>
-                <ul className="space-y-2">
-                  {section.items.map((item) => {
-                    const isActive = activeSlug === item.slug.replace('docs/', '');
-                    return (
-                      <li key={item.slug}>
-                        <Link
-                          href={`/${item.slug}`}
-                          className={`block text-sm transition-colors ${
-                            isActive
-                              ? "text-brand-red font-medium opacity-100"
-                              : "opacity-60 hover:opacity-100"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </aside>
-
-        {/* Main Content */}
-        <main className="flex-1 max-w-3xl min-w-0">
-          <div className="prose prose-invert prose-headings:font-bold prose-a:text-brand-red hover:prose-a:text-brand-red/80 max-w-none">
-            {children}
-          </div>
-
-          {/* Prev/Next Navigation */}
-          <div className="mt-12 pt-8 border-t border-white/10 flex justify-between">
-            <div>
-              {/* Prev link would go here */}
-            </div>
-            <div>
-              {/* Next link would go here */}
-            </div>
-          </div>
-        </main>
-
-        {/* Table of Contents */}
-        <aside className="w-64 flex-shrink-0 hidden xl:block">
-          <div className="fixed top-24 w-64 max-h-[calc(100vh-6rem)] overflow-y-auto pl-4">
-            <h4 className="font-bold text-sm mb-4 opacity-100">On this page</h4>
-            <nav>
-              <ul className="space-y-1">
-                {tocItems.map((item) => (
-                  <li key={item.id} style={{ paddingLeft: `${(item.level - 1) * 12}px` }}>
-                    <a
-                      href={`#${item.id}`}
-                      className="block text-sm opacity-60 hover:opacity-100 transition-colors"
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <nav className="space-y-1">
+              {filteredSidebar.map((section) => (
+                <div key={section.label} className="mb-4">
+                  {/* Section header - collapsible */}
+                  <button
+                    onClick={() => toggleSection(section.label)}
+                    className="flex items-center justify-between w-full py-2 text-sm font-bold text-red-600 hover:text-red-700"
+                  >
+                    <span>{section.label}</span>
+                    {expandedSections.has(section.label) ? (
+                      <ChevronDown size={14} className="text-neutral-400" />
+                    ) : (
+                      <ChevronRight size={14} className="text-neutral-400" />
+                    )}
+                  </button>
+                  
+                  {/* Section items */}
+                  {expandedSections.has(section.label) && (
+                    <ul className="ml-2 space-y-0.5 border-l border-neutral-200">
+                      {section.items.map((item) => {
+                        const isActive = activeSlug === item.slug.replace('docs/', '');
+                        return (
+                          <li key={item.slug}>
+                            <Link
+                              href={`/${item.slug}`}
+                              className={`block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px ${
+                                isActive
+                                  ? "text-red-600 border-red-600 font-medium bg-red-50"
+                                  : "text-neutral-600 border-transparent hover:text-neutral-900 hover:border-neutral-300"
+                              }`}
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </nav>
           </div>
         </aside>
+
+        {/* Main Content - White background */}
+        <main className="flex-1 bg-white">
+          <div className="max-w-4xl px-12 py-12">
+            <article className="docs-content">
+              {children}
+            </article>
+          </div>
+        </main>
+      </div>
       </div>
     </>
   );

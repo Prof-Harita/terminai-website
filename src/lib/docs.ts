@@ -2,54 +2,101 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const docsDirectory = path.join(process.cwd(), 'src/content/docs');
+const DOCS_DIRECTORY = path.join(process.cwd(), 'src/content/docs');
 
-export function getDocSlugs() {
-  if (!fs.existsSync(docsDirectory)) {
-    return [];
-  }
-  return fs.readdirSync(docsDirectory);
+export interface Doc {
+  slug: string;
+  meta: {
+    title: string;
+    description?: string;
+    [key: string]: unknown;
+  };
+  content: string;
 }
 
-export function getDocBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = path.join(docsDirectory, `${realSlug}.md`);
+export function getAllDocs(): Doc[] {
+  const filePaths = getAllFilePaths(DOCS_DIRECTORY);
+  
+  return filePaths.map((filePath) => {
+    const relativePath = path.relative(DOCS_DIRECTORY, filePath);
+    const slug = relativePath.replace(/\.mdx?$/, '');
+    const source = fs.readFileSync(filePath, 'utf8');
+    const { data, content } = matter(source);
 
-  if (!fs.existsSync(fullPath)) {
-    throw new Error(`Doc not found: ${fullPath}`);
+    return {
+      slug,
+      meta: {
+        title: data.title || slug,
+        ...data,
+      },
+      content,
+    };
+  });
+}
+
+export function getDocBySlug(slugPath: string[]): Doc | null {
+  // Try .mdx then .md
+  const slugJoined = slugPath.join('/');
+  
+  // Potential file paths
+  const extensions = ['.mdx', '.md'];
+  
+  // Try direct path first, then nested under docs/ subdirectory
+  const pathsToTry = [
+    slugJoined,
+    `docs/${slugJoined}`, // Files are nested under docs/ subdirectory
+  ];
+  
+  for (const basePath of pathsToTry) {
+    for (const ext of extensions) {
+      const fullPath = path.join(DOCS_DIRECTORY, `${basePath}${ext}`);
+      if (fs.existsSync(fullPath)) {
+          const source = fs.readFileSync(fullPath, 'utf8');
+          const { data, content } = matter(source);
+          return {
+              slug: slugJoined,
+              meta: {
+                  title: data.title || slugJoined,
+                  ...data
+              },
+              content
+          };
+      }
+      
+      // Check if it's a directory with index
+      const indexPath = path.join(DOCS_DIRECTORY, basePath, `index${ext}`);
+      if (fs.existsSync(indexPath)) {
+          const source = fs.readFileSync(indexPath, 'utf8');
+          const { data, content } = matter(source);
+          return {
+              slug: slugJoined,
+              meta: {
+                  title: data.title || slugJoined,
+                  ...data
+              },
+              content
+          };
+      }
+    }
   }
 
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+  return null;
+}
 
-  type Items = {
-    [key: string]: string;
-  };
+function getAllFilePaths(dirPath: string, arrayOfFiles: string[] = []) {
+  if (!fs.existsSync(dirPath)) return [];
+  
+  const files = fs.readdirSync(dirPath);
 
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === 'slug') {
-      items[field] = realSlug;
-    }
-    if (field === 'content') {
-      items[field] = content;
-    }
-
-    if (typeof data[field] !== 'undefined') {
-      items[field] = data[field];
+  files.forEach((file) => {
+    if (fs.statSync(path.join(dirPath, file)).isDirectory()) {
+      arrayOfFiles = getAllFilePaths(path.join(dirPath, file), arrayOfFiles);
+    } else {
+      if (file.endsWith('.mdx') || file.endsWith('.md')) {
+        arrayOfFiles.push(path.join(dirPath, file));
+      }
     }
   });
 
-  return items;
-}
-
-export function getAllDocs(fields: string[] = []) {
-  const slugs = getDocSlugs();
-  const docs = slugs
-    .map((slug) => getDocBySlug(slug, fields))
-    // sort docs by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return docs;
+  return arrayOfFiles;
 }

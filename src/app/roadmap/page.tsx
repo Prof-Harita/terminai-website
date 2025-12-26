@@ -1,237 +1,114 @@
-import { Metadata } from "next";
+"use client";
+
+import { motion } from "framer-motion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Calendar, Users, GitBranch, Zap, Shield, Globe } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Roadmap | terminaI",
-  description: "Future plans and development roadmap for terminaI - the sovereign shell.",
-};
+import { CheckCircle2, Circle, Clock } from "lucide-react";
 
 const roadmapItems = [
-  {
-    quarter: "Q1 2025",
-    title: "Voice & Multimodal",
-    status: "in-progress",
-    items: [
-      "Offline STT (Whisper integration) - COMPLETED",
-      "Advanced voice commands and barge-in",
-      "Multimodal input (voice + text)",
-      "Voice-guided tutorials"
-    ],
-    icon: Zap
-  },
-  {
-    quarter: "Q2 2025",
-    title: "Enterprise & Security",
-    status: "planned",
-    items: [
-      "Enterprise audit logging (SIEM integration)",
-      "BYOM (Bring Your Own Model) support",
-      "Advanced permission controls",
-      "Compliance certifications"
-    ],
-    icon: Shield
-  },
-  {
-    quarter: "Q3 2025",
-    title: "Agent Ecosystem",
-    status: "planned",
-    items: [
-      "Agent-to-Agent marketplace",
-      "Pre-built automation templates",
-      "Third-party integrations",
-      "Agent orchestration tools"
-    ],
-    icon: Users
-  },
-  {
-    quarter: "Q4 2025",
-    title: "Platform Expansion",
-    status: "planned",
-    items: [
-      "Mobile companion apps",
-      "Web-based terminal interface",
-      "Multi-device synchronization",
-      "Cross-platform deployment"
-    ],
-    icon: Globe
-  }
-];
-
-const communityFeatures = [
-  {
-    title: "Community Voting",
-    description: "Vote on upcoming features and influence the roadmap",
-    link: "https://github.com/Prof-Harita/terminaI/discussions/categories/feature-requests",
-    icon: Users
-  },
-  {
-    title: "Contribute Code",
-    description: "Help build the future of terminal AI",
-    link: "/contribute",
-    icon: GitBranch
-  },
-  {
-    title: "Beta Testing",
-    description: "Get early access to new features",
-    link: "https://github.com/Prof-Harita/terminaI/releases",
-    icon: Calendar
-  }
+    {
+        stage: "Currently Shipping",
+        status: "shipped",
+        items: [
+            { title: "Gemini 2.5 Pro 2M Context", desc: "Native support for massive context reasoning." },
+            { title: "A2A Protocol v1", desc: "Agent-to-agent delegation and remote viewing." },
+            { title: "MCP Tooling Hub", desc: "Plug-and-play with the Model Context Protocol." },
+            { title: "Approval Ladder", desc: "Three-tier safety governance architecture." }
+        ]
+    },
+    {
+        stage: "Q1 2025: GUI Revolution",
+        status: "current",
+        items: [
+            { title: "Desktop Automation Protocol", desc: "Native GUI control for Linux & Windows." },
+            { title: "Remote A2A Relay", desc: "Secure remote viewing without port forwarding." },
+            { title: "Local Voice (Whisper/Piper)", desc: "100% offline speech-to-system control." },
+            { title: "Pattern Library (Recipes)", desc: "Community-driven automation templates." }
+        ]
+    },
+    {
+        stage: "Q2 2025: Mobility & Mesh",
+        status: "future",
+        items: [
+            { title: "iOS / Android Operators", desc: "Control your machines via voice from your phone." },
+            { title: "Multi-Agent Mesh", desc: "Orchestrate complex tasks across a fleet of machines." },
+            { title: "Hardware Optimization", desc: "Native support for NPU-accelerated local models." }
+        ]
+    }
 ];
 
 export default function RoadmapPage() {
-  return (
-    <>
-      <SiteHeader />
-      <main className="pt-32">
-        {/* Hero */}
-        <section className="section pb-16">
-          <div className="container text-center">
-            <h1 className="mb-6">
-              The Future of{" "}
-              <span className="text-[var(--color-brand-red)]">Terminal AI</span>
-            </h1>
-            <p className="text-2xl opacity-70 max-w-3xl mx-auto mb-4">
-              Our roadmap for building the most capable terminal operator
-            </p>
-            <p className="text-lg opacity-50 max-w-2xl mx-auto">
-              Governed autonomy that scales from personal use to enterprise deployment
-            </p>
-          </div>
-        </section>
+    return (
+        <>
+            <SiteHeader />
+            <main className="pt-32 pb-20">
+                <div className="container max-w-5xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mb-20 text-center"
+                    >
+                        <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+                            The Roadmap
+                        </h1>
+                        <p className="text-xl md:text-2xl opacity-60 leading-relaxed max-w-3xl mx-auto">
+                            Our mission is to build the universal system operator. 
+                            Here is how we get there.
+                        </p>
+                    </motion.div>
 
-        {/* Roadmap Timeline */}
-        <section className="section pt-0">
-          <div className="container">
-            <div className="space-y-12">
-              {roadmapItems.map((phase, index) => {
-                const Icon = phase.icon;
-                return (
-                  <div key={index} className="relative">
-                    {/* Timeline line */}
-                    {index < roadmapItems.length - 1 && (
-                      <div className="absolute left-8 top-16 w-0.5 h-24 bg-gradient-to-b from-brand-red to-transparent"></div>
-                    )}
+                    <div className="grid grid-cols-1 gap-12 relative">
+                        {/* Center vertical line for desktop */}
+                        <div className="absolute left-1/2 top-10 bottom-10 w-px bg-white/10 hidden md:block" />
 
-                    <div className="flex gap-8">
-                      {/* Quarter indicator */}
-                      <div className="flex-shrink-0">
-                        <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
-                          phase.status === 'completed' ? 'bg-green-500/20 text-green-400' :
-                          phase.status === 'in-progress' ? 'bg-brand-red/20 text-brand-red' :
-                          'bg-white/10 text-white/50'
-                        }`}>
-                          <Icon size={24} />
-                        </div>
-                        <div className="text-sm font-medium mt-2 opacity-70">{phase.quarter}</div>
-                      </div>
+                        {roadmapItems.map((period, idx) => (
+                            <section key={period.stage} className="relative">
+                                <div className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-16`}>
+                                    
+                                    {/* Timeline Marker */}
+                                    <div className="absolute left-1/2 top-0 -translate-x-1/2 hidden md:flex items-center justify-center">
+                                        <div className={`w-4 h-4 rounded-full border-2 ${period.status === 'shipped' ? 'bg-green-500 border-green-500' : period.status === 'current' ? 'bg-brand-red border-brand-red animate-pulse' : 'bg-transparent border-white/20'}`} />
+                                    </div>
 
-                      {/* Content */}
-                      <div className="flex-1 pb-12">
-                        <div className="flex items-center gap-3 mb-4">
-                          <h2 className="text-2xl font-bold">{phase.title}</h2>
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            phase.status === 'completed' ? 'bg-green-500/20 text-green-400' :
-                            phase.status === 'in-progress' ? 'bg-brand-red/20 text-brand-red' :
-                            'bg-white/10 text-white/60'
-                          }`}>
-                            {phase.status === 'completed' ? 'Completed' :
-                             phase.status === 'in-progress' ? 'In Progress' : 'Planned'}
-                          </span>
-                        </div>
-                        <ul className="space-y-2">
-                          {phase.items.map((item, i) => (
-                            <li key={i} className="flex items-start gap-3 text-lg opacity-70">
-                              <span className="text-brand-red mt-1">•</span>
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                                    <div className="flex-1 w-full">
+                                        <motion.div 
+                                            initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            className={`p-8 rounded-3xl border border-white/10 bg-white/[0.02] ${idx % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}
+                                        >
+                                            <h2 className="text-2xl font-bold mb-6 text-white">{period.stage}</h2>
+                                            <div className="grid grid-cols-1 gap-6">
+                                                {period.items.map((item) => (
+                                                    <div key={item.title} className="group">
+                                                        <h3 className={`text-lg font-bold mb-1 group-hover:text-brand-red transition-colors`}>{item.title}</h3>
+                                                        <p className="text-sm opacity-50 leading-relaxed">{item.desc}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    </div>
+
+                                    {/* Spacer for timeline symmetry */}
+                                    <div className="hidden md:block flex-1" />
+                                </div>
+                            </section>
+                        ))}
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
 
-        {/* Community Section */}
-        <section className="section border-t border-white/5">
-          <div className="container text-center">
-            <h2 className="mb-4">Shape the Future</h2>
-            <p className="text-lg opacity-70 mb-12 max-w-2xl mx-auto">
-              terminaI is built by and for its community. Help us decide what comes next.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {communityFeatures.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <a
-                    key={index}
-                    href={feature.link}
-                    target={feature.link.startsWith('http') ? '_blank' : undefined}
-                    rel={feature.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="p-6 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors group"
-                  >
-                    <Icon size={32} className="text-brand-red mb-4 mx-auto" />
-                    <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                    <p className="text-sm opacity-70 mb-4">{feature.description}</p>
-                    <span className="text-sm text-brand-red group-hover:underline">Learn more →</span>
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Current Status */}
-        <section className="section border-t border-white/5">
-          <div className="container max-w-4xl">
-            <h2 className="text-center mb-8">Current Development Focus</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-6 rounded-lg border border-brand-red/20 bg-brand-red/5">
-                <h3 className="text-lg font-bold text-brand-red mb-4">🔥 Active Development</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>• Voice integration and barge-in controls</li>
-                  <li>• Enhanced A2A protocol for remote operation</li>
-                  <li>• MCP ecosystem expansion</li>
-                  <li>• Enterprise security features</li>
-                </ul>
-              </div>
-
-              <div className="p-6 rounded-lg border border-white/20 bg-white/5">
-                <h3 className="text-lg font-bold mb-4">📋 Recently Completed</h3>
-                <ul className="space-y-2 text-sm opacity-70">
-                  <li>• Core safety approval system (A/B/C levels)</li>
-                  <li>• Real-time system awareness</li>
-                  <li>• PTY-based terminal execution</li>
-                  <li>• Initial voice TTS support</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="section border-t border-white/5">
-          <div className="container text-center">
-            <h2 className="mb-6">Ready to help build the future?</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contribute" className="btn btn-primary">
-                Start Contributing
-              </a>
-              <a href="/contact" className="btn btn-outline">
-                Get in Touch
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <SiteFooter />
-    </>
-  );
+                    <div className="mt-32 p-12 rounded-3xl border border-white/10 bg-white/[0.01] text-center">
+                        <h2 className="text-3xl font-bold mb-4">Influence the Future</h2>
+                        <p className="opacity-60 mb-8 max-w-2xl mx-auto">
+                            We build based on what people actually use. Have a feature request or want to contribute to a core protocol?
+                        </p>
+                        <div className="flex justify-center gap-4">
+                            <a href="https://github.com/Prof-Harita/terminaI/issues" className="btn btn-outline px-8">Submit Issue</a>
+                            <a href="https://github.com/Prof-Harita/terminaI/discussions" className="btn btn-primary px-8">Join Discussion</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <SiteFooter />
+        </>
+    );
 }

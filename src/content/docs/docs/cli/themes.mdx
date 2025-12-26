@@ -1,0 +1,222 @@
+---
+title: "Themes"
+description: ""
+---
+
+# Themes
+
+
+TerminaI supports a variety of themes to customize its color scheme and appearance. You can change the theme to suit your preferences via the `/theme` command or `"theme":` configuration setting.
+
+## Available themes
+
+[Section titled “Available themes”](#available-themes)
+
+TerminaI comes with a selection of pre-defined themes, which you can list using the `/theme` command within TerminaI:
+
+*   **Dark themes:**
+    *   `ANSI`
+    *   `Atom One`
+    *   `Ayu`
+    *   `Default`
+    *   `Dracula`
+    *   `GitHub`
+*   **Light themes:**
+    *   `ANSI Light`
+    *   `Ayu Light`
+    *   `Default Light`
+    *   `GitHub Light`
+    *   `Google Code`
+    *   `Xcode`
+
+### Changing themes
+
+[Section titled “Changing themes”](#changing-themes)
+
+1.  Enter `/theme` into TerminaI.
+2.  A dialog or selection prompt appears, listing the available themes.
+3.  Using the arrow keys, select a theme. Some interfaces might offer a live preview or highlight as you select.
+4.  Confirm your selection to apply the theme.
+
+**Note:** If a theme is defined in your `settings.json` file (either by name or by a file path), you must remove the `"theme"` setting from the file before you can change the theme using the `/theme` command.
+
+### Theme persistence
+
+[Section titled “Theme persistence”](#theme-persistence)
+
+Selected themes are saved in TerminaI’s [configuration](/docs/get-started/configuration) so your preference is remembered across sessions.
+
+* * *
+
+## Custom color themes
+
+[Section titled “Custom color themes”](#custom-color-themes)
+
+TerminaI allows you to create your own custom color themes by specifying them in your `settings.json` file. This gives you full control over the color palette used in the CLI.
+
+### How to define a custom theme
+
+[Section titled “How to define a custom theme”](#how-to-define-a-custom-theme)
+
+Add a `customThemes` block to your user, project, or system `settings.json` file. Each custom theme is defined as an object with a unique name and a set of color keys. For example:
+
+```
+{  "ui": {    "customThemes": {      "MyCustomTheme": {        "name": "MyCustomTheme",        "type": "custom",        "Background": "#181818",        ...      }    }  }}
+```
+
+**Color keys:**
+
+*   `Background`
+*   `Foreground`
+*   `LightBlue`
+*   `AccentBlue`
+*   `AccentPurple`
+*   `AccentCyan`
+*   `AccentGreen`
+*   `AccentYellow`
+*   `AccentRed`
+*   `Comment`
+*   `Gray`
+*   `DiffAdded` (optional, for added lines in diffs)
+*   `DiffRemoved` (optional, for removed lines in diffs)
+*   `DiffModified` (optional, for modified lines in diffs)
+
+You can also override individual UI text roles by adding a nested `text` object. This object supports the keys `primary`, `secondary`, `link`, `accent`, and `response`. When `text.response` is provided it takes precedence over `text.primary` for rendering model responses in chat.
+
+**Required properties:**
+
+*   `name` (must match the key in the `customThemes` object and be a string)
+*   `type` (must be the string `"custom"`)
+*   `Background`
+*   `Foreground`
+*   `LightBlue`
+*   `AccentBlue`
+*   `AccentPurple`
+*   `AccentCyan`
+*   `AccentGreen`
+*   `AccentYellow`
+*   `AccentRed`
+*   `Comment`
+*   `Gray`
+
+You can use either hex codes (e.g., `#FF0000`) **or** standard CSS color names (e.g., `coral`, `teal`, `blue`) for any color value. See [CSS color names](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords) for a full list of supported names.
+
+You can define multiple custom themes by adding more entries to the `customThemes` object.
+
+### Loading themes from a file
+
+[Section titled “Loading themes from a file”](#loading-themes-from-a-file)
+
+In addition to defining custom themes in `settings.json`, you can also load a theme directly from a JSON file by specifying the file path in your `settings.json`. This is useful for sharing themes or keeping them separate from your main configuration.
+
+To load a theme from a file, set the `theme` property in your `settings.json` to the path of your theme file:
+
+```
+{  "ui": {    "theme": "/path/to/your/theme.json"  }}
+```
+
+The theme file must be a valid JSON file that follows the same structure as a custom theme defined in `settings.json`.
+
+**Example `my-theme.json`:**
+
+```
+{  "name": "My File Theme",  "type": "custom",  "Background": "#282A36",  "Foreground": "#F8F8F2",  "LightBlue": "#82AAFF",  "AccentBlue": "#61AFEF",  "AccentPurple": "#BD93F9",  "AccentCyan": "#8BE9FD",  "AccentGreen": "#50FA7B",  "AccentYellow": "#F1FA8C",  "AccentRed": "#FF5555",  "Comment": "#6272A4",  "Gray": "#ABB2BF",  "DiffAdded": "#A6E3A1",  "DiffRemoved": "#F38BA8",  "DiffModified": "#89B4FA",  "GradientColors": ["#4796E4", "#847ACE", "#C3677F"]}
+```
+
+**Security note:** For your safety, TerminaI will only load theme files that are located within your home directory. If you attempt to load a theme from outside your home directory, a warning will be displayed and the theme will not be loaded. This is to prevent loading potentially malicious theme files from untrusted sources.
+
+### Example custom theme
+
+[Section titled “Example custom theme”](#example-custom-theme)
+
+![Custom theme example](../assets/theme-custom.png)
+
+### Using your custom theme
+
+[Section titled “Using your custom theme”](#using-your-custom-theme)
+
+*   Select your custom theme using the `/theme` command in TerminaI. Your custom theme will appear in the theme selection dialog.
+*   Or, set it as the default by adding `"theme": "MyCustomTheme"` to the `ui` object in your `settings.json`.
+*   Custom themes can be set at the user, project, or system level, and follow the same [configuration precedence](/docs/get-started/configuration) as other settings.
+
+* * *
+
+## Dark themes
+
+[Section titled “Dark themes”](#dark-themes)
+
+### ANSI
+
+[Section titled “ANSI”](#ansi)
+
+![ANSI theme](/assets/theme-ansi.png)
+
+### Atom OneDark
+
+[Section titled “Atom OneDark”](#atom-onedark)
+
+![Atom One theme](/assets/theme-atom-one.png)
+
+### Ayu
+
+[Section titled “Ayu”](#ayu)
+
+![Ayu theme](/assets/theme-ayu.png)
+
+### Default
+
+[Section titled “Default”](#default)
+
+![Default theme](/assets/theme-default.png)
+
+### Dracula
+
+[Section titled “Dracula”](#dracula)
+
+![Dracula theme](/assets/theme-dracula.png)
+
+### GitHub
+
+[Section titled “GitHub”](#github)
+
+![GitHub theme](/assets/theme-github.png)
+
+## Light themes
+
+[Section titled “Light themes”](#light-themes)
+
+### ANSI Light
+
+[Section titled “ANSI Light”](#ansi-light)
+
+![ANSI Light theme](/assets/theme-ansi-light.png)
+
+### Ayu Light
+
+[Section titled “Ayu Light”](#ayu-light)
+
+![Ayu Light theme](/assets/theme-ayu-light.png)
+
+### Default Light
+
+[Section titled “Default Light”](#default-light)
+
+![Default Light theme](/assets/theme-default-light.png)
+
+### GitHub Light
+
+[Section titled “GitHub Light”](#github-light)
+
+![GitHub Light theme](/assets/theme-github-light.png)
+
+### Google Code
+
+[Section titled “Google Code”](#google-code)
+
+![Google Code theme](/assets/theme-google-light.png)
+
+### Xcode
+
+[Section titled “Xcode”](#xcode)
+
+![Xcode Light theme](/assets/theme-xcode-light.png)

@@ -1,0 +1,91 @@
+---
+title: "TerminaI Documentation"
+description: "Comprehensive guides for installing, using, and extending the sovereign shell."
+---
+
+Welcome to the TerminaI documentation. Here you'll find everything you need to know about the sovereign agentic shell.
+
+## Defining Features
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <a href="/docs/get-started/quickstart-terminai" className="block p-6 rounded-lg border border-white/10 bg-white/5 hover:border-brand-red/50 transition-colors no-underline">
+    <h3 className="text-xl font-bold mb-2 mt-0">🚀 Quickstart</h3>
+    <p className="text-sm opacity-90 mb-0">Get up and running with TerminaI in minutes. Install, configure, and run your first agent.</p>
+  </a>
+
+{" "}
+
+<a
+  href="/docs/features/voice"
+  className="block p-6 rounded-lg border border-white/10 bg-white/5 hover:border-brand-red/50 transition-colors no-underline"
+>
+  <h3 className="text-xl font-bold mb-2 mt-0">🎙️ Voice & Speech</h3>
+  <p className="text-sm opacity-90 mb-0">
+    Offline STT and TTS with barge-in support. Talk to your terminal naturally.
+  </p>
+</a>
+
+{" "}
+
+<a
+  href="/docs/features/web-remote"
+  className="block p-6 rounded-lg border border-white/10 bg-white/5 hover:border-brand-red/50 transition-colors no-underline"
+>
+  <h3 className="text-xl font-bold mb-2 mt-0">🌐 Web Remote (A2A)</h3>
+  <p className="text-sm opacity-90 mb-0">
+    Control your terminal from a browser or desktop app using the Agent-to-Agent
+    protocol.
+  </p>
+</a>
+
+{" "}
+
+<a
+  href="/docs/features/safety-trust"
+  className="block p-6 rounded-lg border border-white/10 bg-white/5 hover:border-brand-red/50 transition-colors no-underline"
+>
+  <h3 className="text-xl font-bold mb-2 mt-0">🛡️ Safety & Trust</h3>
+  <p className="text-sm opacity-90 mb-0">
+    Understand the approval ladder and how TerminaI keeps you safe from
+    dangerous commands.
+  </p>
+</a>
+
+{" "}
+
+<a
+  href="/docs/get-started/configuration-reference"
+  className="block p-6 rounded-lg border border-white/10 bg-white/5 hover:border-brand-red/50 transition-colors no-underline"
+>
+  <h3 className="text-xl font-bold mb-2 mt-0">⚙️ Configuration</h3>
+  <p className="text-sm opacity-90 mb-0">
+    Deep dive into settings.toml, profiles, and environment variables.
+  </p>
+</a>
+
+  <a href="/docs/guides/recipes" className="block p-6 rounded-lg border border-white/10 bg-white/5 hover:border-brand-red/50 transition-colors no-underline">
+    <h3 className="text-xl font-bold mb-2 mt-0">🍳 Recipes</h3>
+    <p className="text-sm opacity-90 mb-0">Common patterns and workflows for system administration, coding, and data analysis.</p>
+  </a>
+</div>
+
+## Documentation Index
+
+### Overview & Architecture
+
+- **[Architecture Overview](/docs/architecture)**: High-level design.
+- **[Operator Interface](/docs/architecture/operator-interface)**: Philosophy of the OI.
+- **[A2A Protocol](/docs/architecture/a2a-protocol)**: Technical details of the remote control plane.
+
+### Core Manual (Upstream)
+
+- **[CLI Commands](/docs/cli/commands)**: Full command reference.
+- **[Configuration](/docs/get-started/configuration)**: Basic configuration guide.
+- **[Model Selection](/docs/cli/model)**: Switching between Gemini models.
+- **[Sandbox](/docs/cli/sandbox)**: Understanding the execution environment.
+
+### Extensions & Tools
+
+- **[MCP Servers](/docs/tools/mcp-server)**: Extending TerminaI with MCP.
+- **[Tools API](/docs/core/tools-api)**: Building custom tools.
+- **[Hooks](/docs/hooks)**: Lifecycle hooks for advanced integration.

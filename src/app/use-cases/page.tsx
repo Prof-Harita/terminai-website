@@ -1,83 +1,243 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Laptop, Network, Building, Server } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { 
+  Folder, BarChart, PenTool, Calendar, Shield, Server,
+  GraduationCap, GitBranch, Mic, Settings, Palette, Gamepad2, FlaskConical
+} from "lucide-react";
 
-const useCases = [
+const useCaseBuckets = [
   {
-    icon: Laptop,
-    title: "Laptop Assistant",
-    description: "Your daily driver. Automate local workflows, fix config drift, and manage your dev environment.",
-    href: "/use-cases/laptop-assistant",
-    gradient: "from-pink-500 to-rose-500",
+    icon: Folder,
+    title: "File & System Operations",
+    examples: [
+      "Semantic file search across your machine",
+      "Intelligent cleanup of stale files and directories",
+      "Natural language shell commands",
+      "Batch rename with smart pattern detection",
+      "Organize downloads into structured folders"
+    ]
   },
   {
-    icon: Network,
-    title: "Automation Hub",
-    description: "The glue between services. Connect GitHub, Linear, and Slack using MCP to orchestrate complex tasks.",
-    href: "/use-cases/automation-hub",
-    gradient: "from-blue-500 to-cyan-500",
+    icon: BarChart,
+    title: "Data Analysis & Reporting",
+    examples: [
+      "Automated CSV cleaning and statistics",
+      "Financial analysis with buy/sell ratings",
+      "Text-to-SQL for natural language queries",
+      "Generate PDF reports from raw data",
+      "Visual data extraction from spreadsheets"
+    ]
   },
   {
-    icon: Building,
-    title: "Endpoints",
-    description: "Fleet management for the modern era. Enforce policy and audit actions across 1000s of machines.",
-    href: "/use-cases/endpoints",
-    gradient: "from-amber-500 to-orange-500",
+    icon: PenTool,
+    title: "Content Creation & Writing",
+    examples: [
+      "Automated release notes from git commits",
+      "Technical blog posts from feature branches",
+      "Intelligent GitHub issue creation",
+      "Context-aware email drafting",
+      "Documentation generation"
+    ]
+  },
+  {
+    icon: Calendar,
+    title: "Personal Productivity",
+    examples: [
+      "Travel planning with itinerary generation",
+      "Meal planning based on dietary rules",
+      "Task management and prioritization",
+      "Budget tracking with alerts",
+      "Smart todo list organization"
+    ]
+  },
+  {
+    icon: Shield,
+    title: "Security & Maintenance",
+    examples: [
+      "CVE scanning in dependencies",
+      "Pre-commit secret detection",
+      "Self-healing CI/CD pipelines",
+      "OWASP compliance checks",
+      "Automated security audits"
+    ]
   },
   {
     icon: Server,
-    title: "Server Ops",
-    description: "SRE in a box. Interactive runbooks, incident response, and safe production access.",
-    href: "/use-cases/servers",
-    gradient: "from-green-500 to-emerald-500",
+    title: "DevOps & Infrastructure",
+    examples: [
+      "Incident triage and root cause analysis",
+      "Kubernetes manifest generation",
+      "Terraform from natural language",
+      "Home automation control",
+      "Observability queries"
+    ]
   },
+  {
+    icon: GraduationCap,
+    title: "Education & Learning",
+    examples: [
+      "Interactive tutorials and Socratic teaching",
+      "Quiz generation from documentation",
+      "Explain Like I'm 5 for complex concepts",
+      "Hands-on prompt engineering guides",
+      "Code concept explanations"
+    ]
+  },
+  {
+    icon: GitBranch,
+    title: "Workflow Integration",
+    examples: [
+      "Slack message search and automation",
+      "Google Drive document management",
+      "BigQuery data warehouse queries",
+      "Tool pipelining and chaining",
+      "Cross-platform automation"
+    ]
+  },
+  {
+    icon: Mic,
+    title: "Accessibility & Voice",
+    examples: [
+      "Hands-free coding with voice",
+      "Offline speech-to-text and TTS",
+      "Screen reader optimization",
+      "Voice-controlled smart displays",
+      "Accessibility compliance audits"
+    ]
+  },
+  {
+    icon: Settings,
+    title: "Environment Management",
+    examples: [
+      "Automated project scaffolding",
+      "Dotfiles sync across machines",
+      "NPM registry authentication",
+      "Shell startup optimization",
+      "Environment documentation"
+    ]
+  },
+  {
+    icon: Palette,
+    title: "Creative & Artistic",
+    examples: [
+      "ASCII art banner generation",
+      "Retro art automation",
+      "Procedural visualization code",
+      "Data-driven graphics",
+      "Terminal-based design"
+    ]
+  },
+  {
+    icon: Gamepad2,
+    title: "Gaming & Simulation",
+    examples: [
+      "Minecraft automation via visual AI",
+      "Pokemon agent benchmarks",
+      "Text adventure game mastering",
+      "Game testing automation",
+      "Interactive simulations"
+    ]
+  },
+  {
+    icon: FlaskConical,
+    title: "Scientific Research",
+    examples: [
+      "Autonomous paper synthesis",
+      "Lab robotics interface",
+      "Medical imaging queries",
+      "Experiment documentation",
+      "Data pipeline management"
+    ]
+  }
 ];
 
 export default function UseCasesPage() {
   return (
     <>
       <SiteHeader />
-      <main className="pt-32 pb-24">
-        <div className="container max-w-6xl">
-           <div className="text-center mb-16">
-             <h1 className="text-5xl font-bold mb-6">Use Cases</h1>
-             <p className="text-xl opacity-70 max-w-2xl mx-auto">
-               From personal productivity to enterprise fleet management. TerminaI scales with your trust.
-             </p>
-           </div>
+      <main className="pt-32">
+        {/* Hero */}
+        <section className="section pb-16">
+          <div className="container text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Example <span className="text-[var(--color-brand-red)]">Use Cases</span>
+            </h1>
+            <p className="text-xl md:text-2xl opacity-70 max-w-3xl mx-auto mb-4">
+              From organizing your files to running scientific experiments
+            </p>
+            <p className="text-lg opacity-50 max-w-2xl mx-auto">
+              terminaI transforms how you interact with your computer. 
+              See real examples of what developers are building every day.
+            </p>
+          </div>
+        </section>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             {useCases.map((useCase, index) => {
-               const Icon = useCase.icon;
-               return (
-                 <Link href={useCase.href} key={useCase.title} className="group block">
-                   <motion.div
-                     initial={{ opacity: 0, y: 20 }}
-                     animate={{ opacity: 1, y: 0 }}
-                     transition={{ delay: index * 0.1 }}
-                     className="h-full bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors relative overflow-hidden"
-                   >
-                     <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${useCase.gradient} opacity-10 blur-3xl rounded-full translate-x-12 -translate-y-12 group-hover:opacity-20 transition-opacity`} />
-                     
-                     <div className="flex items-center gap-4 mb-4">
-                       <div className={`p-3 rounded-lg bg-white/5 text-white group-hover:scale-110 transition-transform`}>
-                         <Icon size={32} />
-                       </div>
-                       <h2 className="text-2xl font-bold">{useCase.title}</h2>
-                     </div>
-                     <p className="text-lg opacity-70 leading-relaxed">
-                       {useCase.description}
-                     </p>
-                   </motion.div>
-                 </Link>
-               );
-             })}
-           </div>
-        </div>
+        {/* Use Case Buckets */}
+        {useCaseBuckets.map((bucket, bucketIndex) => {
+          const Icon = bucket.icon;
+          const isAlt = bucketIndex % 2 === 1;
+          
+          return (
+            <section 
+              key={bucket.title}
+              id={bucket.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+              className={`py-16 scroll-mt-24 ${isAlt ? 'bg-[#2a2520]' : 'bg-[#1f1b17]'}`}
+            >
+              <div className="container">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-8"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-[var(--color-brand-red)]/10 border border-[var(--color-brand-red)]/20 flex items-center justify-center text-[var(--color-brand-red)]">
+                      <Icon size={24} />
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">{bucket.title}</h2>
+                  </div>
+                </motion.div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                  {bucket.examples.map((example, i) => (
+                    <motion.div
+                      key={example}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.05 }}
+                      whileHover={{ y: -4 }}
+                      className="group p-6 rounded-xl bg-[#3d352d] border border-[#4d433a] shadow-md hover:border-[var(--color-brand-red)]/50 hover:shadow-[0_0_20px_rgba(220,38,38,0.15)] transition-all duration-300 cursor-default"
+                    >
+                      <p className="text-lg font-medium text-white/90 group-hover:text-white transition-colors leading-relaxed">
+                        {example}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })}
+
+        {/* CTA */}
+        <section className="section border-t border-white/5">
+          <div className="container text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to try these examples yourself?</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/install" className="btn btn-primary">
+                Install terminaI
+              </Link>
+              <Link href="/docs" className="btn btn-outline">
+                Read the Docs
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </>

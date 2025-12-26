@@ -1,10 +1,8 @@
 import { Hero } from "@/components/Hero";
-import { IceCreamBar } from "@/components/IceCreamBar";
-import { Testimonials } from "@/components/Testimonials";
-import { AudienceCards } from "@/components/AudienceCards";
-import { Primitives } from "@/components/Primitives";
-import { ComparisonTable } from "@/components/ComparisonTable";
-import { ContributeCTA } from "@/components/ContributeCTA";
+import { BentoFeatures } from "@/components/BentoFeatures";
+import { HowItWorks } from "@/components/HowItWorks";
+import { ManifestoHome } from "@/components/ManifestoHome";
+import { FinalCTA } from "@/components/FinalCTA";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -14,12 +12,10 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
-        <IceCreamBar />
-        <Testimonials />
-        <AudienceCards />
-        <ComparisonTable />
-        <Primitives />
-        <ContributeCTA />
+        <BentoFeatures />
+        <HowItWorks />
+        <ManifestoHome />
+        <FinalCTA />
       </main>
       <SiteFooter />
     </>

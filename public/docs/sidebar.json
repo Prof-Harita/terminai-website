@@ -1,0 +1,150 @@
+[
+
+  {
+    "label": "Get Started",
+    "items": [
+      { "label": "Quickstart", "slug": "docs/get-started" },
+      { "label": "Quickstart (TerminaI)", "slug": "docs/get-started/quickstart-terminai" },
+      { "label": "Gemini 3 Integration", "slug": "docs/get-started/gemini-3" },
+      { "label": "Authentication", "slug": "docs/get-started/authentication" },
+      { "label": "Configuration", "slug": "docs/get-started/configuration" },
+      { "label": "Configuration Reference", "slug": "docs/get-started/configuration-reference" },
+      { "label": "Desktop App", "slug": "docs/get-started/desktop-app" },
+      { "label": "Installation", "slug": "docs/get-started/installation" },
+      { "label": "Examples", "slug": "docs/get-started/examples" }
+    ]
+  },
+  {
+      "label": "Features",
+      "items": [
+          { "label": "Voice & Speech", "slug": "docs/features/voice" },
+          { "label": "Web Remote (A2A)", "slug": "docs/features/web-remote" },
+          { "label": "Cloud Relay", "slug": "docs/features/cloud-relay" },
+          { "label": "Multi-LLM Support", "slug": "docs/features/multi-llm" },
+          { "label": "Safety & Trust", "slug": "docs/features/safety-trust" }
+      ]
+  },
+  {
+    "label": "Overview (Architecture)",
+    "items": [
+      { "label": "Introduction", "slug": "docs" },
+      { "label": "Architecture Overview", "slug": "docs/architecture" },
+      { "label": "Operator Interface", "slug": "docs/architecture/operator-interface" },
+      { "label": "Safety Layer", "slug": "docs/architecture/safety-layer" },
+      { "label": "Design Philosophy", "slug": "docs/architecture/design-philosophy" },
+      { "label": "A2A Protocol", "slug": "docs/architecture/a2a-protocol" },
+      { "label": "Contribution Guide", "slug": "docs/contributing" }
+    ]
+  },
+  {
+      "label": "Guides",
+      "items": [
+          { "label": "Recipes", "slug": "docs/guides/recipes" },
+          { "label": "Use Cases", "slug": "docs/guides/use-cases" },
+          { "label": "Case Studies", "slug": "docs/guides/case-studies" }
+      ]
+  },
+  {
+    "label": "CLI",
+    "items": [
+      { "label": "Introduction", "slug": "docs/cli" },
+      { "label": "Commands", "slug": "docs/cli/commands" },
+      { "label": "Checkpointing", "slug": "docs/cli/checkpointing" },
+      { "label": "Custom Commands", "slug": "docs/cli/custom-commands" },
+      { "label": "Enterprise", "slug": "docs/cli/enterprise" },
+      { "label": "Headless Mode", "slug": "docs/cli/headless" },
+      { "label": "Keyboard Shortcuts", "slug": "docs/cli/keyboard-shortcuts" },
+      { "label": "Model Selection", "slug": "docs/cli/model" },
+      { "label": "Sandbox", "slug": "docs/cli/sandbox" },
+      { "label": "Session Management", "slug": "docs/cli/session-management" },
+      { "label": "Settings", "slug": "docs/cli/settings" },
+      { "label": "Telemetry", "slug": "docs/cli/telemetry" },
+      { "label": "Themes", "slug": "docs/cli/themes" },
+      { "label": "Token Caching", "slug": "docs/cli/token-caching" },
+      { "label": "Trusted Folders", "slug": "docs/cli/trusted-folders" },
+      { "label": "Tutorials", "slug": "docs/cli/tutorials" },
+      { "label": "Uninstall", "slug": "docs/cli/uninstall" },
+      { "label": "System Prompt", "slug": "docs/cli/system-prompt" }
+    ]
+  },
+  {
+      "label": "Reference",
+      "items": [
+          { "label": "Developer API", "slug": "docs/reference/developer-api" },
+          { "label": "Why TerminaI?", "slug": "docs/concepts/why-terminai" }
+      ]
+  },
+  {
+    "label": "Core",
+    "items": [
+      { "label": "Introduction", "slug": "docs/core" },
+      { "label": "Tools API", "slug": "docs/core/tools-api" },
+      { "label": "Memory Import", "slug": "docs/core/memport" },
+      { "label": "Policy Engine", "slug": "docs/core/policy-engine" }
+    ]
+  },
+  {
+    "label": "Tools",
+    "items": [
+      { "label": "Introduction", "slug": "docs/tools" },
+      { "label": "File System", "slug": "docs/tools/file-system" },
+      { "label": "Shell", "slug": "docs/tools/shell" },
+      { "label": "Web Fetch", "slug": "docs/tools/web-fetch" },
+      { "label": "Web Search", "slug": "docs/tools/web-search" },
+      { "label": "Memory", "slug": "docs/tools/memory" },
+      { "label": "Todos", "slug": "docs/tools/todos" },
+      { "label": "MCP Servers", "slug": "docs/tools/mcp-server" }
+    ]
+  },
+  {
+    "label": "Extensions",
+    "items": [
+      { "label": "Introduction", "slug": "docs/extensions" },
+      { "label": "Getting Started", "slug": "docs/extensions/getting-started-extensions" },
+      { "label": "Releasing", "slug": "docs/extensions/extension-releasing" }
+    ]
+  },
+  {
+    "label": "Hooks",
+    "items": [
+      { "label": "Introduction", "slug": "docs/hooks" },
+      { "label": "Writing Hooks", "slug": "docs/hooks/writing-hooks" },
+      { "label": "Reference", "slug": "docs/hooks/reference" },
+      { "label": "Best Practices", "slug": "docs/hooks/best-practices" }
+    ]
+  },
+  {
+    "label": "IDE Integration",
+    "items": [
+      { "label": "Introduction", "slug": "docs/ide-integration" },
+      { "label": "Companion Spec", "slug": "docs/ide-integration/ide-companion-spec" }
+    ]
+  },
+  {
+    "label": "Development",
+    "items": [
+      { "label": "NPM", "slug": "docs/npm" },
+      { "label": "Releases", "slug": "docs/releases" },
+      { "label": "Integration Tests", "slug": "docs/integration-tests" },
+      { "label": "Issue Automation", "slug": "docs/issue-and-pr-automation" }
+    ]
+  },
+  {
+    "label": "Release Notes",
+    "items": [
+      { "label": "Changelog", "slug": "docs/changelogs" },
+      { "label": "Latest", "slug": "docs/changelogs/latest" },
+      { "label": "Preview", "slug": "docs/changelogs/preview" },
+      { "label": "Releases", "slug": "docs/changelogs/releases" }
+    ]
+  },
+  {
+    "label": "Support",
+    "items": [
+      { "label": "FAQ", "slug": "docs/faq" },
+      { "label": "Troubleshooting", "slug": "docs/troubleshooting" },
+      { "label": "Quota & Pricing", "slug": "docs/quota-and-pricing" },
+      { "label": "Terms & Privacy", "slug": "docs/tos-privacy" }
+    ]
+  }
+]
