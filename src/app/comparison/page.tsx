@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Compare, Layers, TerminalSquare } from "lucide-react";
+import { Layers, Scale, TerminalSquare } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ComparisonTable } from "@/components/ComparisonTable";
@@ -67,7 +67,7 @@ export default function ComparisonPage() {
         <section className="section border-t border-white/5">
           <div className="container">
             <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-white/40 mb-4">
-              <Compare size={14} />
+              <Scale size={14} />
               Competitive Matrix
             </div>
             <ComparisonTable />
