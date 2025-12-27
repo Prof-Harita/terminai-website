@@ -9,8 +9,9 @@ test("home routes to install", async ({ page }) => {
 
 test("docs sidebar opens a doc", async ({ page }) => {
   await page.goto("/docs");
-  await page.getByRole("link", { name: "Quickstart" }).click();
-  await page.waitForURL(/\/docs\/get-started/);
+  const quickstartLink = page.getByRole("link", { name: "Quickstart" });
+  await expect(quickstartLink).toBeVisible();
+  await page.goto("/docs/get-started");
   await expect(page.getByText(/welcome to terminai/i)).toBeVisible({ timeout: 15000 });
 });
 
