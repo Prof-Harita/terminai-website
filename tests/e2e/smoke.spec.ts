@@ -11,7 +11,7 @@ test("docs sidebar opens a doc", async ({ page }) => {
   await page.goto("/docs");
   await page.getByRole("link", { name: "Quickstart" }).click();
   await expect(page).toHaveURL(/\/docs\/get-started/);
-  await expect(page.getByRole("heading", { name: /get started/i })).toBeVisible();
+  await expect(page.getByText(/welcome to terminai/i)).toBeVisible();
 });
 
 test("404 page renders", async ({ page }) => {
