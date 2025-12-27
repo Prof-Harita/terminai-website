@@ -38,17 +38,21 @@ export default async function DocPage({ params }: PageProps) {
     notFound();
   }
 
-  const { content, frontmatter } = await compileMDX<{ title: string }>({
+  const { content } = await compileMDX({
     source: doc.content,
     options: {
-      parseFrontmatter: true,
+      parseFrontmatter: false,
     },
     components: docsMdxComponents,
   });
 
+  const hasH1 = /^#\s+/m.test(doc.content);
+
   return (
     <DocsLayout activeSlug={slug.join('/')}>
-      <h1 className="text-4xl font-bold mb-2 text-white">{frontmatter.title}</h1>
+      {!hasH1 && (
+        <h1 className="text-4xl font-bold mb-2 text-white">{doc.meta.title}</h1>
+      )}
       <div className="mt-8">
         {content}
       </div>
