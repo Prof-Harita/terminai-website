@@ -95,7 +95,7 @@ export function DemoScriptPlayer() {
       <div className="flex items-center justify-between mb-4">
         <div>
           <p className="text-sm uppercase tracking-widest text-white/40">Interactive Demo</p>
-          <h3 className="text-lg font-bold text-white">Ask -> Approve -> Execute</h3>
+          <h3 className="text-lg font-bold text-white">Ask / Approve / Execute</h3>
         </div>
         <div className="flex items-center gap-2">
           <button

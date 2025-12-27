@@ -20,7 +20,7 @@ export function DemoShowcase() {
             </div>
             <h2 className="mb-4">See Governed Autonomy in Motion</h2>
             <p className="text-lg opacity-70 mb-6">
-              Watch the ask -> approve -> execute flow end to end, then replay the scripted session to
+              Watch the ask, approve, execute flow end to end, then replay the scripted session to
               understand how TerminaI keeps you in control.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
