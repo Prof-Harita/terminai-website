@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Trust Center | TerminaI",
@@ -61,6 +62,24 @@ const boundaries = [
   "Local sessions stay on-device unless you explicitly enable remote access.",
   "Remote viewing uses a separate relay with end-to-end encryption.",
   "Every action can be traced back to the approval decision.",
+];
+
+const securityPosture = [
+  {
+    icon: KeyRound,
+    title: "Bring your own keys",
+    description: "Model keys stay with you and can be rotated without server dependency.",
+  },
+  {
+    icon: FileText,
+    title: "Audit-ready logs",
+    description: "Approvals and commands are captured for review and export.",
+  },
+  {
+    icon: Lock,
+    title: "Retention control",
+    description: "You decide how long logs persist and when they are purged.",
+  },
 ];
 
 export default function TrustPage() {
@@ -135,6 +154,40 @@ export default function TrustPage() {
                   <span>{item}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section border-t border-white/5">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2 className="mb-6">Security posture</h2>
+                <div className="space-y-4">
+                  {securityPosture.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={item.title} className="card">
+                        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-white/40 mb-2">
+                          <Icon size={14} />
+                          {item.title}
+                        </div>
+                        <p className="text-sm opacity-70">{item.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="card">
+                <div className="text-xs uppercase tracking-widest text-white/40 mb-3">Approval ladder</div>
+                <Image
+                  src="/illustrations/trust-ladder.svg"
+                  alt="Approval ladder diagram"
+                  width={640}
+                  height={320}
+                  className="w-full h-auto border border-white/10 rounded-2xl bg-black"
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Cpu, Shield, Globe, Terminal, Box } from "lucide-react";
+import Image from "next/image";
 
 const layers = [
     {
@@ -83,6 +84,25 @@ export default function ArchitecturePage() {
                                             <li>• Framer Motion for UI Experience</li>
                                         </ul>
                                     </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-3xl font-bold mb-8">Architecture Diagram</h2>
+                            <div className="p-10 rounded-3xl border border-white/10 bg-white/[0.02] mb-12">
+                                <div className="flex flex-col gap-6">
+                                    <Image
+                                        src="/illustrations/architecture-stack.svg"
+                                        alt="TerminaI architecture stack"
+                                        width={640}
+                                        height={360}
+                                        className="w-full h-auto border border-white/10 rounded-2xl bg-black"
+                                    />
+                                    <p className="opacity-70 leading-relaxed text-lg">
+                                        The stack keeps execution local, layers approvals for every action, and exposes
+                                        secure protocols for MCP and A2A orchestration.
+                                    </p>
                                 </div>
                             </div>
                         </section>

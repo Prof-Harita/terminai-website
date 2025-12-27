@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Approval ladder">
+  <rect width="640" height="320" fill="#070707"/>
+  <g fill="none" stroke="#2a2a2a" stroke-width="2">
+    <rect x="80" y="210" width="160" height="60" rx="12"/>
+    <rect x="240" y="150" width="160" height="60" rx="12"/>
+    <rect x="400" y="90" width="160" height="60" rx="12"/>
+  </g>
+  <g fill="#f5f0e6" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="18" font-weight="700">
+    <text x="110" y="246">Level A</text>
+    <text x="270" y="186">Level B</text>
+    <text x="430" y="126">Level C</text>
+  </g>
+  <g fill="#e2231a" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="12">
+    <text x="110" y="266">Safe actions</text>
+    <text x="270" y="206">Sensitive changes</text>
+    <text x="430" y="146">High risk</text>
+  </g>
+</svg>

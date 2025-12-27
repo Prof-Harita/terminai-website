@@ -43,6 +43,7 @@ export function SiteFooter() {
                         <h4 className="font-bold text-white tracking-widest uppercase text-xs">Resources</h4>
                         <Link href="/start" className="opacity-60 hover:opacity-100 transition-opacity">Start Here</Link>
                         <Link href="/docs" className="opacity-60 hover:opacity-100 transition-opacity">Documentation</Link>
+                        <Link href="/updates" className="opacity-60 hover:opacity-100 transition-opacity">Updates</Link>
                         <Link href="/recipes" className="opacity-60 hover:opacity-100 transition-opacity">Recipes</Link>
                         <Link href="/case-studies" className="opacity-60 hover:opacity-100 transition-opacity">Case Studies</Link>
                         <Link href="/comparison" className="opacity-60 hover:opacity-100 transition-opacity">Comparison</Link>
@@ -71,6 +72,7 @@ export function SiteFooter() {
                             Origins: Google Gemini CLI
                         </a>
                         <Link href="/architecture" className="hover:text-white transition-colors">OI Architecture</Link>
+                        <Link href="/es" className="hover:text-white transition-colors">Espanol</Link>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getAllUpdates } from '@/lib/updates';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://terminai.org';
@@ -6,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // List of static routes
   const routes = [
     '',
+    '/es',
     '/free',
     '/intelligence',
     '/extensibility',
@@ -27,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/enterprise',
     '/roadmap',
     '/recipes',
+    '/updates',
+    '/updates/contribute',
     '/case-studies',
     '/comparison',
     '/trust',
@@ -38,5 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }));
 
-  return routes;
+  const updates = getAllUpdates().map((update) => ({
+    url: `${baseUrl}/updates/${update.slug}`,
+    lastModified: update.meta.date ? new Date(update.meta.date) : new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  return [...routes, ...updates];
 }

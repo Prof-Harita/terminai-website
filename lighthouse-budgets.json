@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/",
+    "resourceSizes": [
+      { "resourceType": "script", "budget": 350 },
+      { "resourceType": "total", "budget": 900 }
+    ],
+    "timings": [
+      { "metric": "largest-contentful-paint", "budget": 2500 }
+    ]
+  },
+  {
+    "path": "/install",
+    "resourceSizes": [
+      { "resourceType": "script", "budget": 360 },
+      { "resourceType": "total", "budget": 950 }
+    ],
+    "timings": [
+      { "metric": "largest-contentful-paint", "budget": 2600 }
+    ]
+  },
+  {
+    "path": "/docs",
+    "resourceSizes": [
+      { "resourceType": "script", "budget": 420 },
+      { "resourceType": "total", "budget": 1100 }
+    ],
+    "timings": [
+      { "metric": "largest-contentful-paint", "budget": 3000 }
+    ]
+  },
+  {
+    "path": "/safety",
+    "resourceSizes": [
+      { "resourceType": "script", "budget": 360 },
+      { "resourceType": "total", "budget": 950 }
+    ],
+    "timings": [
+      { "metric": "largest-contentful-paint", "budget": 2600 }
+    ]
+  },
+  {
+    "path": "/enterprise",
+    "resourceSizes": [
+      { "resourceType": "script", "budget": 380 },
+      { "resourceType": "total", "budget": 1000 }
+    ],
+    "timings": [
+      { "metric": "largest-contentful-paint", "budget": 2800 }
+    ]
+  }
+]

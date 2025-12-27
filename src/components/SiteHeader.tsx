@@ -39,6 +39,9 @@ export function SiteHeader() {
                     <Link href="/docs" className="opacity-70 hover:opacity-100 transition-opacity">
                         Docs
                     </Link>
+                    <Link href="/updates" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Updates
+                    </Link>
                 </nav>
 
                 <div className="flex items-center gap-2 lg:gap-4">
@@ -102,6 +105,9 @@ export function SiteHeader() {
                                 </Link>
                                 <Link href="/docs" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Docs
+                                </Link>
+                                <Link href="/updates" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Updates
                                 </Link>
                             </div>
                             <div className="pt-4 border-t border-white/10 flex flex-col gap-3">

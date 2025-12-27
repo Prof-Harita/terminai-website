@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "terminaI | The Universal System Operator",
+    "description": "Open source AI terminal operator with voice control and governed autonomy."
+  },
+  "hero": {
+    "eyebrow": "Language Preview",
+    "title": "TerminaI now ships with a Spanish landing page.",
+    "subtitle": "Start in Espanol and continue into the full English documentation.",
+    "primaryCta": "Install TerminaI",
+    "secondaryCta": "Read the Docs",
+    "languageToggleLabel": "Ver en Espanol",
+    "languageToggleHref": "/es"
+  },
+  "highlights": {
+    "title": "What makes TerminaI different",
+    "items": [
+      {
+        "title": "System operator",
+        "description": "Runs real commands with approvals and audit trails."
+      },
+      {
+        "title": "Voice + remote view",
+        "description": "Operate hands-free while watching from any device."
+      },
+      {
+        "title": "Governed autonomy",
+        "description": "Tiered approvals keep humans in control."
+      }
+    ]
+  },
+  "pillars": {
+    "title": "Sovereignty and safety",
+    "items": [
+      {
+        "title": "Local first",
+        "description": "Your machine, your policies, your data."
+      },
+      {
+        "title": "Transparent approvals",
+        "description": "Every action is visible and reviewable."
+      },
+      {
+        "title": "Multi-LLM by default",
+        "description": "Route to Gemini, GPT, Claude, or local models."
+      }
+    ]
+  },
+  "notice": {
+    "title": "Coverage note",
+    "body": "This Spanish landing page is the first step. The rest of the site remains in English while translations expand.",
+    "linkLabel": "Go to the main site",
+    "linkHref": "/"
+  }
+}

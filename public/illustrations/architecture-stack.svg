@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="TerminaI architecture stack">
+  <rect width="640" height="360" fill="#070707"/>
+  <g fill="none" stroke="#2a2a2a" stroke-width="2">
+    <rect x="80" y="40" width="480" height="44" rx="10"/>
+    <rect x="80" y="96" width="480" height="44" rx="10"/>
+    <rect x="80" y="152" width="480" height="44" rx="10"/>
+    <rect x="80" y="208" width="480" height="44" rx="10"/>
+    <rect x="80" y="264" width="480" height="44" rx="10"/>
+  </g>
+  <g fill="#f5f0e6" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="16" font-weight="700">
+    <text x="100" y="68">Interface Layer</text>
+    <text x="100" y="124">Operator Core</text>
+    <text x="100" y="180">Safety Ladder</text>
+    <text x="100" y="236">MCP Host</text>
+    <text x="100" y="292">A2A Relay</text>
+  </g>
+  <g fill="#e2231a" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace" font-size="12">
+    <text x="430" y="68">PTY + UI</text>
+    <text x="430" y="124">Planner + Tools</text>
+    <text x="430" y="180">Approvals</text>
+    <text x="430" y="236">Connectors</text>
+    <text x="430" y="292">Remote View</text>
+  </g>
+</svg>

@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "predev": "npm run recipes:validate && npm run docs:api && npm run docs:search-index",
+    "predev": "npm run recipes:validate && npm run updates:validate && npm run i18n:validate && npm run docs:api && npm run docs:search-index",
     "build": "next build",
-    "prebuild": "npm run recipes:validate && npm run docs:api && npm run docs:search-index",
+    "prebuild": "npm run recipes:validate && npm run updates:validate && npm run i18n:validate && npm run docs:api && npm run docs:search-index",
     "start": "next start",
     "lint": "eslint",
     "docs:api": "node scripts/generate_api_reference.mjs",
     "docs:search-index": "node scripts/build_docs_search_index.mjs",
+    "i18n:validate": "node scripts/validate_locales.mjs",
     "recipes:validate": "node scripts/validate_recipes.mjs",
+    "updates:validate": "node scripts/validate_updates.mjs",
+    "perf:ci": "lhci autorun --config=./lighthouserc.cjs",
     "test:e2e": "playwright test",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
@@ -27,6 +30,7 @@
     "shiki": "^3.20.0"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

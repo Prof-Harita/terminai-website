@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "terminaI | Operador Universal del Sistema",
+    "description": "Operador de terminal con IA, voz y autonomia gobernada."
+  },
+  "hero": {
+    "eyebrow": "TerminaI en Espanol",
+    "title": "El operador universal del sistema, ahora en Espanol.",
+    "subtitle": "Empieza en Espanol y continua con la documentacion completa en Ingles.",
+    "primaryCta": "Instalar TerminaI",
+    "secondaryCta": "Leer la documentacion",
+    "languageToggleLabel": "Read in English",
+    "languageToggleHref": "/"
+  },
+  "highlights": {
+    "title": "Por que TerminaI es diferente",
+    "items": [
+      {
+        "title": "Operador del sistema",
+        "description": "Ejecuta comandos reales con aprobacion y trazabilidad."
+      },
+      {
+        "title": "Voz y vista remota",
+        "description": "Opera sin manos y observa desde cualquier dispositivo."
+      },
+      {
+        "title": "Autonomia gobernada",
+        "description": "Aprobaciones por niveles mantienen el control humano."
+      }
+    ]
+  },
+  "pillars": {
+    "title": "Soberania y seguridad",
+    "items": [
+      {
+        "title": "Local primero",
+        "description": "Tu maquina, tus politicas, tus datos."
+      },
+      {
+        "title": "Aprobaciones transparentes",
+        "description": "Cada accion es visible y revisable."
+      },
+      {
+        "title": "Multi-LLM",
+        "description": "Elige Gemini, GPT, Claude o modelos locales."
+      }
+    ]
+  },
+  "notice": {
+    "title": "Cobertura limitada",
+    "body": "Esta pagina en Espanol es el primer paso. El resto del sitio sigue en Ingles mientras ampliamos traducciones.",
+    "linkLabel": "Ir al sitio principal",
+    "linkHref": "/"
+  }
+}
