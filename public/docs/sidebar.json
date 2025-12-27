@@ -70,7 +70,7 @@
   {
       "label": "Reference",
       "items": [
-          { "label": "Developer API", "slug": "docs/reference/developer-api" },
+          { "label": "API Reference (Website)", "slug": "docs/reference/website-api" },
           { "label": "Why TerminaI?", "slug": "docs/concepts/why-terminai" }
       ]
   },

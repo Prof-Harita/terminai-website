@@ -1,0 +1,74 @@
+[
+  {
+    "id": "disk-space-triage",
+    "title": "Disk Space Triage",
+    "summary": "Find large folders, propose a cleanup plan, and confirm before delete.",
+    "persona": "Everyday",
+    "risk": "Low",
+    "tags": ["storage", "cleanup", "maintenance"],
+    "example": "Find the largest folders and propose a safe cleanup plan."
+  },
+  {
+    "id": "wifi-repair",
+    "title": "Wi-Fi Repair Checklist",
+    "summary": "Diagnose flaky Wi-Fi with a step-by-step workflow and approvals.",
+    "persona": "Everyday",
+    "risk": "Low",
+    "tags": ["network", "troubleshooting"],
+    "example": "Explain why my Wi-Fi drops and propose fixes."
+  },
+  {
+    "id": "incident-triage",
+    "title": "Incident Triage Summary",
+    "summary": "Collect logs, summarize symptoms, and propose next steps with guardrails.",
+    "persona": "Operators",
+    "risk": "Medium",
+    "tags": ["logs", "incident", "analysis"],
+    "example": "Summarize the last 30 minutes of auth logs and highlight anomalies."
+  },
+  {
+    "id": "patch-window",
+    "title": "Safe Patch Window",
+    "summary": "Plan host patching, capture approvals, and log each step.",
+    "persona": "Operators",
+    "risk": "Medium",
+    "tags": ["patching", "fleet", "maintenance"],
+    "example": "Prepare a patch plan for these hosts and wait for approval."
+  },
+  {
+    "id": "local-dev-bootstrap",
+    "title": "Local Dev Bootstrap",
+    "summary": "Install dependencies, set env vars, and validate the project runs.",
+    "persona": "Developers",
+    "risk": "Low",
+    "tags": ["setup", "tooling"],
+    "example": "Set up this repo and run the test suite."
+  },
+  {
+    "id": "release-notes",
+    "title": "Release Notes Draft",
+    "summary": "Summarize commits and generate a draft changelog.",
+    "persona": "Developers",
+    "risk": "Low",
+    "tags": ["git", "changelog"],
+    "example": "Draft release notes from the last 20 commits."
+  },
+  {
+    "id": "policy-ladder",
+    "title": "Policy Ladder Setup",
+    "summary": "Map risky commands to approval levels and document the policy.",
+    "persona": "Enterprise",
+    "risk": "High",
+    "tags": ["policy", "safety", "governance"],
+    "example": "Define approvals for rm, sudo, and network changes."
+  },
+  {
+    "id": "audit-review",
+    "title": "Audit Log Review",
+    "summary": "Export approvals, summarize actions, and flag anomalies for review.",
+    "persona": "Enterprise",
+    "risk": "Medium",
+    "tags": ["audit", "compliance"],
+    "example": "Summarize approvals from last week for compliance review."
+  }
+]

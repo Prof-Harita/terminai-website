@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   output: 'standalone',
+  outputFileTracingIncludes: {
+    "/docs": ["src/content/docs/**/*"],
+    "/docs/[...slug]": ["src/content/docs/**/*"],
+  },
   async redirects() {
     return [
       {

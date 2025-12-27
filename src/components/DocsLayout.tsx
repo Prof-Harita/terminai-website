@@ -5,6 +5,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { DocsSearch } from "@/components/DocsSearch";
+import { DocsVersionNotice } from "@/components/DocsVersionNotice";
 
 interface DocsLayoutProps {
   children: ReactNode;
@@ -126,6 +127,7 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
             <div className="lg:hidden mb-6">
               <DocsSearch />
             </div>
+            <DocsVersionNotice />
             <article className="docs-content">
               {children}
             </article>

@@ -294,11 +294,11 @@
     "content": "System Prompt Override (GEMINI\\ SYSTEM\\ MD) The core system instructions that guide TerminaI can be completely replaced with your own Markdown file. This feature is controlled via the environment variable. Overview The variable instructs the CLI to use an external Markdown file for its system prompt, completely overriding the built in default. This is a full replacement, not a merge. If you use a custom file, none of the original core instructions will apply unless you include them yourself. This feature is intended for advanced users who need to enforce strict, project specific behavior or create a customized persona. Tip: You can export the current default system prompt to a file first, review it, and then selectively modify or replace it (see ). How to enable You can set the environment variable temporarily in your shell, or persist it via a file. See . Use the project default path ( ): or The CLI reads (relative to your current project directory). Use a custom file path: Relative p..."
   },
   {
-    "slug": "docs/reference/developer-api",
-    "title": "Developer API Reference (high-level)",
+    "slug": "docs/reference/website-api",
+    "title": "Website Type Reference",
     "section": "Reference",
-    "description": "TerminaI documentation for Developer API Reference (high-level)",
-    "content": "Developer API Reference (high level) TerminaI is a monorepo. “API” here means the surfaces other developers integrate with. 1) CLI surface Binary: Entry: 2) A2A server surface Package: HTTP routes: Auth logic: See also: . 3) MCP surface MCP client/tooling lives in core. Extension config lives in CLI settings. Docs: (MCP tutorial) 4) Safety / policy surface Approval ladder: Policy engine: 5) Desktop (PTY) surface Desktop app: Tauri PTY bridge:"
+    "description": "Auto-generated reference from src/types.",
+    "content": "Website Type Reference This page is auto generated from to document the website data contracts. Item Kind: Interface title: string slug: string description?: string | undefined DocSection Kind: Interface title: string items: Item[]"
   },
   {
     "slug": "docs/concepts/why-terminai",
@@ -565,6 +565,13 @@
     "section": "Docs",
     "description": "TerminaI documentation for Governance",
     "content": "Governance TerminaI is built around a simple principle: autonomy without governance is a bug . This document describes how the project makes decisions and how contributions ship. Roles Maintainers : merge PRs, cut releases, set technical direction. Contributors : propose changes, implement features, improve docs/tests. Decision making We prefer: 1. Issues + lightweight proposals for any non trivial change. 2. Small PRs that are easy to review and revert. 3. Compatibility first changes (avoid breaking existing user setups). If a change impacts safety boundaries (policy/approval, auth, sandboxing, PTY execution), maintainers may require: a short threat model tests proving the boundary an explicit rollback plan What needs an issue first Open an issue before starting work if your change: adds or changes auth/token handling (A2A/web remote) changes approval ladder semantics modifies shell execution policy touches the desktop PTY bridge changes default behavior or config formats Release poli..."
+  },
+  {
+    "slug": "docs/reference/developer-api",
+    "title": "Developer API Reference (high-level)",
+    "section": "Docs",
+    "description": "TerminaI documentation for Developer API Reference (high-level)",
+    "content": "Developer API Reference (high level) TerminaI is a monorepo. “API” here means the surfaces other developers integrate with. 1) CLI surface Binary: Entry: 2) A2A server surface Package: HTTP routes: Auth logic: See also: . 3) MCP surface MCP client/tooling lives in core. Extension config lives in CLI settings. Docs: (MCP tutorial) 4) Safety / policy surface Approval ladder: Policy engine: 5) Desktop (PTY) surface Desktop app: Tauri PTY bridge:"
   },
   {
     "slug": "docs/troubleshooting/terminai-specifics",

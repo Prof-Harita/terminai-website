@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "predev": "npm run docs:search-index",
+    "predev": "npm run recipes:validate && npm run docs:api && npm run docs:search-index",
     "build": "next build",
-    "prebuild": "npm run docs:search-index",
+    "prebuild": "npm run recipes:validate && npm run docs:api && npm run docs:search-index",
     "start": "next start",
     "lint": "eslint",
+    "docs:api": "node scripts/generate_api_reference.mjs",
     "docs:search-index": "node scripts/build_docs_search_index.mjs",
+    "recipes:validate": "node scripts/validate_recipes.mjs",
     "test:e2e": "playwright test",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
