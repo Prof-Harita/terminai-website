@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || "http://127.0.0.1:3000";
+const isCI = Boolean(process.env.CI);
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -19,10 +20,15 @@ export default defineConfig({
   webServer: process.env.PLAYWRIGHT_TEST_BASE_URL
     ? undefined
     : {
-        command: "npm run start",
+        command: isCI
+          ? "node .next/standalone/server.js"
+          : "npm run dev -- --port 3000",
         url: baseURL,
-        reuseExistingServer: !process.env.CI,
+        reuseExistingServer: !isCI,
         timeout: 120 * 1000,
+        env: {
+          PORT: "3000",
+        },
       },
   projects: [
     {

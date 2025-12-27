@@ -19,15 +19,16 @@ test("404 page renders", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Page Not Found" })).toBeVisible();
 });
 
-test.describe("mobile navigation", () => {
-  test.use({ ...devices["iPhone 12"] });
+test("mobile navigation opens and navigates", async ({ browser }) => {
+  const context = await browser.newContext({ ...devices["iPhone 12"] });
+  const page = await context.newPage();
 
-  test("opens and navigates", async ({ page }) => {
-    await page.goto("/");
-    await page.getByRole("button", { name: "Toggle menu" }).click();
-    const docsLink = page.getByRole("link", { name: "Docs" });
-    await expect(docsLink).toBeVisible();
-    await docsLink.click();
-    await expect(page).toHaveURL(/\/docs/);
-  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Toggle menu" }).click();
+  const docsLink = page.getByRole("link", { name: "Docs" });
+  await expect(docsLink).toBeVisible();
+  await docsLink.click();
+  await expect(page).toHaveURL(/\/docs/);
+
+  await context.close();
 });
