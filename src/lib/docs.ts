@@ -14,6 +14,14 @@ export interface Doc {
   content: string;
 }
 
+export interface DocsSidebarSection {
+  label: string;
+  items: Array<{
+    label: string;
+    slug: string;
+  }>;
+}
+
 export function getAllDocs(): Doc[] {
   const filePaths = getAllFilePaths(DOCS_DIRECTORY);
   
@@ -81,6 +89,25 @@ export function getDocBySlug(slugPath: string[]): Doc | null {
   }
 
   return null;
+}
+
+export function getDocsSidebar(): DocsSidebarSection[] {
+  const sidebarPath = path.join(process.cwd(), "public/docs/sidebar.json");
+  if (!fs.existsSync(sidebarPath)) return [];
+  return JSON.parse(fs.readFileSync(sidebarPath, "utf8")) as DocsSidebarSection[];
+}
+
+export function getDocsNav(slug: string) {
+  const sidebar = getDocsSidebar();
+  const flatItems = sidebar.flatMap((section) =>
+    section.items.map((item) => ({ ...item, section: section.label }))
+  );
+  const currentIndex = flatItems.findIndex((item) => item.slug === slug);
+  if (currentIndex === -1) return null;
+  return {
+    prev: flatItems[currentIndex - 1] ?? null,
+    next: flatItems[currentIndex + 1] ?? null,
+  };
 }
 
 function getAllFilePaths(dirPath: string, arrayOfFiles: string[] = []) {

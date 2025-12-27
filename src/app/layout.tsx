@@ -56,11 +56,14 @@ export default function RootLayout({
       <body
         className={`${GeistMono.variable} antialiased`}
       >
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        {children}
+        <div id="main">{children}</div>
       </body>
     </html>
   );

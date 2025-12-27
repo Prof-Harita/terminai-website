@@ -30,6 +30,9 @@ export function SiteHeader() {
                     <Link href="/safety" className="opacity-70 hover:opacity-100 transition-opacity">
                         Safety
                     </Link>
+                    <Link href="/start" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Start Here
+                    </Link>
                     <Link href="/use-cases" className="opacity-70 hover:opacity-100 transition-opacity">
                         Use Cases
                     </Link>
@@ -90,6 +93,9 @@ export function SiteHeader() {
                                 </Link>
                                 <Link href="/safety" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Safety
+                                </Link>
+                                <Link href="/start" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Start Here
                                 </Link>
                                 <Link href="/use-cases" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Use Cases

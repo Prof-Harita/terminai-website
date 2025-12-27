@@ -5,6 +5,8 @@ import { ManifestoHome } from "@/components/ManifestoHome";
 import { FinalCTA } from "@/components/FinalCTA";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { DemoShowcase } from "@/components/DemoShowcase";
+import { PersonaPathways } from "@/components/PersonaPathways";
 
 export default function Home() {
   return (
@@ -12,8 +14,10 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
+        <DemoShowcase />
         <BentoFeatures />
         <HowItWorks />
+        <PersonaPathways />
         <ManifestoHome />
         <FinalCTA />
       </main>

@@ -41,6 +41,7 @@ export function SiteFooter() {
 
                     <div className="flex flex-col gap-4 text-sm">
                         <h4 className="font-bold text-white tracking-widest uppercase text-xs">Resources</h4>
+                        <Link href="/start" className="opacity-60 hover:opacity-100 transition-opacity">Start Here</Link>
                         <Link href="/docs" className="opacity-60 hover:opacity-100 transition-opacity">Documentation</Link>
                         <Link href="/recipes" className="opacity-60 hover:opacity-100 transition-opacity">Recipes</Link>
                         <Link href="/architecture" className="opacity-60 hover:opacity-100 transition-opacity">OI Architecture</Link>

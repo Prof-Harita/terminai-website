@@ -1,0 +1,639 @@
+[
+  {
+    "slug": "docs/get-started",
+    "title": "Get started with TerminaI",
+    "section": "Get Started",
+    "description": "Get started with TerminaI Welcome to TerminaI! This guide will help you install, configure, and start using the TerminaI to enhance your workflow right from your terminal. Quicksta...",
+    "content": "Get started with TerminaI Welcome to TerminaI! This guide will help you install, configure, and start using the TerminaI to enhance your workflow right from your terminal. Quickstart: Install, authenticate, configure, and use TerminaI TerminaI brings the power of advanced language models directly to your command line interface. As an AI powered assistant, TerminaI can help you with a variety of tasks, from understanding and generating code to reviewing and editing documents. Install The standard method to install and run TerminaI uses : Terminal window Once TerminaI is installed, run TerminaI from your command line: Terminal window For more installation options, see . Authenticate To begin using TerminaI, you must authenticate with a Google service. In most cases, you can log in with your existing Google account: 1. Run TerminaI after installation: Terminal window 2. When asked “How would you like to authenticate for this project?” select 1\\. Login with Google . 3. Select your Google a..."
+  },
+  {
+    "slug": "docs/get-started/quickstart-terminai",
+    "title": "Quickstart Guide",
+    "section": "Get Started",
+    "description": "TerminaI documentation for Quickstart Guide",
+    "content": "Quickstart Guide Get up and running with terminaI in 5 minutes. Installation From Source (Recommended) Optional: Add Alias For muscle memory compatibility: Authentication terminaI uses Google OAuth (browser flow) or an API key for model access. Option 1: Login with Google (Recommended) Option 2: API Key First Commands Interactive Mode Slash Commands Show available commands List background processes Exit terminaI Next Steps Offline voice install + usage Connect Desktop/web clients Tauri Desktop client Approval ladder (A/B/C) + PIN Settings and flags Optional: Run the Desktop App (Tauri) The Desktop app is an A2A client (it does not spawn the CLI). In the Desktop app, set: Agent URL : the A2A server URL (e.g. ) Token : the web remote token printed by the CLI (see Web Remote guide)"
+  },
+  {
+    "slug": "docs/get-started/gemini-3",
+    "title": "Gemini 3 Pro and Gemini 3 Flash on TerminaI",
+    "section": "Get Started",
+    "description": "Gemini 3 Pro and Gemini 3 Flash on TerminaI Gemini 3 Pro and Gemini 3 Flash are now available on TerminaI! Currently, most paid customers of TerminaI will have access to both Gemin...",
+    "content": "Gemini 3 Pro and Gemini 3 Flash on TerminaI Gemini 3 Pro and Gemini 3 Flash are now available on TerminaI! Currently, most paid customers of TerminaI will have access to both Gemini 3 Pro and Gemini 3 Flash, including the following subscribers: Google AI Pro and Google AI Ultra (excluding business customers). Gemini Code Assist Standard and Enterprise (requires ). Paid Gemini API and Vertex API key holders. For free tier users: If you signed up for the waitlist, please check your email for details. We’ve onboarded everyone who signed up to the previously available waitlist. If you were not on our waitlist, we’re rolling out additional access gradually to ensure the experience remains fast and reliable. Stay tuned for more details. How to get started with Gemini 3 on TerminaI Get started by upgrading TerminaI to the latest version (0.21.1): Terminal window After you’ve confirmed your version is 0.21.1 or later: 1. Use the command in TerminaI. 2. Toggle Preview Features to . 3. Run and s..."
+  },
+  {
+    "slug": "docs/get-started/authentication",
+    "title": "TerminaI authentication setup",
+    "section": "Get Started",
+    "description": "TerminaI authentication setup To use TerminaI, you’ll need to authenticate with Google. This guide helps you quickly find the best way to sign in based on your account type and how...",
+    "content": "TerminaI authentication setup To use TerminaI, you’ll need to authenticate with Google. This guide helps you quickly find the best way to sign in based on your account type and how you’re using the CLI. For most users, we recommend starting TerminaI and logging in with your personal Google account. Choose your authentication method Select the authentication method that matches your situation in the table below: User Type / Scenario Recommended Authentication Method Google Cloud Project Required Individual Google accounts No, with exceptions Organization users with a company, school, or Google Workspace account AI Studio user with a Gemini API key No Google Cloud Vertex AI user or No (for Gemini API Key) (for Vertex AI) What is my Google account type? Individual Google accounts: Includes all such as Gemini Code Assist for individuals, as well as paid subscriptions for . Organization accounts: Accounts using paid licenses through an organization such as a company, school, or . Includes s..."
+  },
+  {
+    "slug": "docs/get-started/configuration",
+    "title": "TerminaI configuration",
+    "section": "Get Started",
+    "description": "TerminaI configuration Note on configuration format, 9/17/25: The format of the file has been updated to a new, more organized structure. The new format will be supported in the st...",
+    "content": "TerminaI configuration Note on configuration format, 9/17/25: The format of the file has been updated to a new, more organized structure. The new format will be supported in the stable release starting \\[09/10/25\\] . Automatic migration from the old format to the new format will begin on \\[09/17/25\\] . For details on the previous format, please see the . TerminaI offers several ways to configure its behavior, including environment variables, command line arguments, and settings files. This document outlines the different configuration methods and available settings. Configuration layers Configuration is applied in the following order of precedence (lower numbers are overridden by higher numbers): 1. Default values: Hardcoded defaults within the application. 2. System defaults file: System wide default settings that can be overridden by other settings files. 3. User settings file: Global settings for the current user. 4. Project settings file: Project specific settings. 5. System settin..."
+  },
+  {
+    "slug": "docs/get-started/configuration-reference",
+    "title": "Configuration",
+    "section": "Get Started",
+    "description": "TerminaI documentation for Configuration",
+    "content": "Configuration Settings file (CLI / agent) TerminaI uses the same settings file layout as the upstream Gemini CLI. Default path: Common options: (string, 6 digits) Used for Level C approvals (default: ). Example: (string: \"safe\" | \"prompt\" | \"yolo\") Controls approval ladder behavior (default: ). (boolean) Enables experimental features (default: ). (string: \"gemini\" | \"ollama\") AI model provider (default: ). (boolean) Enables CLI spoken replies (TTS). (string) CLI key for voice controls (commonly ). (number) Caps how much text is spoken per assistant turn. Environment variables: Uses API key auth instead of the OAuth browser flow. Web Remote (A2A) token When you start the agent with , the CLI prints (or stores) a token used by clients. Rotate token (prints a new token): Start server with a pinned port: Desktop app settings Desktop stores its own UI settings locally (agent URL/token, workspace path, voice toggle/volume). These settings do not replace the agent’s ."
+  },
+  {
+    "slug": "docs/get-started/desktop-app",
+    "title": "Desktop App (Tauri) Guide",
+    "section": "Get Started",
+    "description": "TerminaI documentation for Desktop App (Tauri) Guide",
+    "content": "Desktop App (Tauri) Guide The Desktop app is a client for the A2A server . It does not spawn the CLI and it does not implement its own OAuth. Status ✅ Connects to an A2A server (local or remote) using token auth + replay signatures ✅ Streams assistant output and handles tool confirmations ✅ Voice: offline STT+TTS (download once → offline), with barge in and spoken confirmations (including PIN prompts) Platform Support | Platform | Status | | | | | Linux | ✅ Supported | | Windows | ✅ Supported | | macOS | 🚧 Coming Soon | Accessibility The Desktop app strives for WCAG compliance: Screen readers : Full ARIA support, including regions and labeled controls. Keyboard navigation : Full keyboard support. Voice : Hands free operation via \"system operator\" voice mode. Run (from repo) Connect to a local agent 1. Start the A2A server via the CLI: 2. In the Desktop app: Agent URL : Token : the token printed by the CLI (rotate with if needed) Workspace Path : server side path the agent should opera..."
+  },
+  {
+    "slug": "docs/get-started/installation",
+    "title": "TerminaI installation, execution, and deployment",
+    "section": "Get Started",
+    "description": "TerminaI installation, execution, and deployment Install and run TerminaI. This document provides an overview of TerminaI’s installation methods and deployment architecture. How to...",
+    "content": "TerminaI installation, execution, and deployment Install and run TerminaI. This document provides an overview of TerminaI’s installation methods and deployment architecture. How to install and/or run TerminaI There are several ways to run TerminaI. The recommended option depends on how you intend to use TerminaI. As a standard installation. This is the most straightforward method of using TerminaI. In a sandbox. This method offers increased security and isolation. From the source. This is recommended for contributors to the project. 1\\. Standard installation (recommended for standard users) This is the recommended way for end users to install TerminaI. It involves downloading the TerminaI package from the NPM registry. Global install: Terminal window Then, run the CLI from anywhere: Terminal window NPX execution: Terminal window 2\\. Run in a sandbox (Docker/Podman) For security and isolation, TerminaI can be run inside a container. This is the default way that the CLI executes tools th..."
+  },
+  {
+    "slug": "docs/get-started/examples",
+    "title": "TerminaI examples",
+    "section": "Get Started",
+    "description": "TerminaI examples Not sure where to get started with TerminaI? This document covers examples on how to use TerminaI for a variety of tasks. Note: Results are examples intended to s...",
+    "content": "TerminaI examples Not sure where to get started with TerminaI? This document covers examples on how to use TerminaI for a variety of tasks. Note: Results are examples intended to showcase potential use cases. Your results may vary. Rename your photographs based on content Scenario: You have a folder containing the following files: Terminal window Give Gemini the following prompt: Result: Gemini will ask for permission to rename your files. Select Allow once and your files will be renamed: Terminal window Explain a repository by reading its code Scenario: You want to understand how a popular open source utility works by inspecting its code, not just its README. Give TerminaI the following prompt: Result: Gemini will perform a sequence of actions to answer your request. 1. First, it will ask for permission to run to download the repository. 2. Next, it will find the important source files and ask for permission to read them. 3. Finally, after analyzing the code, it will provide a summary..."
+  },
+  {
+    "slug": "docs/features/voice",
+    "title": "Voice Guide",
+    "section": "Features",
+    "description": "TerminaI documentation for Voice Guide",
+    "content": "Voice Guide [!NOTE] Voice Mode is currently in beta . Full offline STT support is coming soon. terminaI supports offline voice (download once → offline) via the Desktop app. Overview There are two “voice surfaces” in this repo: Desktop app (recommended) : offline STT+TTS with natural turn taking (barge in). CLI : TTS spoken replies and spoken confirmations. Install Offline Voice (one time) Run this once (requires internet during install): This installs voice dependencies into: / + (STT) / + (TTS) After install, voice runs offline. CLI Voice (TTS) Enable Or set in your settings file (default path: ). What it does Speaks a short “spoken reply” for assistant responses. Speaks confirmation prompts. Lets you interrupt speech (barge in) with the PTT key. Push to talk note The CLI currently cannot do true “press and hold to record” in a normal terminal. Today, the PTT key is used mainly for interrupting speech . Desktop Voice (Tauri) The Desktop app supports: Offline STT: Offline TTS: Natural..."
+  },
+  {
+    "slug": "docs/features/web-remote",
+    "title": "Web Remote (A2A) Guide",
+    "section": "Features",
+    "description": "TerminaI documentation for Web Remote (A2A) Guide",
+    "content": "Web Remote (A2A) Guide Run a single local/remote agent backend (A2A) and connect clients (Desktop, browser, custom). Overview Web Remote starts an A2A server that exposes the agent over HTTP(S). Clients: Desktop app (Tauri) : recommended today (it speaks A2A directly). Browser UI : available at . Custom clients : can use A2A JSON RPC + SSE, with token + replay signatures. Status: 🚧 Beta Architecture Setup 1. Start Web Remote Run terminaI with the flag: By default it binds to and chooses a random free port. To pin a port: The CLI prints: the listening URL (host/port) the UI URL (may include a on first run) token storage notes 2. Connect Desktop App (recommended) Open the Desktop app and set: Agent URL : Token : the token printed by the CLI If the CLI says the token is “stored hashed” (and it didn’t print it), rotate it: Browser UI (experimental) Open the URL printed by the CLI. If the token was printed as , the UI stores it locally and removes it from the URL. If the token is not print..."
+  },
+  {
+    "slug": "docs/features/cloud-relay",
+    "title": "Cloud Relay Architecture & Implementation",
+    "section": "Features",
+    "description": "TerminaI documentation for Cloud Relay Architecture & Implementation",
+    "content": "Cloud Relay Architecture & Implementation This document details the architecture, security model, and implementation of the TerminaI Cloud Relay , a system providing secure remote access to the TerminaI agent without requiring complex network configuration (port forwarding) or trusting a central server with sensitive data. 1. High Level Architecture The system follows a Zero Trust Relay pattern. The Cloud Relay acts as a dumb pipe, blind to the content of the traffic it forwards. All authentication and encryption happen strictly between the Host (Desktop Agent) and the Client (Web Browser). Key Components 1. Desktop Agent ( ) : The authoritative host. It initiates the session, generates encryption keys, and executes agent commands. 2. Cloud Relay ( ) : A lightweight, stateless WebSocket server deployed to the cloud (e.g., Google Cloud Run). It routes messages based on . 3. Web Client ( ) : The user interface running in the browser. It performs client side encryption/decryption using th..."
+  },
+  {
+    "slug": "docs/features/multi-llm",
+    "title": "Multi-LLM Provider Support Architecture",
+    "section": "Features",
+    "description": "TerminaI documentation for Multi-LLM Provider Support Architecture",
+    "content": "Multi LLM Provider Support Architecture Status : Implemented Version : 0.21.0 Last Updated : December 2024 Overview TerminaI supports multiple LLM providers through a pluggable architecture that allows users to choose between Gemini (default), OpenAI compatible APIs, and future providers like Anthropic. Architecture Diagram Provider Configuration Settings Schema ( ) Provider Types ( ) Provider Selection Flow Key Components 1. OpenAIContentGenerator Location: Handles OpenAI compatible API interactions: | Method | Description | | | | | | Non streaming text/tool generation | | | SSE streaming with tool call accumulation | | | Local token estimation via | | | Gemini Tool → OpenAI function schema | | | → mapping | Key Features: Auth modes: , , Proxy support via Multi chunk tool call accumulation Debug mode only error logging 2. Provider Capability Gating Location: Used in UI to conditionally render: Citations display (only if ) Preview model marketing (only for Gemini) Image upload controls..."
+  },
+  {
+    "slug": "docs/features/safety-trust",
+    "title": "Safety Guide",
+    "section": "Features",
+    "description": "TerminaI documentation for Safety Guide",
+    "content": "Safety Guide terminaI is a “terminal operator”. Safety is enforced in layers: Deterministic enforcement (parser/policy driven) is the line of defense. Model risk assessment is used for UX (explain consequences, choose preview/confirm), not for final allow/deny. Approval ladder (A/B/C) TerminaI routes actions into three review levels: Level A : no approval (read only, bounded, reversible; includes low impact git ops like / ) Level B : click to approve after a clear plain English explanation of ramifications Level C : click to approve + a 6 digit PIN for extreme/irreversible actions If parsing is uncertain or scope is unbounded, TerminaI fails closed into a higher level. PIN PIN is stored in settings as (default: ). See . Where it applies today Shell tool : uses a deterministic action profile + minimum review computation; Level C requires PIN. Other tools : continue to use tool specific confirmation prompts; they should migrate to the same ladder over time. In clients The same confirmati..."
+  },
+  {
+    "slug": "docs",
+    "title": "TerminaI Documentation",
+    "section": "Overview (Architecture)",
+    "description": "Comprehensive guides for installing, using, and extending the sovereign shell.",
+    "content": "Welcome to the TerminaI documentation. Here you'll find everything you need to know about the sovereign agentic shell. Defining Features 🚀 Quickstart Get up and running with TerminaI in minutes. Install, configure, and run your first agent. {\" \"} 🎙️ Voice & Speech Offline STT and TTS with barge in support. Talk to your terminal naturally. {\" \"} 🌐 Web Remote (A2A) Control your terminal from a browser or desktop app using the Agent to Agent protocol. {\" \"} 🛡️ Safety & Trust Understand the approval ladder and how TerminaI keeps you safe from dangerous commands. {\" \"} ⚙️ Configuration Deep dive into settings.toml, profiles, and environment variables. 🍳 Recipes Common patterns and workflows for system administration, coding, and data analysis. Documentation Index Overview & Architecture : High level design. : Philosophy of the OI. : Technical details of the remote control plane. Core Manual (Upstream) : Full command reference. : Basic configuration guide. : Switching between Gemini mod..."
+  },
+  {
+    "slug": "docs/architecture",
+    "title": "TerminaI Architecture Overview",
+    "section": "Overview (Architecture)",
+    "description": "TerminaI Architecture Overview This document provides a high level overview of the TerminaI’s architecture. Core components The TerminaI is primarily composed of two main packages,...",
+    "content": "TerminaI Architecture Overview This document provides a high level overview of the TerminaI’s architecture. Core components The TerminaI is primarily composed of two main packages, along with a suite of tools that can be used by the system in the course of handling command line input: 1. CLI package ( ): Purpose: This contains the user facing portion of the TerminaI, such as handling the initial user input, presenting the final output, and managing the overall user experience. Key functions contained in the package: History management Display rendering 2. Core package ( ): Purpose: This acts as the backend for the TerminaI. It receives requests sent from , orchestrates interactions with the Gemini API, and manages the execution of available tools. Key functions contained in the package: API client for communicating with the Google Gemini API Prompt construction and management Tool registration and execution logic State management for conversations or sessions Server side configuration..."
+  },
+  {
+    "slug": "docs/architecture/operator-interface",
+    "title": "TerminaI \"Brain\" Architecture: Before, OI, and Proposed",
+    "section": "Overview (Architecture)",
+    "description": "TerminaI documentation for TerminaI \"Brain\" Architecture: Before, OI, and Proposed",
+    "content": "TerminaI \"Brain\" Architecture: Before, OI, and Proposed A simple comparison of how TerminaI solves problems today, how Open Interpreter does it, and how TerminaI will do it after this upgrade. Comparison Table | Problem | Gemini CLI forked | Open Interpreter | TerminaI | | | | | | | How does it run code? | Runs one command, forgets everything, starts fresh next time. | Keeps a \"notebook\" open—variables and imports stay alive. | Same as OI: persistent sessions that remember everything. | | How does it think? | \"Let me call a tool for that.\" Treats code as a last resort. | \"Let me try some code, see what happens, and adjust.\" Code is the default. | Adaptive: uses tools for simple tasks, escalates to code when needed. | | Does it remember what it defined? | No. If you say \"use the data from before,\" it's confused. | Yes. It knows exists because it defined it earlier. | Yes. After each code run, it gets a summary: \"You have: , .\" | | What if code fails? | Shows the error. Might try again,..."
+  },
+  {
+    "slug": "docs/architecture/safety-layer",
+    "title": "Safety Architecture (TerminaI)",
+    "section": "Overview (Architecture)",
+    "description": "TerminaI documentation for Safety Architecture (TerminaI)",
+    "content": "Safety Architecture (TerminaI) TerminaI’s safety model is built around one core split: Deterministic enforcement decides what review level is minimally required. The model/brain decides how to proceed safely (preview/plan/explain), but cannot lower the deterministic minimum. Invariants 1. Everything is possible with explicit user confirmation. The system should escalate review, not permanently block safety related actions. 2. Fail closed. If an action can’t be parsed/understood confidently, require higher review. 3. Minimum review cannot be downgraded by the model. The model may only increase caution. 4. Plain English consent. Before Level B/C actions, the user sees what will happen and why it’s risky (direct + indirect consequences). 5. Provenance aware. Untrusted sources can inform investigation but must not silently authorize execution. Approval ladder (A/B/C) A : no approval needed A typically covers read only work and explicitly low impact reversible actions (e.g. some operations)..."
+  },
+  {
+    "slug": "docs/architecture/design-philosophy",
+    "title": "terminaI Design Language",
+    "section": "Overview (Architecture)",
+    "description": "TerminaI documentation for terminaI Design Language",
+    "content": "terminaI Design Language Core Identity terminaI is a system aware terminal operator. It is not just a chatbot; it is a tool that owns the shell. The design reflects this: utility first, minimalist, precision engineered. Logo & Logotype The logo consists strictly of the wordmark followed by a stylized . Construction Text : Suffix : (Capital 'i') Font Family : Geist Mono (closest open source alternative to modern proprietary console fonts) or JetBrains Mono . Weight : : Regular / Medium (400/500) : Bold / ExtraBold (700/800) The \"Pulse\" (The Red I) The at the end represents the cursor, the AI agent's presence, and the \"Intelligence\". Color : IBM ThinkPad Red HEX: RGB: Animation : State : Always blinking when active/thinking. Static when idle? Or always blinking like a terminal cursor. Style : \"Hard\" cursor blink (on/off) to emphasize the terminal nature. Duration: 1s loop (500ms ON, 500ms OFF). Usage Variations Dark Mode (Default) Background : (Pure Black) or (Near Black) Color : (White)..."
+  },
+  {
+    "slug": "docs/architecture/a2a-protocol",
+    "title": "A2A (Agent-to-Agent) Protocol",
+    "section": "Overview (Architecture)",
+    "description": "TerminaI documentation for A2A (Agent-to-Agent) Protocol",
+    "content": "A2A (Agent to Agent) Protocol A2A is TerminaI’s remote control plane. It allows external clients (Desktop app, browser UI, IDE integrations, scripts) to: submit tasks stream events/output receive tool confirmations replay sessions This project currently ships an HTTP server in . Security model (current) The server is intended to bind to loopback by default. Clients authenticate using a shared token and request signing / replay protection. Tokens should be treated like secrets. Operational tips: rotate token if leaked: Concepts Task : a unit of work (prompt + context + execution mode) Run : a single execution of a task Events : streamed output and state transitions High level flow 1. Start the agent backend: 2. Connect a client (Desktop or browser ). 3. Client submits tasks; server streams events. Protocol surface (developer view) Exact routes may evolve, but common groups include: Auth : token setup/rotation Task execution : create task, stream events, cancel Replay : fetch stored requ..."
+  },
+  {
+    "slug": "docs/contributing",
+    "title": "How to contribute",
+    "section": "Overview (Architecture)",
+    "description": "How to contribute We would love to accept your patches and contributions to this project. This document includes: : Essential steps to take before becoming a TerminaI contributor....",
+    "content": "How to contribute We would love to accept your patches and contributions to this project. This document includes: : Essential steps to take before becoming a TerminaI contributor. : How to contribute code to TerminaI. : How to set up your development environment and workflow. : How to contribute documentation to TerminaI. We’re looking forward to seeing your contributions! Before you begin Sign our Contributor License Agreement Contributions to this project must be accompanied by a (CLA). You (or your employer) retain the copyright to your contribution; this simply gives us permission to use and redistribute your contributions as part of the project. If you or your current employer have already signed the Google CLA (even if it was for a different project), you probably don’t need to do it again. Visit to see your current agreements or to sign a new one. Review our Community Guidelines This project follows . Code contribution process Get started The process for contributing code is as..."
+  },
+  {
+    "slug": "docs/guides/recipes",
+    "title": "System Operator Recipes",
+    "section": "Guides",
+    "description": "TerminaI documentation for System Operator Recipes",
+    "content": "System Operator Recipes Recipes are reusable, human readable playbooks that TerminaI can execute under governance . They are meant to be: reviewable (humans can understand them) composable (small building blocks) safe by default (confirmations for risky steps) What belongs in a recipe A good recipe includes: Goal : what problem it solves Pre checks : how to detect the issue Plan : ordered steps Verification : how to confirm success Rollback : how to undo if possible Examples (starter ideas) Fix: “Docker daemon not running” Fix: “Port already in use” Fix: “Disk full on Linux” Repair: “Broken apt dependencies” Ops: “Restart service and verify health” Where recipes live Recipes are expected to evolve. If you’re contributing, propose the location via an issue first. Contribution guidelines Prefer idempotent actions. Avoid destructive commands unless explicitly guarded with confirmations. Include verification commands. Assume the operator has limited context; write explicit, checkable steps..."
+  },
+  {
+    "slug": "docs/guides/use-cases",
+    "title": "Comprehensive Use Case Commands",
+    "section": "Guides",
+    "description": "TerminaI documentation for Comprehensive Use Case Commands",
+    "content": "Comprehensive Use Case Commands TerminaI provides 49 specialized agentic commands covering system operations, data analysis, content creation, and more. Each command is optimized with a specific prompt and MCP configuration. Organization Commands follow the naming convention: . | Bucket | Category | Description | | : | : | : | | | System Operations | File management, cleanup, shell translation | | | Data Analysis | CSV reporting, financial research, SQL | | | Content Creation | Release notes, issues, ghostwriting | | | Productivity | Travel, diet, todos, budget | | | Security | Auditing, CVE scanning, pipeline healing | | | DevOps/SRE | Incident triage, IaC, home automation | | | Education | Tutoring, quizzes, hands on learning | | | Workflow | Slack, Drive, BigQuery integration | | | Accessibility | Voice mode, screen reader audits | | | Environment | Scaffolding, dotfiles, npm config | | | Art Generation | ASCII art, procedural visuals | | | Gaming | Minecraft, Pokemon, text adventur..."
+  },
+  {
+    "slug": "docs/guides/case-studies",
+    "title": "Case studies (what TerminaI is for)",
+    "section": "Guides",
+    "description": "TerminaI documentation for Case studies (what TerminaI is for)",
+    "content": "Case studies (what TerminaI is for) These are realistic scenarios TerminaI is designed to handle with governance. 1) “My dev environment broke” (toolchain repair) Symptom: / / failures, PATH conflicts Operator loop: inspect versions + PATH detect conflicting installs propose safe repair steps verify builds and tests 2) “A service is down on my server” (ops triage) Symptom: 5xxs, failed health checks Operator loop: inspect systemd status review logs restart service with confirmation verify health endpoint 3) “Disk is full” (capacity recovery) Symptom: write failures, slow machine Operator loop: find biggest directories propose reversible cleanup first require confirmation for deletes verify free space 4) “I need new powers” (MCP integration) Add an MCP server for GitHub/Jira/Linear/etc. TerminaI can then execute tasks that span both your system and external tools. 5) “I want to drive TerminaI from another client” (A2A) Use the A2A server to connect Desktop/browser/IDE. This turns Termin..."
+  },
+  {
+    "slug": "docs/cli",
+    "title": "TerminaI",
+    "section": "CLI",
+    "description": "TerminaI Within TerminaI, is the frontend for users to send and receive prompts with the Gemini AI model and its associated tools. For a general overview of TerminaI, see the . Bas...",
+    "content": "TerminaI Within TerminaI, is the frontend for users to send and receive prompts with the Gemini AI model and its associated tools. For a general overview of TerminaI, see the . Basic features : A reference for all built in slash commands : Create your own commands and shortcuts for frequently used prompts. : Use TerminaI programmatically for scripting and automation. : Configure the Gemini AI model used by the CLI. : Configure various aspects of the CLI’s behavior and appearance. : Customizing the CLI’s appearance with different themes. : A reference for all keyboard shortcuts to improve your workflow. : Step by step guides for common tasks. Advanced features : Automatically save and restore snapshots of your session and files. : Deploying and manage TerminaI in an enterprise environment. : Isolate tool execution in a secure, containerized environment. : Configure observability to monitor usage and performance. : Optimize API costs by caching tokens. : A security feature to control whi..."
+  },
+  {
+    "slug": "docs/cli/commands",
+    "title": "CLI commands",
+    "section": "CLI",
+    "description": "CLI commands TerminaI supports several built in commands to help you manage your session, customize the interface, and control its behavior. These commands are prefixed with a forw...",
+    "content": "CLI commands TerminaI supports several built in commands to help you manage your session, customize the interface, and control its behavior. These commands are prefixed with a forward slash ( ), an at symbol ( ), or an exclamation mark ( ). Slash commands ( ) Slash commands provide meta level control over the CLI itself. Built in Commands Description: File an issue about TerminaI. By default, the issue is filed within the GitHub repository for TerminaI. The string you enter after will become the headline for the bug being filed. The default behavior can be modified using the setting in your files. Description: Save and resume conversation history for branching conversation state interactively, or resuming a previous state from a later session. Sub commands: Description: Saves the current conversation history. You must add a for identifying the conversation state. Usage: Details on checkpoint location: The default locations for saved chat checkpoints are: Linux/macOS: Windows: Behavior:..."
+  },
+  {
+    "slug": "docs/cli/checkpointing",
+    "title": "Checkpointing",
+    "section": "CLI",
+    "description": "Checkpointing The TerminaI includes a Checkpointing feature that automatically saves a snapshot of your project’s state before any file modifications are made by AI powered tools....",
+    "content": "Checkpointing The TerminaI includes a Checkpointing feature that automatically saves a snapshot of your project’s state before any file modifications are made by AI powered tools. This allows you to safely experiment with and apply code changes, knowing you can instantly revert back to the state before the tool was run. How it works When you approve a tool that modifies the file system (like or ), the CLI automatically creates a “checkpoint.” This checkpoint includes: 1. A Git snapshot: A commit is made in a special, shadow Git repository located in your home directory ( ). This snapshot captures the complete state of your project files at that moment. It does not interfere with your own project’s Git repository. 2. Conversation history: The entire conversation you’ve had with the agent up to that point is saved. 3. The tool call: The specific tool call that was about to be executed is also stored. If you want to undo the change or simply go back, you can use the command. Restoring a c..."
+  },
+  {
+    "slug": "docs/cli/custom-commands",
+    "title": "Custom commands",
+    "section": "CLI",
+    "description": "Custom commands Custom commands let you save and reuse your favorite or most frequently used prompts as personal shortcuts within TerminaI. You can create commands that are specifi...",
+    "content": "Custom commands Custom commands let you save and reuse your favorite or most frequently used prompts as personal shortcuts within TerminaI. You can create commands that are specific to a single project or commands that are available globally across all your projects, streamlining your workflow and ensuring consistency. File locations and precedence TerminaI discovers commands from two locations, loaded in a specific order: 1. User commands (global): Located in . These commands are available in any project you are working on. 2. Project commands (local): Located in . These commands are specific to the current project and can be checked into version control to be shared with your team. If a command in the project directory has the same name as a command in the user directory, the project command will always be used. This allows projects to override global commands with project specific versions. Naming and namespacing The name of a command is determined by its file path relative to its d..."
+  },
+  {
+    "slug": "docs/cli/enterprise",
+    "title": "TerminaI for the enterprise",
+    "section": "CLI",
+    "description": "TerminaI for the enterprise This document outlines configuration patterns and best practices for deploying and managing TerminaI in an enterprise environment. By leveraging system...",
+    "content": "TerminaI for the enterprise This document outlines configuration patterns and best practices for deploying and managing TerminaI in an enterprise environment. By leveraging system level settings, administrators can enforce security policies, manage tool access, and ensure a consistent experience for all users. A note on security: The patterns described in this document are intended to help administrators create a more controlled and secure environment for using TerminaI. However, they should not be considered a foolproof security boundary. A determined user with sufficient privileges on their local machine may still be able to circumvent these configurations. These measures are designed to prevent accidental misuse and enforce corporate policy in a managed environment, not to defend against a malicious actor with local administrative rights. Centralized configuration: The system settings file The most powerful tools for enterprise administration are the system wide settings files. Thes..."
+  },
+  {
+    "slug": "docs/cli/headless",
+    "title": "Headless mode",
+    "section": "CLI",
+    "description": "Headless mode Headless mode allows you to run TerminaI programmatically from command line scripts and automation tools without any interactive UI. This is ideal for scripting, auto...",
+    "content": "Headless mode Headless mode allows you to run TerminaI programmatically from command line scripts and automation tools without any interactive UI. This is ideal for scripting, automation, CI/CD pipelines, and building AI powered tools. Overview The headless mode provides a headless interface to TerminaI that: Accepts prompts via command line arguments or stdin Returns structured output (text or JSON) Supports file redirection and piping Enables automation and scripting workflows Provides consistent exit codes for error handling Basic usage Direct prompts Use the (or ) flag to run in headless mode: Terminal window Stdin input Pipe input to TerminaI from your terminal: Terminal window Combining with file input Read from files and process with Gemini: Terminal window Output formats Text output (default) Standard human readable output: Terminal window Response format: JSON output Returns structured data including response, statistics, and metadata. This format is ideal for programmatic pro..."
+  },
+  {
+    "slug": "docs/cli/keyboard-shortcuts",
+    "title": "TerminaI keyboard shortcuts",
+    "section": "CLI",
+    "description": "TerminaI keyboard shortcuts TerminaI ships with a set of default keyboard shortcuts for editing input, navigating history, and controlling the UI. Use this reference to learn the a...",
+    "content": "TerminaI keyboard shortcuts TerminaI ships with a set of default keyboard shortcuts for editing input, navigating history, and controlling the UI. Use this reference to learn the available combinations. Basic Controls Action Keys Confirm the current selection or choice. Dismiss dialogs or cancel the current focus. Cursor Movement Action Keys Move the cursor to the start of the line. Move the cursor to the end of the line. Editing Action Keys Delete from the cursor to the end of the line. Delete from the cursor to the start of the line. Clear all text in the input field. Delete the previous word. Screen Control Action Keys Clear the terminal screen and redraw the UI. Scrolling Action Keys Scroll content up. Scroll content down. Scroll to the top. Scroll to the bottom. Scroll up by one page. Scroll down by one page. History & Search Action Keys Show the previous entry in history. Show the next entry in history. Start reverse search through history. Insert the selected reverse search matc..."
+  },
+  {
+    "slug": "docs/cli/model",
+    "title": "TerminaI model selection (`/model` command)",
+    "section": "CLI",
+    "description": "TerminaI model selection (\\ command) Select your TerminaI model. The command lets you configure the model used by TerminaI, giving you more control over your results. Use Pro model...",
+    "content": "TerminaI model selection (\\ command) Select your TerminaI model. The command lets you configure the model used by TerminaI, giving you more control over your results. Use Pro models for complex tasks and reasoning, Flash models for high speed results, or the (recommended) Auto setting to choose the best model for your tasks. Note: The command (and the flag) does not override the model used by sub agents. Consequently, even when using the flag you may see other models used in your model usage reports. How to use the command Use the following command in TerminaI: Running this command will open a dialog with your options: Option Description Models Auto (Gemini 3) Let the system choose the best Gemini 3 model for your task. gemini 3 pro preview (if enabled), gemini 3 flash preview (if enabled) Auto (Gemini 2.5) Let the system choose the best Gemini 2.5 model for your task. gemini 2.5 pro, gemini 2.5 flash Manual Select a specific model. Any available model. We recommend selecting one of th..."
+  },
+  {
+    "slug": "docs/cli/sandbox",
+    "title": "Sandboxing in the TerminaI",
+    "section": "CLI",
+    "description": "Sandboxing in the TerminaI This document provides a guide to sandboxing in the TerminaI, including prerequisites, quickstart, and configuration. Prerequisites Before using sandboxi...",
+    "content": "Sandboxing in the TerminaI This document provides a guide to sandboxing in the TerminaI, including prerequisites, quickstart, and configuration. Prerequisites Before using sandboxing, you need to install and set up the TerminaI: Terminal window To verify the installation Terminal window Overview of sandboxing Sandboxing isolates potentially dangerous operations (such as shell commands or file modifications) from your host system, providing a security barrier between AI operations and your environment. The benefits of sandboxing include: Security : Prevent accidental system damage or data loss. Isolation : Limit file system access to project directory. Consistency : Ensure reproducible environments across different systems. Safety : Reduce risk when working with untrusted code or experimental commands. Sandboxing methods Your ideal method of sandboxing may differ depending on your platform and your preferred container solution. 1\\. macOS Seatbelt (macOS only) Lightweight, built in sandb..."
+  },
+  {
+    "slug": "docs/cli/session-management",
+    "title": "Session Management",
+    "section": "CLI",
+    "description": "Session Management TerminaI includes robust session management features that automatically save your conversation history. This allows you to interrupt your work and resume exactly...",
+    "content": "Session Management TerminaI includes robust session management features that automatically save your conversation history. This allows you to interrupt your work and resume exactly where you left off, review past interactions, and manage your conversation history effectively. Automatic Saving Every time you interact with TerminaI, your session is automatically saved. This happens in the background without any manual intervention. What is saved: The complete conversation history, including: Your prompts and the model’s responses. All tool executions (inputs and outputs). Token usage statistics (input/output/cached, etc.). Assistant thoughts/reasoning summaries (when available). Location: Sessions are stored in . Scope: Sessions are project specific. Switching directories to a different project will switch to that project’s session history. Resuming Sessions You can resume a previous session to continue the conversation with all prior context restored. From the Command Line When starting..."
+  },
+  {
+    "slug": "docs/cli/settings",
+    "title": "TerminaI settings (`/settings` command)",
+    "section": "CLI",
+    "description": "TerminaI settings (\\ command) Control your TerminaI experience with the command. The command opens a dialog to view and edit all your TerminaI settings, including your UI experienc...",
+    "content": "TerminaI settings (\\ command) Control your TerminaI experience with the command. The command opens a dialog to view and edit all your TerminaI settings, including your UI experience, keybindings, and accessibility features. Your TerminaI settings are stored in a file. In addition to using the command, you can also edit them in one of the following locations: User settings : Workspace settings : Note: Workspace settings override user settings. Settings reference Here is a list of all the available settings, grouped by category and ordered as they appear in the UI. General UI Label Setting Description Default Preview Features (e.g., models) Enable preview features (e.g., preview models). Vim Mode Enable Vim keybindings. Disable Auto Update Disable automatic updates. Enable Prompt Completion Enable AI powered prompt completion suggestions while typing. Debug Keystroke Logging Enable debug logging of keystrokes to the console. Session Retention Settings for automatic session cleanup. This..."
+  },
+  {
+    "slug": "docs/cli/telemetry",
+    "title": "Observability with OpenTelemetry",
+    "section": "CLI",
+    "description": "Observability with OpenTelemetry Learn how to enable and setup OpenTelemetry for TerminaI. Key benefits 🔍 Usage analytics : Understand interaction patterns and feature adoption ac...",
+    "content": "Observability with OpenTelemetry Learn how to enable and setup OpenTelemetry for TerminaI. Key benefits 🔍 Usage analytics : Understand interaction patterns and feature adoption across your team ⚡ Performance monitoring : Track response times, token consumption, and resource utilization 🐛 Real time debugging : Identify bottlenecks, failures, and error patterns as they occur 📊 Workflow optimization : Make informed decisions to improve configurations and processes 🏢 Enterprise governance : Monitor usage across teams, track costs, ensure compliance, and integrate with existing monitoring infrastructure OpenTelemetry integration Built on — the vendor neutral, industry standard observability framework — TerminaI’s observability system provides: Universal compatibility : Export to any OpenTelemetry backend (Google Cloud, Jaeger, Prometheus, Datadog, etc.) Standardized data : Use consistent formats and collection methods across your toolchain Future proof integration : Connect with existin..."
+  },
+  {
+    "slug": "docs/cli/themes",
+    "title": "Themes",
+    "section": "CLI",
+    "description": "Themes TerminaI supports a variety of themes to customize its color scheme and appearance. You can change the theme to suit your preferences via the command or configuration settin...",
+    "content": "Themes TerminaI supports a variety of themes to customize its color scheme and appearance. You can change the theme to suit your preferences via the command or configuration setting. Available themes TerminaI comes with a selection of pre defined themes, which you can list using the command within TerminaI: Dark themes: Light themes: Changing themes 1. Enter into TerminaI. 2. A dialog or selection prompt appears, listing the available themes. 3. Using the arrow keys, select a theme. Some interfaces might offer a live preview or highlight as you select. 4. Confirm your selection to apply the theme. Note: If a theme is defined in your file (either by name or by a file path), you must remove the setting from the file before you can change the theme using the command. Theme persistence Selected themes are saved in TerminaI’s so your preference is remembered across sessions. Custom color themes TerminaI allows you to create your own custom color themes by specifying them in your file. This..."
+  },
+  {
+    "slug": "docs/cli/token-caching",
+    "title": "Token caching and cost optimization",
+    "section": "CLI",
+    "description": "Token caching and cost optimization TerminaI automatically optimizes API costs through token caching when using API key authentication (Gemini API key or Vertex AI). This feature r...",
+    "content": "Token caching and cost optimization TerminaI automatically optimizes API costs through token caching when using API key authentication (Gemini API key or Vertex AI). This feature reuses previous system instructions and context to reduce the number of tokens processed in subsequent requests. Token caching is available for: API key users (Gemini API key) Vertex AI users (with project and location setup) Token caching is not available for: OAuth users (Google Personal/Enterprise accounts) the Code Assist API does not support cached content creation at this time You can view your token usage and cached token savings using the command. When cached tokens are available, they will be displayed in the stats output."
+  },
+  {
+    "slug": "docs/cli/trusted-folders",
+    "title": "Trusted Folders",
+    "section": "CLI",
+    "description": "Trusted Folders The Trusted Folders feature is a security setting that gives you control over which projects can use the full capabilities of the TerminaI. It prevents potentially...",
+    "content": "Trusted Folders The Trusted Folders feature is a security setting that gives you control over which projects can use the full capabilities of the TerminaI. It prevents potentially malicious code from running by asking you to approve a folder before the CLI loads any project specific configurations from it. Enabling the feature The Trusted Folders feature is disabled by default . To use it, you must first enable it in your settings. Add the following to your user file: How it works: The trust dialog Once the feature is enabled, the first time you run the TerminaI from a folder, a dialog will automatically appear, prompting you to make a choice: Trust folder : Grants full trust to the current folder (e.g., ). Trust parent folder : Grants trust to the parent directory (e.g., ), which automatically trusts all of its subdirectories as well. This is useful if you keep all your safe projects in one place. Don’t trust : Marks the folder as untrusted. The CLI will operate in a restricted “safe..."
+  },
+  {
+    "slug": "docs/cli/tutorials",
+    "title": "Tutorials",
+    "section": "CLI",
+    "description": "Tutorials This page contains tutorials for interacting with TerminaI. Setting up a Model Context Protocol (MCP) server \\[!CAUTION\\] Before using a third party MCP server, ensure yo...",
+    "content": "Tutorials This page contains tutorials for interacting with TerminaI. Setting up a Model Context Protocol (MCP) server \\[!CAUTION\\] Before using a third party MCP server, ensure you trust its source and understand the tools it provides. Your use of third party servers is at your own risk. This tutorial demonstrates how to set up an MCP server, using the as an example. The GitHub MCP server provides tools for interacting with GitHub repositories, such as creating issues and commenting on pull requests. Prerequisites Before you begin, ensure you have the following installed and configured: Docker: Install and run . GitHub Personal Access Token (PAT): Create a new or PAT with the necessary scopes. Guide Configure the MCP server in In your project’s root directory, create or open the . Within the file, add the configuration block, which provides instructions for how to launch the GitHub MCP server. Set your GitHub token \\[!CAUTION\\] Using a broadly scoped personal access token that has acc..."
+  },
+  {
+    "slug": "docs/cli/uninstall",
+    "title": "Uninstalling the CLI",
+    "section": "CLI",
+    "description": "Uninstalling the CLI Your uninstall method depends on how you ran the CLI. Follow the instructions for either npx or a global npm installation. Method 1: Using npx npx runs package...",
+    "content": "Uninstalling the CLI Your uninstall method depends on how you ran the CLI. Follow the instructions for either npx or a global npm installation. Method 1: Using npx npx runs packages from a temporary cache without a permanent installation. To “uninstall” the CLI, you must clear this cache, which will remove terminai and any other packages previously executed with npx. The npx cache is a directory named inside your main npm cache folder. You can find your npm cache path by running . For macOS / Linux Terminal window For Windows Command Prompt Terminal window PowerShell Terminal window Method 2: Using npm (global install) If you installed the CLI globally (e.g., ), use the command with the flag to remove it. Terminal window This command completely removes the package from your system."
+  },
+  {
+    "slug": "docs/cli/system-prompt",
+    "title": "System Prompt Override (GEMINI_SYSTEM_MD)",
+    "section": "CLI",
+    "description": "System Prompt Override (GEMINI\\ SYSTEM\\ MD) The core system instructions that guide TerminaI can be completely replaced with your own Markdown file. This feature is controlled via...",
+    "content": "System Prompt Override (GEMINI\\ SYSTEM\\ MD) The core system instructions that guide TerminaI can be completely replaced with your own Markdown file. This feature is controlled via the environment variable. Overview The variable instructs the CLI to use an external Markdown file for its system prompt, completely overriding the built in default. This is a full replacement, not a merge. If you use a custom file, none of the original core instructions will apply unless you include them yourself. This feature is intended for advanced users who need to enforce strict, project specific behavior or create a customized persona. Tip: You can export the current default system prompt to a file first, review it, and then selectively modify or replace it (see ). How to enable You can set the environment variable temporarily in your shell, or persist it via a file. See . Use the project default path ( ): or The CLI reads (relative to your current project directory). Use a custom file path: Relative p..."
+  },
+  {
+    "slug": "docs/reference/developer-api",
+    "title": "Developer API Reference (high-level)",
+    "section": "Reference",
+    "description": "TerminaI documentation for Developer API Reference (high-level)",
+    "content": "Developer API Reference (high level) TerminaI is a monorepo. “API” here means the surfaces other developers integrate with. 1) CLI surface Binary: Entry: 2) A2A server surface Package: HTTP routes: Auth logic: See also: . 3) MCP surface MCP client/tooling lives in core. Extension config lives in CLI settings. Docs: (MCP tutorial) 4) Safety / policy surface Approval ladder: Policy engine: 5) Desktop (PTY) surface Desktop app: Tauri PTY bridge:"
+  },
+  {
+    "slug": "docs/concepts/why-terminai",
+    "title": "Why the Gemini CLI core?",
+    "section": "Reference",
+    "description": "TerminaI documentation for Why the Gemini CLI core?",
+    "content": "Why the Gemini CLI core? TerminaI is building “governed autonomy” on top of a proven, test heavy upstream engine. The short version We reuse the Gemini CLI core today because it already provides: a working interactive CLI and tool scheduler extensive tests and battle tested edge handling a model integration layer that can evolve independently This lets TerminaI focus on the differentiators: system operator UX PTY execution (real TUIs) approvals/policy auditability A2A + MCP integration What TerminaI is not doing (yet) ripping out the upstream engine forcing a breaking provider abstraction We prefer alias & append : keep compatibility, ship identity and capabilities."
+  },
+  {
+    "slug": "docs/core",
+    "title": "TerminaI core",
+    "section": "Core",
+    "description": "TerminaI core TerminaI’s core package ( ) is the backend portion of TerminaI, handling communication with the Gemini API, managing tools, and processing requests sent from . For a...",
+    "content": "TerminaI core TerminaI’s core package ( ) is the backend portion of TerminaI, handling communication with the Gemini API, managing tools, and processing requests sent from . For a general overview of TerminaI, see the . Navigating this section : Information on how tools are defined, registered, and used by the core. : Documentation for the modular GEMINI.md import feature using @file.md syntax. : Use the Policy Engine for fine grained control over tool execution. Role of the core While the portion of TerminaI provides the user interface, is responsible for: Gemini API interaction: Securely communicating with the Google Gemini API, sending user prompts, and receiving model responses. Prompt engineering: Constructing effective prompts for the Gemini model, potentially incorporating conversation history, tool definitions, and instructional context from files. Tool management & orchestration: Registering available tools (e.g., file system tools, shell command execution). Interpreting tool..."
+  },
+  {
+    "slug": "docs/core/tools-api",
+    "title": "TerminaI core: Tools API",
+    "section": "Core",
+    "description": "TerminaI core: Tools API The TerminaI core ( ) features a robust system for defining, registering, and executing tools. These tools extend the capabilities of the Gemini model, all...",
+    "content": "TerminaI core: Tools API The TerminaI core ( ) features a robust system for defining, registering, and executing tools. These tools extend the capabilities of the Gemini model, allowing it to interact with the local environment, fetch web content, and perform various actions beyond simple text generation. Core concepts Tool ( ): An interface and base class ( ) that defines the contract for all tools. Each tool must have: : A unique internal name (used in API calls to Gemini). : A user friendly name. : A clear explanation of what the tool does, which is provided to the Gemini model. : A JSON schema defining the parameters that the tool accepts. This is crucial for the Gemini model to understand how to call the tool correctly. : A method to validate incoming parameters. : A method to provide a human readable description of what the tool will do with specific parameters before execution. : A method to determine if user confirmation is required before execution (e.g., for potentially destr..."
+  },
+  {
+    "slug": "docs/core/memport",
+    "title": "Memory Import Processor",
+    "section": "Core",
+    "description": "Memory Import Processor The Memory Import Processor is a feature that allows you to modularize your GEMINI.md files by importing content from other files using the syntax. Overview...",
+    "content": "Memory Import Processor The Memory Import Processor is a feature that allows you to modularize your GEMINI.md files by importing content from other files using the syntax. Overview This feature enables you to break down large GEMINI.md files into smaller, more manageable components that can be reused across different contexts. The import processor supports both relative and absolute paths, with built in safety features to prevent circular imports and ensure file access security. Syntax Use the symbol followed by the path to the file you want to import: Supported path formats Relative paths Import from the same directory Import from parent directory Import from subdirectory Absolute paths Import using absolute path Examples Basic import Nested imports The imported files can themselves contain imports, creating a nested structure: main.md header.md Safety features Circular import detection The processor automatically detects and prevents circular imports: file a.md File access security T..."
+  },
+  {
+    "slug": "docs/core/policy-engine",
+    "title": "Policy engine",
+    "section": "Core",
+    "description": "Policy engine The TerminaI includes a powerful policy engine that provides fine grained control over tool execution. It allows users and administrators to define rules that determi...",
+    "content": "Policy engine The TerminaI includes a powerful policy engine that provides fine grained control over tool execution. It allows users and administrators to define rules that determine whether a tool call should be allowed, denied, or require user confirmation. Quick start To create your first policy: 1. Create the policy directory if it doesn’t exist: Terminal window 2. Create a new policy file (e.g., ). You can use any filename ending in ; all such files in this directory will be loaded and combined: 3. Run a command that triggers the policy (e.g., ask TerminaI to ). The tool will now execute automatically without prompting for confirmation. Core concepts The policy engine operates on a set of rules. Each rule is a combination of conditions and a resulting decision. When a large language model wants to execute a tool, the policy engine evaluates all rules to find the highest priority rule that matches the tool call. A rule consists of the following main components: Conditions : Criteri..."
+  },
+  {
+    "slug": "docs/tools",
+    "title": "TerminaI tools",
+    "section": "Tools",
+    "description": "TerminaI tools The TerminaI includes built in tools that the Gemini model uses to interact with your local environment, access information, and perform actions. These tools enhance...",
+    "content": "TerminaI tools The TerminaI includes built in tools that the Gemini model uses to interact with your local environment, access information, and perform actions. These tools enhance the CLI’s capabilities, enabling it to go beyond text generation and assist with a wide range of tasks. Overview of TerminaI tools In the context of the TerminaI, tools are specific functions or modules that the Gemini model can request to be executed. For example, if you ask Gemini to “Summarize the contents of ,” the model will likely identify the need to read that file and will request the execution of the tool. The core component ( ) manages these tools, presents their definitions (schemas) to the Gemini model, executes them when requested, and returns the results to the model for further processing into a user facing response. These tools provide the following capabilities: Access local information: Tools allow Gemini to access your local file system, read file contents, list directories, etc. Execute c..."
+  },
+  {
+    "slug": "docs/tools/file-system",
+    "title": "TerminaI file system tools",
+    "section": "Tools",
+    "description": "TerminaI file system tools The TerminaI provides a comprehensive suite of tools for interacting with the local file system. These tools allow the Gemini model to read from, write t...",
+    "content": "TerminaI file system tools The TerminaI provides a comprehensive suite of tools for interacting with the local file system. These tools allow the Gemini model to read from, write to, list, search, and modify files and directories, all under your control and typically with confirmation for sensitive operations. Note: All file system tools operate within a (usually the current working directory where you launched the CLI) for security. Paths that you provide to these tools are generally expected to be absolute or are resolved relative to this root directory. 1\\. (ReadFolder) lists the names of files and subdirectories directly within a specified directory path. It can optionally ignore entries matching provided glob patterns. Tool name: Display name: ReadFolder File: Parameters: (string, required): The absolute path to the directory to list. (array of strings, optional): A list of glob patterns to exclude from the listing (e.g., ). (boolean, optional): Whether to respect patterns when li..."
+  },
+  {
+    "slug": "docs/tools/shell",
+    "title": "Shell tool (`run_shell_command`)",
+    "section": "Tools",
+    "description": "Shell tool (\\ ) This document describes the tool for the TerminaI. Description Use to interact with the underlying system, run scripts, or perform command line operations. executes...",
+    "content": "Shell tool (\\ ) This document describes the tool for the TerminaI. Description Use to interact with the underlying system, run scripts, or perform command line operations. executes a given shell command, including interactive commands that require user input (e.g., , ) if the setting is set to . On Windows, commands are executed with (unless you explicitly point at another shell). On other platforms, they are executed with . Arguments takes the following arguments: (string, required): The exact shell command to execute. (string, optional): A brief description of the command’s purpose, which will be shown to the user. (string, optional): The directory (relative to the project root) in which to execute the command. If not provided, the command runs in the project root. How to use with the TerminaI When using , the command is executed as a subprocess. can start background processes using . The tool returns detailed information about the execution, including: : The command that was execute..."
+  },
+  {
+    "slug": "docs/tools/web-fetch",
+    "title": "Web fetch tool (`web_fetch`)",
+    "section": "Tools",
+    "description": "Web fetch tool (\\ ) This document describes the tool for the TerminaI. Description Use to summarize, compare, or extract information from web pages. The tool processes content from...",
+    "content": "Web fetch tool (\\ ) This document describes the tool for the TerminaI. Description Use to summarize, compare, or extract information from web pages. The tool processes content from one or more URLs (up to 20) embedded in a prompt. takes a natural language prompt and returns a generated response. Arguments takes one argument: (string, required): A comprehensive prompt that includes the URL(s) (up to 20) to fetch and specific instructions on how to process their content. For example: . The prompt must contain at least one URL starting with or . How to use with the TerminaI To use with the TerminaI, provide a natural language prompt that contains URLs. The tool will ask for confirmation before fetching any URLs. Once confirmed, the tool will process URLs through Gemini API’s . If the Gemini API cannot access the URL, the tool will fall back to fetching content directly from the local machine. The tool will format the response, including source attribution and citations where possible. The..."
+  },
+  {
+    "slug": "docs/tools/web-search",
+    "title": "Web search tool (`google_web_search`)",
+    "section": "Tools",
+    "description": "Web search tool (\\ ) This document describes the tool. Description Use to perform a web search using Google Search via the Gemini API. The tool returns a summary of web results wit...",
+    "content": "Web search tool (\\ ) This document describes the tool. Description Use to perform a web search using Google Search via the Gemini API. The tool returns a summary of web results with sources. Arguments takes one argument: (string, required): The search query. How to use with the TerminaI The tool sends a query to the Gemini API, which then performs a web search. will return a generated response based on the search results, including citations and sources. Usage: examples Get information on a topic: Important notes Response returned: The tool returns a processed summary, not a raw list of search results. Citations: The response includes citations to the sources used to generate the summary."
+  },
+  {
+    "slug": "docs/tools/memory",
+    "title": "Memory tool (`save_memory`)",
+    "section": "Tools",
+    "description": "Memory tool (\\ ) This document describes the tool for the TerminaI. Description Use to save and recall information across your TerminaI sessions. With , you can direct the CLI to r...",
+    "content": "Memory tool (\\ ) This document describes the tool for the TerminaI. Description Use to save and recall information across your TerminaI sessions. With , you can direct the CLI to remember key details across sessions, providing personalized and directed assistance. Arguments takes one argument: (string, required): The specific fact or piece of information to remember. This should be a clear, self contained statement written in natural language. How to use with the TerminaI The tool appends the provided to a special file located in the user’s home directory ( ). This file can be configured to have a different name. Once added, the facts are stored under a section. This file is loaded as context in subsequent sessions, allowing the CLI to recall the saved information. Usage: examples Remember a user preference: Store a project specific detail: Important notes General usage: This tool should be used for concise, important facts. It is not intended for storing large amounts of data or conve..."
+  },
+  {
+    "slug": "docs/tools/todos",
+    "title": "Todo tool (`write_todos`)",
+    "section": "Tools",
+    "description": "Todo tool (\\ ) This document describes the tool for the TerminaI. Description The tool allows the Gemini agent to create and manage a list of subtasks for complex user requests. Th...",
+    "content": "Todo tool (\\ ) This document describes the tool for the TerminaI. Description The tool allows the Gemini agent to create and manage a list of subtasks for complex user requests. This provides you, the user, with greater visibility into the agent’s plan and its current progress. It also helps with alignment where the agent is less likely to lose track of its current goal. Arguments takes one argument: (array of objects, required): The complete list of todo items. This replaces the existing list. Each item includes: (string): The task description. (string): The current status ( , , , or ). Behavior The agent uses this tool to break down complex multi step requests into a clear plan. Progress tracking: The agent updates this list as it works, marking tasks as when done. Single focus: Only one task will be marked at a time, indicating exactly what the agent is currently working on. Dynamic updates: The plan may evolve as the agent discovers new information, leading to new tasks being added..."
+  },
+  {
+    "slug": "docs/tools/mcp-server",
+    "title": "MCP servers with the TerminaI",
+    "section": "Tools",
+    "description": "MCP servers with the TerminaI This document provides a guide to configuring and using Model Context Protocol (MCP) servers with the TerminaI. What is an MCP server? An MCP server i...",
+    "content": "MCP servers with the TerminaI This document provides a guide to configuring and using Model Context Protocol (MCP) servers with the TerminaI. What is an MCP server? An MCP server is an application that exposes tools and resources to the TerminaI through the Model Context Protocol, allowing it to interact with external systems and data sources. MCP servers act as a bridge between the Gemini model and your local environment or other services like APIs. An MCP server enables the TerminaI to: Discover tools: List available tools, their descriptions, and parameters through standardized schema definitions. Execute tools: Call specific tools with defined arguments and receive structured responses. Access resources: Read data from specific resources that the server exposes (files, API payloads, reports, etc.). With an MCP server, you can extend the TerminaI’s capabilities to perform actions beyond its built in features, such as interacting with databases, APIs, custom scripts, or specialized w..."
+  },
+  {
+    "slug": "docs/extensions",
+    "title": "TerminaI extensions",
+    "section": "Extensions",
+    "description": "TerminaI extensions This documentation is up to date with the v0.4.0 release. TerminaI extensions package prompts, MCP servers, and custom commands into a familiar and user friendl...",
+    "content": "TerminaI extensions This documentation is up to date with the v0.4.0 release. TerminaI extensions package prompts, MCP servers, and custom commands into a familiar and user friendly format. With extensions, you can expand the capabilities of TerminaI and share those capabilities with others. They are designed to be easily installable and shareable. To see examples of extensions, you can browse a gallery of . See for a guide on creating your first extension. See for an advanced guide on setting up GitHub releases. Extension management We offer a suite of extension management tools using commands. Note that these commands are not supported from within the CLI, although you can list installed extensions using the subcommand. Note that all of these commands will only be reflected in active CLI sessions on restart. Installing an extension You can install an extension using with either a GitHub URL or a local path. Note that we create a copy of the installed extension, so you will need to ru..."
+  },
+  {
+    "slug": "docs/extensions/getting-started-extensions",
+    "title": "Getting started with TerminaI extensions",
+    "section": "Extensions",
+    "description": "Getting started with TerminaI extensions This guide will walk you through creating your first TerminaI extension. You’ll learn how to set up a new extension, add a custom tool via...",
+    "content": "Getting started with TerminaI extensions This guide will walk you through creating your first TerminaI extension. You’ll learn how to set up a new extension, add a custom tool via an MCP server, create a custom command, and provide context to the model with a file. Prerequisites Before you start, make sure you have the TerminaI installed and a basic understanding of Node.js and TypeScript. Step 1: Create a new extension The easiest way to start is by using one of the built in templates. We’ll use the example as our foundation. Run the following command to create a new directory called with the template files: Terminal window This will create a new directory with the following structure: Step 2: Understand the extension files Let’s look at the key files in your new extension. This is the manifest file for your extension. It tells TerminaI how to load and use your extension. : The unique name for your extension. : The version of your extension. : This section defines one or more Model Co..."
+  },
+  {
+    "slug": "docs/extensions/extension-releasing",
+    "title": "Extension releasing",
+    "section": "Extensions",
+    "description": "Extension releasing There are two primary ways of releasing extensions to users: Git repository releases tend to be the simplest and most flexible approach, while GitHub releases c...",
+    "content": "Extension releasing There are two primary ways of releasing extensions to users: Git repository releases tend to be the simplest and most flexible approach, while GitHub releases can be more efficient on initial install as they are shipped as single archives instead of requiring a git clone which downloads each file individually. Github releases may also contain platform specific archives if you need to ship platform specific binary files. Releasing through a git repository This is the most flexible and simple option. All you need to do is create a publicly accessible git repo (such as a public github repository) and then users can install your extension using . They can optionally depend on a specific ref (branch/tag/commit) using the argument, this defaults to the default branch. Whenever commits are pushed to the ref that a user depends on, they will be prompted to update the extension. Note that this also allows for easy rollbacks, the HEAD commit is always treated as the latest ve..."
+  },
+  {
+    "slug": "docs/hooks",
+    "title": "TerminaI hooks",
+    "section": "Hooks",
+    "description": "TerminaI hooks Hooks are scripts or programs that TerminaI executes at specific points in the agentic loop, allowing you to intercept and customize behavior without modifying the C...",
+    "content": "TerminaI hooks Hooks are scripts or programs that TerminaI executes at specific points in the agentic loop, allowing you to intercept and customize behavior without modifying the CLI’s source code. See for a tutorial on creating your first hook and a comprehensive example. See for the technical specification of the I/O schemas. See for guidelines on security, performance, and debugging. What are hooks? With hooks, you can: Add context: Inject relevant information before the model processes a request Validate actions: Review and block potentially dangerous operations Enforce policies: Implement security and compliance requirements Log interactions: Track tool usage and model responses Optimize behavior: Dynamically adjust tool selection or model parameters Hooks run synchronously as part of the agent loop—when a hook event fires, TerminaI waits for all matching hooks to complete before continuing. Core concepts Hook events Hooks are triggered by specific events in TerminaI’s lifecycle...."
+  },
+  {
+    "slug": "docs/hooks/writing-hooks",
+    "title": "Writing hooks for TerminaI",
+    "section": "Hooks",
+    "description": "Writing hooks for TerminaI This guide will walk you through creating hooks for TerminaI, from a simple logging hook to a comprehensive workflow assistant that demonstrates all hook...",
+    "content": "Writing hooks for TerminaI This guide will walk you through creating hooks for TerminaI, from a simple logging hook to a comprehensive workflow assistant that demonstrates all hook events working together. Prerequisites Before you start, make sure you have: TerminaI installed and configured Basic understanding of shell scripting or JavaScript/Node.js Familiarity with JSON for hook input/output Quick start Let’s create a simple hook that logs all tool executions to understand the basics. Step 1: Create your hook script Create a directory for hooks and a simple logging script: Step 2: Configure the hook Add the hook configuration to : Step 3: Test your hook Run TerminaI and execute any command that uses tools: Check to see the logged tool executions. Practical examples Security: Block secrets in commits Prevent committing files containing API keys or passwords. : : Auto testing after code changes Automatically run tests when code files are modified. : : Dynamic context injection Add rele..."
+  },
+  {
+    "slug": "docs/hooks/reference",
+    "title": "Hooks Reference",
+    "section": "Hooks",
+    "description": "Hooks Reference This document provides the technical specification for TerminaI hooks, including the JSON schemas for input and output, exit code behaviors, and the stable model AP...",
+    "content": "Hooks Reference This document provides the technical specification for TerminaI hooks, including the JSON schemas for input and output, exit code behaviors, and the stable model API. Communication Protocol Hooks communicate with TerminaI via standard streams and exit codes: Input : TerminaI sends a JSON object to the hook’s . Output : The hook sends a JSON object (or plain text) to . Exit Codes : Used to signal success or blocking errors. Exit Code Behavior Exit Code Meaning Behavior Success is parsed as JSON. If parsing fails, it’s treated as a . Blocking Error Interrupts the current operation. is shown to the agent (for tool events) or the user. Other Warning Execution continues. is logged as a non blocking warning. Input Schema ( ) Every hook receives a base JSON object. Extra fields are added depending on the specific event. Base Fields (All Events) Field Type Description Unique identifier for the current CLI session. Path to the session’s JSON transcript (if available). The curren..."
+  },
+  {
+    "slug": "docs/hooks/best-practices",
+    "title": "Hooks on TerminaI: Best practices",
+    "section": "Hooks",
+    "description": "Hooks on TerminaI: Best practices This guide covers security considerations, performance optimization, debugging techniques, and privacy considerations for developing and deploying...",
+    "content": "Hooks on TerminaI: Best practices This guide covers security considerations, performance optimization, debugging techniques, and privacy considerations for developing and deploying hooks in TerminaI. Security considerations Validate all inputs Never trust data from hooks without validation. Hook inputs may contain user provided data that could be malicious: Use timeouts Set reasonable timeouts to prevent hooks from hanging indefinitely: Recommended timeouts: Fast validation: 1000 5000ms Network requests: 10000 30000ms Heavy computation: 30000 60000ms Limit permissions Run hooks with minimal required permissions: Scan for secrets Use hooks to prevent committing sensitive data: Review external scripts Always review hook scripts from untrusted sources before enabling them: Terminal window Sandbox untrusted hooks For maximum security, consider running untrusted hooks in isolated environments: Terminal window Performance Keep hooks fast Hooks run synchronously—slow hooks delay the agent loo..."
+  },
+  {
+    "slug": "docs/ide-integration",
+    "title": "IDE integration",
+    "section": "IDE Integration",
+    "description": "IDE integration TerminaI can integrate with your IDE to provide a more seamless and context aware experience. This integration allows the CLI to understand your workspace better an...",
+    "content": "IDE integration TerminaI can integrate with your IDE to provide a more seamless and context aware experience. This integration allows the CLI to understand your workspace better and enables powerful features like native in editor diffing. Currently, the supported IDEs are , , and other editors that support VS Code extensions. To build support for other editors, see the . Features Workspace context: The CLI automatically gains awareness of your workspace to provide more relevant and accurate responses. This context includes: The 10 most recently accessed files in your workspace. Your active cursor position. Any text you have selected (up to a 16KB limit; longer selections will be truncated). Native diffing: When Gemini suggests code modifications, you can view the changes directly within your IDE’s native diff viewer. This allows you to review, edit, and accept or reject the suggested changes seamlessly. VS Code commands: You can access TerminaI features directly from the VS Code Comman..."
+  },
+  {
+    "slug": "docs/ide-integration/ide-companion-spec",
+    "title": "TerminaI companion plugin: Interface specification",
+    "section": "IDE Integration",
+    "description": "TerminaI companion plugin: Interface specification Last Updated: September 15, 2025 This document defines the contract for building a companion plugin to enable TerminaI’s IDE mode...",
+    "content": "TerminaI companion plugin: Interface specification Last Updated: September 15, 2025 This document defines the contract for building a companion plugin to enable TerminaI’s IDE mode. For VS Code, these features (native diffing, context awareness) are provided by the official extension ( ). This specification is for contributors who wish to bring similar functionality to other editors like JetBrains IDEs, Sublime Text, etc. I. The communication interface TerminaI and the IDE plugin communicate through a local communication channel. 1\\. Transport layer: MCP over HTTP The plugin MUST run a local HTTP server that implements the Model Context Protocol (MCP) . Protocol: The server must be a valid MCP server. We recommend using an existing MCP SDK for your language of choice if available. Endpoint: The server should expose a single endpoint (e.g., ) for all MCP communication. Port: The server MUST listen on a dynamically assigned port (i.e., listen on port ). 2\\. Discovery mechanism: The port..."
+  },
+  {
+    "slug": "docs/npm",
+    "title": "Package overview",
+    "section": "Development",
+    "description": "Package overview This monorepo contains two main packages: and . This is the main package for the TerminaI. It is responsible for the user interface, command parsing, and all other...",
+    "content": "Package overview This monorepo contains two main packages: and . This is the main package for the TerminaI. It is responsible for the user interface, command parsing, and all other user facing functionality. When this package is published, it is bundled into a single executable file. This bundle includes all of the package’s dependencies, including . This means that whether a user installs the package with or runs it directly with , they are using this single, self contained executable. This package contains the core logic for interacting with the Gemini API. It is responsible for making API requests, handling authentication, and managing the local cache. This package is not bundled. When it is published, it is published as a standard Node.js package with its own dependencies. This allows it to be used as a standalone package in other projects, if needed. All transpiled js code in the folder is included in the package. NPM workspaces This project uses to manage the packages within this..."
+  },
+  {
+    "slug": "docs/releases",
+    "title": "TerminaI releases",
+    "section": "Development",
+    "description": "TerminaI releases vs environment Our release flows support both and environments. The environment pushes to a private Github hosted NPM repository, with the package names beginning...",
+    "content": "TerminaI releases vs environment Our release flows support both and environments. The environment pushes to a private Github hosted NPM repository, with the package names beginning with instead of . The environment pushes to the public global NPM registry via Wombat Dressing Room, which is Google’s system for managing NPM packages in the namespace. The packages are all named . More information can be found about these systems in the Package scopes Package (Wombat Dressing Room) (Github Private NPM Repo) CLI @google/terminai @google gemini/terminai Core @google/terminai core @google gemini/terminai core A2A Server A2A Server @google/terminai a2a server @google gemini/terminai a2a server Release cadence and tags We will follow as closely as possible but will call out when or if we have to deviate from it. Our weekly releases will be minor version increments and any bug or hotfixes between releases will go out as patch versions on the most recent release. Each Tuesday 2000 UTC new Stable..."
+  },
+  {
+    "slug": "docs/integration-tests",
+    "title": "Integration tests",
+    "section": "Development",
+    "description": "Integration tests This document provides information about the integration testing framework used in this project. Overview The integration tests are designed to validate the end t...",
+    "content": "Integration tests This document provides information about the integration testing framework used in this project. Overview The integration tests are designed to validate the end to end functionality of the TerminaI. They execute the built binary in a controlled environment and verify that it behaves as expected when interacting with the file system. These tests are located in the directory and are run using a custom test runner. Building the tests Prior to running any integration tests, you need to create a release bundle that you want to actually test: Terminal window You must re run this command after making any changes to the CLI source code, but not after making changes to tests. Running the tests The integration tests are not run as part of the default command. They must be run explicitly using the script. The integration tests can also be run using the following shortcut: Terminal window Running a specific set of tests To run a subset of test files, you can use where is either o..."
+  },
+  {
+    "slug": "docs/issue-and-pr-automation",
+    "title": "Automation and triage processes",
+    "section": "Development",
+    "description": "Automation and triage processes This document provides a detailed overview of the automated processes we use to manage and triage issues and pull requests. Our goal is to provide p...",
+    "content": "Automation and triage processes This document provides a detailed overview of the automated processes we use to manage and triage issues and pull requests. Our goal is to provide prompt feedback and ensure that contributions are reviewed and integrated efficiently. Understanding this automation will help you as a contributor know what to expect and how to best interact with our repository bots. Guiding principle: Issues and pull requests First and foremost, almost every Pull Request (PR) should be linked to a corresponding Issue. The issue describes the “what” and the “why” (the bug or feature), while the PR is the “how” (the implementation). This separation helps us track work, prioritize features, and maintain clear historical context. Our automation is built around this principle. Note: Issues tagged as “🔒Maintainers only” are reserved for project maintainers. We will not accept pull requests related to these issues. Detailed automation workflows Here is a breakdown of the specific..."
+  },
+  {
+    "slug": "docs/changelogs",
+    "title": "TerminaI release notes",
+    "section": "Release Notes",
+    "description": "TerminaI release notes TerminaI has three major release channels: nightly, preview, and stable. For most users, we recommend the stable release. On this page, you can find informat...",
+    "content": "TerminaI release notes TerminaI has three major release channels: nightly, preview, and stable. For most users, we recommend the stable release. On this page, you can find information regarding the current releases and announcements from each release. For the full changelog, refer to on GitHub. Current releases Release channel Notes Nightly Nightly release with the most recent changes. Experimental features ready for early feedback. Stable, recommended for general use. Announcements: v0.21.0 2025 12 15 ⚡️⚡️⚡️ Gemini 3 Flash + TerminaI: Better, faster and cheaper than 2.5 Pro and in some scenarios better than 3 Pro! For paid tiers + free tier users who were on the wait list enable Preview Features in For more information: . 🎉 TerminaI Extensions: Rill: Utilize natural language to analyze Rill data, enabling the exploration of metrics and trends without the need for manual queries. Browserbase: Interact with web pages, take screenshots, extract information, and perform automated actions..."
+  },
+  {
+    "slug": "docs/changelogs/latest",
+    "title": "Latest stable release: v0.21.0 - v0.21.1",
+    "section": "Release Notes",
+    "description": "Latest stable release: v0.21.0 v0.21.1 Released: December 16, 2025 For most users, our latest stable release is the recommended release. Install the latest stable version with: Hig...",
+    "content": "Latest stable release: v0.21.0 v0.21.1 Released: December 16, 2025 For most users, our latest stable release is the recommended release. Install the latest stable version with: Highlights ⚡️⚡️⚡️ Gemini 3 Flash + TerminaI: If you are a paid user, you can now enable Gemini 3 Pro and Gemini 3 Flash. Go to and set Preview Features to to enable Gemini 3. For more information: . What’s Changed refactor(stdio): always patch stdout and use createWorkingStdio for clean output by @allenhutchison in chore(release): bump version to 0.21.0 nightly.20251202.2d935b379 by @terminai robot in implement fuzzy search inside settings by @sehoon38 in feat: enable message bus integration by default by @allenhutchison in docs: Recommend using —debug intead of —verbose for CLI debugging by @bbiggs in feat: consolidate remote MCP servers to use in config by @jackwotherspoon in Restrict integration tests tools by @scidomino in track github repository names in telemetry events by @IamRiddhi in Allow telemetry exp..."
+  },
+  {
+    "slug": "docs/changelogs/preview",
+    "title": "Preview release: Release v0.22.0-preview.0",
+    "section": "Release Notes",
+    "description": "Preview release: Release v0.22.0 preview.0 Released: December 16, 2025 Our preview release includes the latest, new, and experimental features. This release may not be as stable as...",
+    "content": "Preview release: Release v0.22.0 preview.0 Released: December 16, 2025 Our preview release includes the latest, new, and experimental features. This release may not be as stable as our . To install the preview release: What’s Changed feat(ide): fallback to GEMINI\\ CLI\\ IDE\\ AUTH\\ TOKEN env var by @skeshive in feat: display quota stats for unused models in /stats by @sehoon38 in feat: ensure codebase investigator uses preview model when main agent does by @abhipatel12 in chore: add closing reason to stale bug workflow by @galz10 in Send the model and CLI version with the user agent by @gundermanc in refactor(sessions): move session summary generation to startup by @jackwotherspoon in Limit search depth in path corrector by @scidomino in Fix: Correct typo in code comment by @kuishou68 in feat(core): Plumbing for late resolution of model configs. by @joshualitt in feat: attempt more error parsing by @adamfweidman in Add missing await. by @gundermanc in feat(core): Add support for transcri..."
+  },
+  {
+    "slug": "docs/changelogs/releases",
+    "title": "TerminaI changelog",
+    "section": "Release Notes",
+    "description": "TerminaI changelog TerminaI has three major release channels: nightly, preview, and stable. For most users, we recommend the stable release. On this page, you can find information...",
+    "content": "TerminaI changelog TerminaI has three major release channels: nightly, preview, and stable. For most users, we recommend the stable release. On this page, you can find information regarding the current releases and highlights from each release. For the full changelog, including nightly releases, refer to on GitHub. Current Releases Release channel Notes Nightly Nightly release with the most recent changes. Experimental features ready for early feedback. Stable, recommended for general use. Release v0.21.0 v0.21.1 (Latest) Highlights ⚡️⚡️⚡️ Gemini 3 Flash + TerminaI: If you are a paid user, you can now enable Gemini 3 Pro and Gemini 3 Flash. Go to and set Preview Features to to enable Gemini 3. For more information: . What’s Changed refactor(stdio): always patch stdout and use createWorkingStdio for clean output by @allenhutchison in chore(release): bump version to 0.21.0 nightly.20251202.2d935b379 by @terminai robot in implement fuzzy search inside settings by @sehoon38 in feat: enable..."
+  },
+  {
+    "slug": "docs/faq",
+    "title": "Frequently asked questions (FAQ)",
+    "section": "Support",
+    "description": "Frequently asked questions (FAQ) This page provides answers to common questions and solutions to frequent problems encountered while using TerminaI. General issues Why am I getting...",
+    "content": "Frequently asked questions (FAQ) This page provides answers to common questions and solutions to frequent problems encountered while using TerminaI. General issues Why am I getting an ? This error indicates that you have exceeded your API request limit. The Gemini API has rate limits to prevent abuse and ensure fair usage. To resolve this, you can: Check your usage: Review your API usage in the Google AI Studio or your Google Cloud project dashboard. Optimize your prompts: If you are making many requests in a short period, try to batch your prompts or introduce delays between requests. Request a quota increase: If you consistently need a higher limit, you can request a quota increase from Google. Why am I getting an error when running ? This error typically occurs in Node.js projects when there is a mismatch between CommonJS and ES Modules. This is often due to a misconfiguration in your or . Ensure that: 1. Your has . 2. Your has or a compatible setting in the . If the problem persist..."
+  },
+  {
+    "slug": "docs/troubleshooting",
+    "title": "Troubleshooting guide",
+    "section": "Support",
+    "description": "Troubleshooting guide This guide provides solutions to common issues and debugging tips, including topics on: Authentication or login errors Frequently asked questions (FAQs) Debug...",
+    "content": "Troubleshooting guide This guide provides solutions to common issues and debugging tips, including topics on: Authentication or login errors Frequently asked questions (FAQs) Debugging tips Existing GitHub Issues similar to yours or creating new Issues Authentication or login errors Error: Cause: This error might occur if TerminaI detects the or environment variable is defined. Setting these variables forces an organization subscription check. This might be an issue if you are using an individual Google account not linked to an organizational subscription. Solution: Individual Users: Unset the and environment variables. Check and remove these variables from your shell configuration files (for example, , ) and any files. If this doesn’t resolve the issue, try using a different Google account. Organizational Users: Contact your Google Cloud administrator to be added to your organization’s Gemini Code Assist subscription. Error: Cause: Users with Google Workspace accounts or Google Cloud..."
+  },
+  {
+    "slug": "docs/quota-and-pricing",
+    "title": "TerminaI: Quotas and pricing",
+    "section": "Support",
+    "description": "TerminaI: Quotas and pricing TerminaI offers a generous free tier that covers many individual developers’ use cases. For enterprise or professional usage, or if you need higher lim...",
+    "content": "TerminaI: Quotas and pricing TerminaI offers a generous free tier that covers many individual developers’ use cases. For enterprise or professional usage, or if you need higher limits, several options are available depending on your authentication account type. See for details on the Privacy Policy and Terms of Service. Note: Published prices are list price; additional negotiated commercial discounting may apply. This article outlines the specific quotas and pricing applicable to TerminaI when using different authentication methods. Generally, there are three categories to choose from: Free Usage: Ideal for experimentation and light use. Paid Tier (fixed price): For individual developers or enterprises who need more generous daily quotas and predictable costs. Pay As You Go: The most flexible option for professional use, long running tasks, or when you need full control over your usage. Free usage Your journey begins with a generous free tier, perfect for experimentation and light use...."
+  },
+  {
+    "slug": "docs/tos-privacy",
+    "title": "TerminaI: License, Terms of Service, and Privacy Notices",
+    "section": "Support",
+    "description": "TerminaI: License, Terms of Service, and Privacy Notices TerminaI is an open source tool that lets you interact with Google’s powerful AI services directly from your command line i...",
+    "content": "TerminaI: License, Terms of Service, and Privacy Notices TerminaI is an open source tool that lets you interact with Google’s powerful AI services directly from your command line interface. The TerminaI software is licensed under the . When you use TerminaI to access or use Google’s services, the Terms of Service and Privacy Notices applicable to those services apply to such access and use. Your TerminaI Usage Statistics are handled in accordance with Google’s Privacy Policy. Note: See for the quota and pricing details that apply to your usage of the TerminaI. Supported authentication methods Your authentication method refers to the method you use to log into and access Google’s services with TerminaI. Supported authentication methods include: Logging in with your Google account to Gemini Code Assist. Using an API key with Gemini Developer API. Using an API key with Vertex AI GenAI API. The Terms of Service and Privacy Notices applicable to the aforementioned Google services are set fo..."
+  },
+  {
+    "slug": "a2a",
+    "title": "A2A Protocol",
+    "section": "Docs",
+    "description": "Agent to Agent (A2A) Protocol A2A is the protocol for \"Agentic Coordination\". It allows TerminaI to communicate with other agents and services securely. What is it? A2A is a lightw...",
+    "content": "Agent to Agent (A2A) Protocol A2A is the protocol for \"Agentic Coordination\". It allows TerminaI to communicate with other agents and services securely. What is it? A2A is a lightweight JSON RPC interactions layer over HTTP/SSE. It allows: Task Delegation : One agent asks another to \"fix the wifi\". Streaming : Real time progress updates. Tool Handoff : Sharing capabilities between contexts. Integration To run an A2A server: To connect a client: (Full spec coming soon)"
+  },
+  {
+    "slug": "api",
+    "title": "API Reference",
+    "section": "Docs",
+    "description": "Developer guide for extending TerminaI",
+    "content": "API Reference TerminaI exposes a plugin system via the A2A Protocol. Clients The main entrypoint for programmatic interaction. Events"
+  },
+  {
+    "slug": "docs/changelogs/terminai-history",
+    "title": "Changelog - terminaI Modifications",
+    "section": "Docs",
+    "description": "TerminaI documentation for Changelog - terminaI Modifications",
+    "content": "Changelog terminaI Modifications This document tracks terminaI specific changes from the upstream Gemini CLI. Stable Core v0.21.0 Release Date: 2025 12 21 Based On: Gemini CLI v0.21.0 nightly.20251219 Major Changes 1. Repositioning: Coding Agent → Universal Terminal Agent Modified: Changed system prompt from coding focused to general terminal operations Added system awareness (CPU, memory, disk monitoring) Added process control capabilities Removed coding specific constraints Enabled general purpose task execution 2. Web Remote + Desktop (A2A) Added/Updated: A2A server exposing the agent over HTTP(S) Browser UI served at (token capture + URL stripping) Desktop app uses A2A directly (no separate OAuth implementation) Token auth + replay signatures (nonce + HMAC) for state changing requests 3. Voice (Offline, Download Once) CLI: TTS spoken replies and spoken confirmations ( ) Interruption primitives (barge in / stop speaking) Desktop (Tauri): Offline STT via Offline TTS via Natural turn..."
+  },
+  {
+    "slug": "docs/governance",
+    "title": "Governance",
+    "section": "Docs",
+    "description": "TerminaI documentation for Governance",
+    "content": "Governance TerminaI is built around a simple principle: autonomy without governance is a bug . This document describes how the project makes decisions and how contributions ship. Roles Maintainers : merge PRs, cut releases, set technical direction. Contributors : propose changes, implement features, improve docs/tests. Decision making We prefer: 1. Issues + lightweight proposals for any non trivial change. 2. Small PRs that are easy to review and revert. 3. Compatibility first changes (avoid breaking existing user setups). If a change impacts safety boundaries (policy/approval, auth, sandboxing, PTY execution), maintainers may require: a short threat model tests proving the boundary an explicit rollback plan What needs an issue first Open an issue before starting work if your change: adds or changes auth/token handling (A2A/web remote) changes approval ladder semantics modifies shell execution policy touches the desktop PTY bridge changes default behavior or config formats Release poli..."
+  },
+  {
+    "slug": "docs/troubleshooting/terminai-specifics",
+    "title": "Troubleshooting",
+    "section": "Docs",
+    "description": "TerminaI documentation for Troubleshooting",
+    "content": "Troubleshooting Desktop can’t connect (401 / unauthorized) Ensure the Agent URL points to the A2A server started by . Ensure the Token is correct. If the CLI did not print the token (stored hashed), rotate it: . Desktop says “agent can’t authenticate” Desktop does not run OAuth itself. The agent (CLI/A2A server) must already be authenticated. Run once in a terminal and complete the browser auth flow, then retry Desktop. Browser can’t run actions The UI needs a token. If the CLI prints a URL, open that once; it will store the token locally and remove it from the address bar. If no token is printed, rotate it first with . Level C approval fails (PIN) PIN is in (default ). Some installs may still read legacy . PIN must be exactly 6 digits and match exactly. command not found If you installed from source, ensure you ran: If you installed via npm, ensure your global npm bin is on PATH. A2A server won’t start (port already in use) Start on a different port: Or stop the existing process that’..."
+  },
+  {
+    "slug": "governance",
+    "title": "Governance & Security",
+    "section": "Docs",
+    "description": "Governance & Security TerminaI is designed with the \"Sovereign Shell\" philosophy: AI should be a powerful tool, but YOU remain the root operator. The Policy Ladder We use a tiered...",
+    "content": "Governance & Security TerminaI is designed with the \"Sovereign Shell\" philosophy: AI should be a powerful tool, but YOU remain the root operator. The Policy Ladder We use a tiered \"Policy Ladder\" to determine when an action requires human approval: 1. Read Only / Safe : Actions that gather information (e.g., , , ) can be auto approved or have a low friction threshold. 2. State Changing / Low Risk : Actions that modify non critical state (e.g., in a temp folder). 3. Critical / Root Access : Actions that modify system config, install packages, or touch sensitive data (e.g., , , editing ). These always require explicit PIN/Prompt approval. Trust Boundaries TerminaI respects your filesystem boundaries. Allowed Scopes : You define which directories the agent can see. Blocked Scopes : Sensitive directories , are blocked by default unless explicitly allowed. Audit Logs Every action taken by the agent—every command suggested, every tool call, every approval grant—is logged to a local, immutabl..."
+  },
+  {
+    "slug": "help",
+    "title": "Help Manual",
+    "section": "Docs",
+    "description": "Comprehensive guide to using terminaI for everyday tasks.",
+    "content": "Welcome to the terminaI operator's manual. This guide is designed to help you master the sovereign shell, enabling you to perform complex tasks with simple natural language commands. 1. Introduction terminaI is a system aware terminal interface. Unlike traditional shells that require memorization of complex flags and syntax, terminaI understands your intent. It bridges the gap between what you want to do and how the system needs to do it. 2. Installation & Configuration Installation terminaI is typically installed as a global CLI tool. Configuration ( ) Your experience is customizable via . Theme : Choose between (default) or . Auth : Configure your preferred LLM provider (Personal, Enterprise, or Local). 3. Natural Language Interface The core interaction model is simple: Ask . Basic Commands Instead of typing , you can type: \"List all files modified in May.\" Instead of , you can type: \"Delete all log files in this directory.\" terminaI will always: 1. Plan : Show you the command it int..."
+  },
+  {
+    "slug": "introduction",
+    "title": "Introduction",
+    "section": "Docs",
+    "description": "Introduction: The Sovereign Shell TerminaI is not just an \"AI Terminal\". It is a sovereign shell for governed autonomy. What does that mean? 1. Sovereign : It runs on your machine,...",
+    "content": "Introduction: The Sovereign Shell TerminaI is not just an \"AI Terminal\". It is a sovereign shell for governed autonomy. What does that mean? 1. Sovereign : It runs on your machine, with your tokens, respecting your policies. It does not rely on a central SaaS for logic. 2. Governed : Every action has a trust boundary. \"Read Only\" is fast. \"Write\" is checked. \"Critical\" requires explicit PIN approval. 3. Shell : It is a true PTY bridge. It knows about your resizing, your colors, your history. It is an extension of your operating system. The 4 Fold Value Prop TerminaI brings four capabilities to your environment: Laptop Assistant : Like \"Android Assistant\", but for your computer's OS. Agentic Coordination : It speaks A2A and MCP to coordinate other tools. Endpoint Management : It scales from your laptop to entire fleets. Server Ops : It provides a safe, audited way to repair servers."
+  },
+  {
+    "slug": "mcp",
+    "title": "Model Context Protocol (MCP)",
+    "section": "Docs",
+    "description": "Model Context Protocol (MCP) TerminaI is a first class MCP host. This means it can connect to any MCP compliant server—local or remote—to extend its capabilities. Why MCP? Instead...",
+    "content": "Model Context Protocol (MCP) TerminaI is a first class MCP host. This means it can connect to any MCP compliant server—local or remote—to extend its capabilities. Why MCP? Instead of building hard coded integrations, you can just plug in an MCP server. Connect to GitHub for issue triage. Connect to Postgres for database ops. Connect to Linear for project management. connecting a Server Add to your configuration: TerminaI handles the handshake, tool discovery, and routing automatically."
+  },
+  {
+    "slug": "security-posture",
+    "title": "Security Posture",
+    "section": "Docs",
+    "description": "Understanding the safety model of TerminaI",
+    "content": "Security Posture TerminaI is designed with a \"Safety First\" architecture. Unlike other agentic tools that are \"all or nothing\", TerminaI provides a granular Policy Engine . The Trust Model 1. Local Execution : All logic runs on your machine. 2. BYO Key : You provide the API key. You control the budget. 3. Audit Logging : Every action is logged to . Policy Levels Level 1 (Safe) : , , . Auto approved. Level 2 (Modify) : , . Requires generic approval (\"y\"). Level 3 (System) : , network installs. Requires explicit confirmation + potentially a PIN. Privacy We do not train on your inputs."
+  },
+  {
+    "slug": "sovereign-terminai",
+    "title": "Sovereign Terminai Language",
+    "section": "Docs",
+    "description": "The philosophy of a system-aware terminal operator.",
+    "content": "terminaI is not just a tool; it is a language of interaction between you and your system. It redefines the command line experience by introducing a \"Sovereign Shell\" philosophy—one where the user retains absolute control while leveraging the intelligence of a system aware agent. Core Philosophy 1. Sovereignty First Unlike cloud based assistants that process your data on remote servers, terminaI is designed to be local first. It respects the boundaries of your machine. Your file system, your environment variables, and your processes remain under your jurisdiction. The agent acts as an operator within your domain, not an observer from outside. 2. The Language of Utility The \"Language\" of terminaI is not a new syntax to learn, but a bridge between natural intent and precise execution. Natural Input : You speak in goals (\"Organize these files\", \"Find the error in this log\"). Precise Output : terminaI translates this into the exact shell commands, scripts, or file operations needed. 3. Syst..."
+  },
+  {
+    "slug": "themes",
+    "title": "Themes",
+    "section": "Docs",
+    "description": "Customizing the look and feel",
+    "content": "Themes TerminaI supports custom color schemes. Configuration Edit : Supported Themes System (Default) Dracula Monokai Solarized Light Cyberpunk (High Contrast)"
+  },
+  {
+    "slug": "troubleshooting",
+    "title": "Troubleshooting",
+    "section": "Docs",
+    "description": "Troubleshooting Common issues when running TerminaI. PTY / Terminal Issues \"The terminal looks weird/garbled\" Ensure you are using a Nerd Font if possible (though not required). Ch...",
+    "content": "Troubleshooting Common issues when running TerminaI. PTY / Terminal Issues \"The terminal looks weird/garbled\" Ensure you are using a Nerd Font if possible (though not required). Check your environment variable. Try . Node.js Version TerminaI requires Node.js 20+ . Check your version: Auth Errors \"Unauthorized / 401\" Run to refresh your token. Check permissions if running in a constrained environment like a container."
+  },
+  {
+    "slug": "tutorials",
+    "title": "Tutorials",
+    "section": "Docs",
+    "description": "Getting started with common workflows",
+    "content": "Tutorials 1. Setting up your first MCP Server Connect to GitHub Issues: Add to : 2. Creating a Custom Workflow Start a conversation:"
+  }
+]

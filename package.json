@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predev": "npm run docs:search-index",
     "build": "next build",
+    "prebuild": "npm run docs:search-index",
     "start": "next start",
     "lint": "eslint",
+    "docs:search-index": "node scripts/build_docs_search_index.mjs",
+    "test:e2e": "playwright test",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
@@ -21,6 +25,7 @@
     "shiki": "^3.20.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

@@ -1,5 +1,3 @@
-"use client";
-
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MessageSquare, Hash, Lock, Zap, Cuboid, ShieldCheck } from "lucide-react";

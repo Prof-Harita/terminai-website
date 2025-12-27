@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
-import { Search, ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
+import { DocsSearch } from "@/components/DocsSearch";
 
 interface DocsLayoutProps {
   children: ReactNode;
@@ -20,33 +21,20 @@ interface SidebarSection {
 
 export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
   const [sidebarData, setSidebarData] = useState<SidebarSection[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [sidebarError, setSidebarError] = useState(false);
 
   useEffect(() => {
-    fetch('/docs/sidebar.json')
-      .then(res => res.json())
+    fetch("/docs/sidebar.json")
+      .then((res) => res.json())
       .then((data: SidebarSection[]) => {
         setSidebarData(data);
-        // Auto-expand all sections initially
-        setExpandedSections(new Set(data.map(s => s.label)));
+        setExpandedSections(new Set(data.map((section) => section.label)));
       })
-      .catch(err => {
-        console.error('Failed to load sidebar:', err);
+      .catch((err) => {
+        console.error("Failed to load sidebar:", err);
         setSidebarError(true);
       });
-
-    // Cmd+K search shortcut
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        const searchInput = document.querySelector('#docs-search') as HTMLInputElement;
-        if (searchInput) searchInput.focus();
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const toggleSection = (label: string) => {
@@ -61,13 +49,6 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
     });
   };
 
-  const filteredSidebar = sidebarData.map(section => ({
-    ...section,
-    items: section.items.filter(item =>
-      item.label.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(section => section.items.length > 0);
-
   return (
     <>
       <SiteHeader />
@@ -80,19 +61,8 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
         <aside className="w-64 flex-shrink-0 hidden lg:block border-r border-white/10 bg-black">
           <div className="sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto py-6 pr-4">
             
-            {/* Search */}
             <div className="mb-6">
-              <div className="relative">
-                <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40" />
-                <input
-                  id="docs-search"
-                  type="text"
-                  placeholder="Search docs... (⌘K)"
-                  className="w-full bg-black/60 border border-white/10 rounded-md px-3 py-2 pl-9 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
+              <DocsSearch />
             </div>
 
             {/* Navigation */}
@@ -107,7 +77,7 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
                   </div>
                 </div>
               )}
-              {!sidebarError && filteredSidebar.map((section) => (
+              {!sidebarError && sidebarData.map((section) => (
                 <div key={section.label} className="mb-4">
                   {/* Section header - collapsible */}
                   <button
@@ -153,6 +123,9 @@ export function DocsLayout({ children, activeSlug }: DocsLayoutProps) {
         {/* Main Content - White background */}
         <main className="flex-1 bg-black">
           <div className="max-w-4xl px-12 py-12">
+            <div className="lg:hidden mb-6">
+              <DocsSearch />
+            </div>
             <article className="docs-content">
               {children}
             </article>
