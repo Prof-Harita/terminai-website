@@ -34,7 +34,7 @@ const channels = [
   {
     icon: Mail,
     name: "Email",
-    description: "For press, partnerships, enterprise inquiries",
+    description: "For community / contributors / security reports",
     link: "mailto:contact@terminai.org",
     buttonText: "Send Email",
   },
@@ -49,7 +49,7 @@ export default function ContactPage() {
           <div className="container max-w-4xl text-center">
             <h1 className="mb-6">Get in Touch</h1>
             <p className="text-xl opacity-70 mb-12">
-              Join the community, report issues, or reach out for partnerships.
+              Join the community, report issues, or send security reports.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

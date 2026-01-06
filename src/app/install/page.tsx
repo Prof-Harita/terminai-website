@@ -73,38 +73,7 @@ export default function InstallPage() {
         <section className="section pt-8">
           <div className="container max-w-4xl">
             <div className="space-y-8">
-              {/* Method 1: NPM */}
-              <div className="rounded-2xl bg-white/[0.02] border border-white/10 p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white">
-                    <Package size={20} />
-                  </div>
-                  <div>
-                    <h2 className="text-xl font-bold">
-                      Method 1: NPM (Recommended)
-                    </h2>
-                    <p className="text-sm opacity-60">
-                      Fastest way to get started
-                    </p>
-                  </div>
-                </div>
-                <div className="code-block mb-4">
-                  <div className="flex items-center justify-between">
-                    <code>npm i -g @google/gemini-cli</code>
-                    <button className="text-xs opacity-50 hover:opacity-100 transition-opacity">
-                      Copy
-                    </button>
-                  </div>
-                </div>
-                <p className="text-sm opacity-60 mb-4">
-                  Then verify installation:
-                </p>
-                <div className="code-block">
-                  <code>terminai --version</code>
-                </div>
-              </div>
-
-              {/* Method 2: From Source */}
+              {/* Method 1: Build from Source */}
               <div className="rounded-2xl bg-white/[0.02] border border-white/10 p-8">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white">
@@ -112,10 +81,10 @@ export default function InstallPage() {
                   </div>
                   <div>
                     <h2 className="text-xl font-bold">
-                      Method 2: Build from Source
+                      Build from Source (Recommended)
                     </h2>
                     <p className="text-sm opacity-60">
-                      For developers and contributors
+                      Independent open-source fork; not affiliated with Google.
                     </p>
                   </div>
                 </div>
@@ -133,30 +102,6 @@ export default function InstallPage() {
                   <div className="mt-3 text-gray-500"># Run</div>
                   <div>terminai</div>
                 </div>
-              </div>
-
-              {/* Method 3: Quick Script */}
-              <div className="rounded-2xl bg-white/[0.02] border border-white/10 p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-white">
-                    <Terminal size={20} />
-                  </div>
-                  <div>
-                    <h2 className="text-xl font-bold">
-                      Method 3: Quick Install Script
-                    </h2>
-                    <p className="text-sm opacity-60">
-                      One-liner for power users
-                    </p>
-                  </div>
-                </div>
-                <div className="code-block">
-                  <code>curl -fsSL https://terminai.org/install.sh | bash</code>
-                </div>
-                <p className="text-xs opacity-40 mt-2">
-                  (Coming soon - currently build from source for latest
-                  features)
-                </p>
               </div>
             </div>
           </div>

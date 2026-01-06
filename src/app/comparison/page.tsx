@@ -3,11 +3,9 @@ import Link from "next/link";
 import { Layers, Scale, TerminalSquare } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ComparisonTable } from "@/components/ComparisonTable";
-
 export const metadata: Metadata = {
-  title: "Comparison | TerminaI",
-  description: "How TerminaI compares to chatbots, terminals, and AI IDEs.",
+  title: "Positioning | TerminaI",
+  description: "How TerminaI differs from chatbots, terminals, and AI IDEs.",
 };
 
 const differentiators = [
@@ -33,7 +31,7 @@ export default function ComparisonPage() {
         <section className="section">
           <div className="container">
             <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-widest text-white/50 mb-3">Comparison</p>
+              <p className="text-xs uppercase tracking-widest text-white/50 mb-3">Positioning</p>
               <h1 className="mb-4">Why TerminaI is a new category.</h1>
               <p className="text-lg opacity-70 mb-8">
                 Traditional chatbots respond with text. TerminaI operates your system with a governed safety ladder,
@@ -61,16 +59,6 @@ export default function ComparisonPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="section border-t border-white/5">
-          <div className="container">
-            <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-white/40 mb-4">
-              <Scale size={14} />
-              Competitive Matrix
-            </div>
-            <ComparisonTable />
           </div>
         </section>
 

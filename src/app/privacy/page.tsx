@@ -16,6 +16,11 @@ export default function PrivacyPage() {
              We do not collect usage data, telemetry, or command history by default. 
              All history is stored locally in `~/.terminai/history`.
            </p>
+           <h2 className="text-2xl font-bold mt-8 mb-4">Remote Relay & Auditing</h2>
+           <p className="opacity-70 mb-4">
+             If you choose to use the optional self-hosted remote relay, session data is transmitted to your own relay server.
+             Audit logs are stored locally by default. You are responsible for securing your relay and audit logs.
+           </p>
            <h2 className="text-2xl font-bold mt-8 mb-4">AI Processing</h2>
            <p className="opacity-70 mb-4">
              When you use the AI features, your prompt and relevant context is sent to the configured LLM provider (e.g., Google Gemini, OpenAI, or local Ollama). 

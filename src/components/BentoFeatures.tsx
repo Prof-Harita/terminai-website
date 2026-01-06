@@ -33,7 +33,7 @@ const features = [
   {
     icon: Globe,
     title: "Remote Viewing",
-    description: "Cloud relay to watch and control from phone, iPad, or anywhere.",
+    description: "Optional self-hosted relay to watch and control from phone, iPad, or anywhere.",
     link: "/extensibility#a2a",
     gradient: "from-blue-500/20 to-cyan-500/20",
   },

@@ -23,13 +23,6 @@ const personas = [
     href: "/for/developers",
     icon: Code2,
   },
-  {
-    title: "Enterprise",
-    description: "Governed autonomy with audit trails, BYO models, and fleet-level policy control.",
-    bullets: ["Enforce approval ladders", "Deploy inside VPCs", "Meet compliance needs"],
-    href: "/for/enterprise",
-    icon: Building2,
-  },
 ];
 
 export function PersonaPathways() {
@@ -42,7 +35,7 @@ export function PersonaPathways() {
             Start with a focused guide for your role. Each path ends with a first success in 10 minutes.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {personas.map((persona) => {
             const Icon = persona.icon;
             return (

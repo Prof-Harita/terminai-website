@@ -31,7 +31,6 @@ const quickstarts = [
     links: [
       { label: "Operator guide", href: "/for/operators" },
       { label: "Docs home", href: "/docs" },
-      { label: "Enterprise overview", href: "/enterprise" },
     ],
   },
   {
@@ -47,21 +46,6 @@ const quickstarts = [
       { label: "Developer guide", href: "/for/developers" },
       { label: "Prompt recipes", href: "/recipes" },
       { label: "Extensibility", href: "/extensibility" },
-    ],
-  },
-  {
-    id: "enterprise",
-    title: "Enterprise",
-    description: "Plan a governed pilot with audit-ready guardrails.",
-    tasks: [
-      "Schedule a pilot scope call.",
-      "Review the approval ladder with security.",
-      "Define which systems can run autonomously.",
-    ],
-    links: [
-      { label: "Enterprise guide", href: "/for/enterprise" },
-      { label: "Safety model", href: "/safety" },
-      { label: "Contact", href: "/contact" },
     ],
   },
 ];
@@ -84,8 +68,13 @@ export default function StartPage() {
                   <TerminalSquare size={14} />
                   Install
                 </div>
-                <div className="code-block text-sm">$ npm i -g @google/gemini-cli</div>
-                <p className="text-xs text-white/50 mt-3">Then run: terminai</p>
+                <div className="code-block text-sm">
+                  <div className="text-gray-500 mb-1"># Build from source</div>
+                  $ git clone https://github.com/Prof-Harita/terminaI.git
+                </div>
+                <p className="text-xs text-white/50 mt-3">
+                  Independent open-source fork; not affiliated with Google.
+                </p>
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link href="/install" className="btn btn-primary text-sm px-6 py-3">
