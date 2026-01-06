@@ -25,6 +25,7 @@ const structuredData = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://terminai.org"),
   title: "terminaI | The Universal System Operator",
   description: "Open source AI terminal agent with voice control, web remote, and system awareness.",
   keywords: ["terminal", "AI", "agent", "voice control", "system operator", "open source"],

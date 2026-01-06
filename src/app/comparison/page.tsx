@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Layers, Scale, TerminalSquare } from "lucide-react";
+import { Layers, TerminalSquare } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 export const metadata: Metadata = {

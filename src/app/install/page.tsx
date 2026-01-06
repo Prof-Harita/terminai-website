@@ -2,8 +2,6 @@ import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
-  Terminal,
-  Package,
   GitBranch,
   CheckCircle,
   AlertCircle,

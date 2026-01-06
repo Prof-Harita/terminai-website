@@ -5,8 +5,8 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { 
-  Folder, BarChart, PenTool, Calendar, Shield, Server,
-  GraduationCap, GitBranch, Mic, Settings, Palette, Gamepad2, FlaskConical
+  Folder, BarChart, PenTool, Shield, Server,
+  GitBranch
 } from "lucide-react";
 
 const useCaseBuckets = [

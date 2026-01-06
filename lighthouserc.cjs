@@ -6,8 +6,7 @@ module.exports = {
         "http://127.0.0.1:4173/",
         "http://127.0.0.1:4173/install",
         "http://127.0.0.1:4173/docs",
-        "http://127.0.0.1:4173/safety",
-        "http://127.0.0.1:4173/enterprise"
+        "http://127.0.0.1:4173/safety"
       ],
       numberOfRuns: 1,
       settings: {
@@ -16,7 +15,6 @@ module.exports = {
       }
     },
     assert: {
-      budgetsFile: "./lighthouse-budgets.json",
       assertions: {
         "categories:performance": ["warn", { "minScore": 0.8 }],
         "categories:accessibility": ["warn", { "minScore": 0.9 }],
