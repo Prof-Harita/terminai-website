@@ -1,12 +1,12 @@
 module.exports = {
   ci: {
     collect: {
-      startServerCommand: "npm run start -- --port 4173",
+      startServerCommand: "node .next/standalone/server.js",
       url: [
-        "http://127.0.0.1:4173/",
-        "http://127.0.0.1:4173/install",
-        "http://127.0.0.1:4173/docs",
-        "http://127.0.0.1:4173/safety"
+        "http://127.0.0.1:3000/",
+        "http://127.0.0.1:3000/install",
+        "http://127.0.0.1:3000/docs",
+        "http://127.0.0.1:3000/safety"
       ],
       numberOfRuns: 1,
       settings: {
