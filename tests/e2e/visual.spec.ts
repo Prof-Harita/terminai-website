@@ -5,7 +5,6 @@ const pages = [
   { name: "install", url: "/install", waitFor: /install/i },
   { name: "docs", url: "/docs", waitFor: /documentation/i },
   { name: "safety", url: "/safety", waitFor: /safety/i },
-  { name: "enterprise", url: "/enterprise", waitFor: /enterprise/i },
 ];
 
 test.describe("visual snapshots", () => {

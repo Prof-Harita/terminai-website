@@ -26,7 +26,6 @@ const useCaseBuckets = [
     title: "Data Analysis & Reporting",
     examples: [
       "Automated CSV cleaning and statistics",
-      "Financial analysis with buy/sell ratings",
       "Text-to-SQL for natural language queries",
       "Generate PDF reports from raw data",
       "Visual data extraction from spreadsheets"
@@ -44,25 +43,12 @@ const useCaseBuckets = [
     ]
   },
   {
-    icon: Calendar,
-    title: "Personal Productivity",
-    examples: [
-      "Travel planning with itinerary generation",
-      "Meal planning based on dietary rules",
-      "Task management and prioritization",
-      "Budget tracking with alerts",
-      "Smart todo list organization"
-    ]
-  },
-  {
     icon: Shield,
-    title: "Security & Maintenance",
+    title: "Maintenance",
     examples: [
       "CVE scanning in dependencies",
       "Pre-commit secret detection",
-      "Self-healing CI/CD pipelines",
-      "OWASP compliance checks",
-      "Automated security audits"
+      "Self-healing CI/CD pipelines"
     ]
   },
   {
@@ -72,85 +58,15 @@ const useCaseBuckets = [
       "Incident triage and root cause analysis",
       "Kubernetes manifest generation",
       "Terraform from natural language",
-      "Home automation control",
       "Observability queries"
-    ]
-  },
-  {
-    icon: GraduationCap,
-    title: "Education & Learning",
-    examples: [
-      "Interactive tutorials and Socratic teaching",
-      "Quiz generation from documentation",
-      "Explain Like I'm 5 for complex concepts",
-      "Hands-on prompt engineering guides",
-      "Code concept explanations"
     ]
   },
   {
     icon: GitBranch,
     title: "Workflow Integration",
     examples: [
-      "Slack message search and automation",
-      "Google Drive document management",
-      "BigQuery data warehouse queries",
       "Tool pipelining and chaining",
       "Cross-platform automation"
-    ]
-  },
-  {
-    icon: Mic,
-    title: "Accessibility & Voice",
-    examples: [
-      "Hands-free coding with voice",
-      "Offline speech-to-text and TTS",
-      "Screen reader optimization",
-      "Voice-controlled smart displays",
-      "Accessibility compliance audits"
-    ]
-  },
-  {
-    icon: Settings,
-    title: "Environment Management",
-    examples: [
-      "Automated project scaffolding",
-      "Dotfiles sync across machines",
-      "NPM registry authentication",
-      "Shell startup optimization",
-      "Environment documentation"
-    ]
-  },
-  {
-    icon: Palette,
-    title: "Creative & Artistic",
-    examples: [
-      "ASCII art banner generation",
-      "Retro art automation",
-      "Procedural visualization code",
-      "Data-driven graphics",
-      "Terminal-based design"
-    ]
-  },
-  {
-    icon: Gamepad2,
-    title: "Gaming & Simulation",
-    examples: [
-      "Minecraft automation via visual AI",
-      "Pokemon agent benchmarks",
-      "Text adventure game mastering",
-      "Game testing automation",
-      "Interactive simulations"
-    ]
-  },
-  {
-    icon: FlaskConical,
-    title: "Scientific Research",
-    examples: [
-      "Autonomous paper synthesis",
-      "Lab robotics interface",
-      "Medical imaging queries",
-      "Experiment documentation",
-      "Data pipeline management"
     ]
   }
 ];

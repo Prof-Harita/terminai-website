@@ -100,9 +100,6 @@ export default function TrustPage() {
                 <Link href="/safety" className="btn btn-primary text-sm px-6 py-3">
                   Safety Ladder
                 </Link>
-                <Link href="/enterprise" className="btn btn-outline text-sm px-6 py-3">
-                  Enterprise Controls
-                </Link>
               </div>
             </div>
           </div>

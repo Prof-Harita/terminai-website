@@ -59,15 +59,17 @@ export default function TermsPage() {
                 <li>Respect the privacy and data of others when using shared systems</li>
               </ul>
 
-              <h2>4. Our Responsibilities</h2>
-              <p>We strive to:</p>
+              <h2>4. Community Maintenance</h2>
+              <p>This is a best-effort community project. We strive to:</p>
               <ul>
                 <li>Maintain the open-source nature of terminaI</li>
                 <li>Provide reasonable safety mechanisms to prevent misuse</li>
-                <li>Keep the software functional and up-to-date</li>
-                <li>Respond to security issues in a timely manner</li>
+                <li>Review contributions and security reports</li>
                 <li>Respect your privacy and data sovereignty</li>
               </ul>
+              <p>
+                  There is no implied Service Level Agreement (SLA) or guarantee of support.
+              </p>
 
               <h2>5. Safety and Security</h2>
               <p>

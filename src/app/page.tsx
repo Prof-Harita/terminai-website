@@ -13,6 +13,9 @@ export default function Home() {
     <>
       <SiteHeader />
       <main>
+        <div className="w-full bg-black/50 border-b border-white/5 py-2 text-center text-xs uppercase tracking-widest text-white/40">
+           TerminaI = governed system operator (terminal + desktop automation) — open-source fork of Gemini CLI
+        </div>
         <Hero />
         <DemoShowcase />
         <BentoFeatures />

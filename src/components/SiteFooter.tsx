@@ -61,7 +61,10 @@ export function SiteFooter() {
                 </div>
 
                 <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/30">
-                    <p>© 2025 terminaI Contributors.</p>
+                    <div className="flex flex-col gap-1">
+                        <p>© 2025 terminaI Contributors.</p>
+                        <p className="opacity-50">TerminaI = governed system operator — Independent open-source fork of Gemini CLI.</p>
+                    </div>
                     <div className="flex items-center gap-6">
                          <a
                             href="https://github.com/google-gemini/gemini-cli"

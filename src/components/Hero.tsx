@@ -27,7 +27,7 @@ export function Hero() {
   const [copied, setCopied] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const installCommand = "npm i -g @google/gemini-cli";
+  const installCommand = "git clone https://github.com/Prof-Harita/terminaI.git";
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(installCommand);
@@ -113,8 +113,9 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl opacity-70 max-w-3xl mx-auto leading-relaxed mb-10">
-              The first AI that controls your entire computer—terminal, apps, and screens. 
-              Voice-powered. Remotely viewable. Always under your command.
+              Local-first. Human-approved. Auditable.
+              <br/>
+              The system operator for your terminal, apps, and screens.
             </p>
 
             {/* Install Command (Primary CTA) */}
@@ -133,7 +134,7 @@ export function Hero() {
                   )}
                 </button>
               </div>
-              <span className="text-xs opacity-40">Then run: terminai</span>
+              <span className="text-xs opacity-40">Independent open-source fork; not affiliated with Google.</span>
             </div>
 
             {/* Secondary CTAs */}
