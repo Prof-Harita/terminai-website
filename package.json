@@ -15,7 +15,8 @@
     "recipes:validate": "node scripts/validate_recipes.mjs",
     "updates:validate": "node scripts/validate_updates.mjs",
     "perf:ci": "lhci autorun --config=./lighthouserc.cjs",
-    "test:e2e": "playwright test",
+    "test:e2e": "playwright test tests/e2e/smoke.spec.ts",
+    "test:visual": "playwright test tests/e2e/visual.spec.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
