@@ -102,9 +102,9 @@ gh run watch
 
 > **Instructions**: After push, if CI fails again, document root causes here.
 
-| CI Run ID | Failing Step | Root Cause | Why #3 Didn't Catch It |
-| --------- | ------------ | ---------- | ---------------------- |
-| _pending_ | _pending_    | _pending_  | _pending_              |
+| CI Run ID   | Failing Step           | Root Cause                                                                                                             | Why #3 Didn't Catch It                                                                                                                                                                  |
+| ----------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 20884716647 | Playwright smoke tests | **Visual snapshot mismatch**: Local snapshot 7026px tall, CI rendered 7206px (180px difference, 0.39 pixel ratio diff) | **Cross-environment rendering inconsistency**: Local machine uses different fonts/rendering engine than GitHub Actions runner. Snapshots generated locally do not match CI environment. |
 
 ---
 
@@ -112,17 +112,43 @@ gh run watch
 
 > **Instructions**: After CI analysis, list any remaining work here.
 
-- [ ] _None yet_
+- [x] **Phase A-F completed locally** - all 8 tests passed
+- [ ] **Fix CI visual snapshot mismatch** - Options:
+  1. **Generate snapshots IN CI** using `--update-snapshots` flag in workflow on a dedicated branch, then merge
+  2. **Increase `maxDiffPixelRatio`** from 0.01 to 0.05 to tolerate minor cross-env differences
+  3. **Use Docker** locally with same base image as CI to generate consistent snapshots
+- [ ] Re-push and verify CI passes
 
 ---
 
 ## Appendix: Issue Resolution Summary
 
-| Original Issue                | Status      | Fix Applied                |
-| ----------------------------- | ----------- | -------------------------- |
-| Visual regression (home)      | **PENDING** | Update snapshots (Phase C) |
-| Lighthouse budgets+assertions | ✅ FIXED    | Config already corrected   |
-| TS2305 Compare icon           | ✅ FIXED    | Import removed             |
-| Smoke test visibility         | **VERIFY**  | Content matches regex      |
-| Stale .next cache             | **PENDING** | Delete .next (Phase A)     |
-| Orphaned enterprise snapshot  | **PENDING** | Delete file (Phase A)      |
+| Original Issue                | Status    | Fix Applied                        |
+| ----------------------------- | --------- | ---------------------------------- |
+| Visual regression (home)      | ❌ FAILED | Local snapshots don't match CI env |
+| Lighthouse budgets+assertions | ✅ FIXED  | Config already corrected           |
+| TS2305 Compare icon           | ✅ FIXED  | Import removed                     |
+| Smoke test visibility         | ✅ PASSED | Content matches regex              |
+| Stale .next cache             | ✅ FIXED  | Deleted .next                      |
+| Orphaned enterprise snapshot  | ✅ FIXED  | Deleted file                       |
+
+---
+
+## Part 6: Why the Plan Failed Despite Being "Well Thought Through"
+
+### The Blind Spot: Environment Parity
+
+The original plan (Phase C) assumed that running Playwright locally with `--update-snapshots` would produce baselines that match CI. This assumption was **wrong** because:
+
+1. **Font rendering differs**: Local Linux (Fedora/Ubuntu desktop) uses different font hinting/anti-aliasing than GitHub Actions' Ubuntu runner
+2. **Viewport/DPI differences**: Despite setting viewport to 1280px, actual rendering can differ based on system DPI settings
+3. **Browser version skew**: Local Chromium version may differ slightly from CI's Playwright-installed Chromium
+4. **Dynamic content height**: The 180px height difference (7026 vs 7206) suggests content like images or fonts loaded differently
+
+### The Fix
+
+The correct approach is one of:
+
+- **Option A**: Generate snapshots directly in CI (run with `--update-snapshots` on a feature branch, download artifacts, commit)
+- **Option B**: Use Docker with the exact CI base image to generate snapshots locally
+- **Option C**: Relax the `maxDiffPixelRatio` threshold (less strict, but pragmatic)
