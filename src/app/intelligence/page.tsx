@@ -25,8 +25,7 @@ export default function IntelligencePage() {
               </span>
             </h1>
             <p className="text-2xl opacity-70 max-w-3xl mx-auto">
-              The most capable agentic harness, powered by the most capable
-              models.
+              An advanced agentic harness, powered by state-of-the-art AI models.
             </p>
           </div>
         </section>
@@ -181,7 +180,7 @@ export default function IntelligencePage() {
                       <div className="flex justify-between mb-1">
                         <span className="text-sm">Context Window</span>
                         <span className="text-sm text-[var(--color-brand-red)]">
-                          2M tokens
+                          ~2M tokens
                         </span>
                       </div>
                       <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -231,7 +230,7 @@ export default function IntelligencePage() {
                 <ul className="space-y-2 text-sm opacity-60">
                   <li>✓ Fork of official Google Gemini CLI</li>
                   <li>✓ Uses official Gemini API</li>
-                  <li>✓ Enterprise option via Vertex AI</li>
+                  <li>✓ Available via Vertex AI for enterprise users</li>
                   <li>✓ Continuous model improvements from Google</li>
                 </ul>
               </div>
