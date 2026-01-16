@@ -242,7 +242,7 @@ export default function IntelligencePage() {
         {/* CTA */}
         <section className="section border-t border-white/5">
           <div className="container text-center">
-            <h2 className="mb-6">Experience unbridled intelligence</h2>
+            <h2 className="mb-6">Experience powerful, governed intelligence</h2>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/install" className="btn btn-primary">
                 Install terminaI
