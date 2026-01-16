@@ -177,6 +177,7 @@ export default function TrustPage() {
               </div>
               <div className="card">
                 <div className="text-xs uppercase tracking-widest text-white/40 mb-3">Approval ladder</div>
+                {/* TODO: Approval Screenshot */}
                 <Image
                   src="/illustrations/trust-ladder.svg"
                   alt="Approval ladder diagram"
