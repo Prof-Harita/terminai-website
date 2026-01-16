@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: 'standalone',
   outputFileTracingIncludes: {
-    "/docs": ["src/content/docs/**/*"],
-    "/docs/[...slug]": ["src/content/docs/**/*"],
+    "/docs": ["src/content/docs/**/*", "public/docs/sidebar.json"],
+    "/docs/[...slug]": ["src/content/docs/**/*", "public/docs/sidebar.json"],
     "/updates": ["src/content/updates/**/*"],
     "/updates/[slug]": ["src/content/updates/**/*"],
     "/sitemap.xml": ["src/content/updates/**/*"],

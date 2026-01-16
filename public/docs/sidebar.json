@@ -3,7 +3,7 @@
   {
     "label": "Get Started",
     "items": [
-      { "label": "Quickstart", "slug": "docs/get-started" },
+      { "label": "Quickstart", "slug": "docs/get-started/installation" },
       { "label": "Quickstart (TerminaI)", "slug": "docs/get-started/quickstart-terminai" },
       { "label": "Gemini 3 Integration", "slug": "docs/get-started/gemini-3" },
       { "label": "Authentication", "slug": "docs/get-started/authentication" },

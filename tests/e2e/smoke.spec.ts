@@ -11,8 +11,8 @@ test("docs sidebar opens a doc", async ({ page }) => {
   await page.goto("/docs");
   const quickstartLink = page.getByRole("link", { name: "Quickstart" });
   await expect(quickstartLink).toBeVisible();
-  await page.goto("/docs/get-started");
-  await expect(page.getByText(/welcome to terminai/i)).toBeVisible({ timeout: 15000 });
+  await page.goto("/docs/get-started/installation");
+  await expect(page.getByRole("heading", { name: /installation/i })).toBeVisible({ timeout: 15000 });
 });
 
 test("404 page renders", async ({ page }) => {

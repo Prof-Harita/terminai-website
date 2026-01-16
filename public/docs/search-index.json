@@ -1,10 +1,10 @@
 [
   {
-    "slug": "docs/get-started",
-    "title": "Get started with TerminaI",
+    "slug": "docs/get-started/installation",
+    "title": "TerminaI installation, execution, and deployment",
     "section": "Get Started",
-    "description": "Get started with TerminaI Welcome to TerminaI! This guide will help you install, configure, and start using the TerminaI to enhance your workflow right from your terminal. Quicksta...",
-    "content": "Get started with TerminaI Welcome to TerminaI! This guide will help you install, configure, and start using the TerminaI to enhance your workflow right from your terminal. Quickstart: Install, authenticate, configure, and use TerminaI TerminaI brings the power of advanced language models directly to your command line interface. As an AI powered assistant, TerminaI can help you with a variety of tasks, from understanding and generating code to reviewing and editing documents. Install The standard method to install and run TerminaI uses : Terminal window Once TerminaI is installed, run TerminaI from your command line: Terminal window For more installation options, see . Authenticate To begin using TerminaI, you must authenticate with a Google service. In most cases, you can log in with your existing Google account: 1. Run TerminaI after installation: Terminal window 2. When asked “How would you like to authenticate for this project?” select 1\\. Login with Google . 3. Select your Google a..."
+    "description": "TerminaI installation, execution, and deployment Install and run TerminaI. This document provides an overview of TerminaI’s installation methods and deployment architecture. How to...",
+    "content": "TerminaI installation, execution, and deployment Install and run TerminaI. This document provides an overview of TerminaI’s installation methods and deployment architecture. How to install and/or run TerminaI There are several ways to run TerminaI. The recommended option depends on how you intend to use TerminaI. As a standard installation. This is the most straightforward method of using TerminaI. In a sandbox. This method offers increased security and isolation. From the source. This is recommended for contributors to the project. 1\\. Standard installation (recommended for standard users) This is the recommended way for end users to install TerminaI. It involves downloading the TerminaI package from the NPM registry. Global install: Terminal window Then, run the CLI from anywhere: Terminal window NPX execution: Terminal window 2\\. Run in a sandbox (Docker/Podman) For security and isolation, TerminaI can be run inside a container. This is the default way that the CLI executes tools th..."
   },
   {
     "slug": "docs/get-started/quickstart-terminai",
@@ -558,6 +558,13 @@
     "section": "Docs",
     "description": "TerminaI documentation for Changelog - terminaI Modifications",
     "content": "Changelog terminaI Modifications This document tracks terminaI specific changes from the upstream Gemini CLI. Stable Core v0.21.0 Release Date: 2025 12 21 Based On: Gemini CLI v0.21.0 nightly.20251219 Major Changes 1. Repositioning: Coding Agent → Universal Terminal Agent Modified: Changed system prompt from coding focused to general terminal operations Added system awareness (CPU, memory, disk monitoring) Added process control capabilities Removed coding specific constraints Enabled general purpose task execution 2. Web Remote + Desktop (A2A) Added/Updated: A2A server exposing the agent over HTTP(S) Browser UI served at (token capture + URL stripping) Desktop app uses A2A directly (no separate OAuth implementation) Token auth + replay signatures (nonce + HMAC) for state changing requests 3. Voice (Offline, Download Once) CLI: TTS spoken replies and spoken confirmations ( ) Interruption primitives (barge in / stop speaking) Desktop (Tauri): Offline STT via Offline TTS via Natural turn..."
+  },
+  {
+    "slug": "docs/get-started",
+    "title": "Get started with TerminaI",
+    "section": "Docs",
+    "description": "Get started with TerminaI Welcome to TerminaI! This guide will help you install, configure, and start using the TerminaI to enhance your workflow right from your terminal. Quicksta...",
+    "content": "Get started with TerminaI Welcome to TerminaI! This guide will help you install, configure, and start using the TerminaI to enhance your workflow right from your terminal. Quickstart: Install, authenticate, configure, and use TerminaI TerminaI brings the power of advanced language models directly to your command line interface. As an AI powered assistant, TerminaI can help you with a variety of tasks, from understanding and generating code to reviewing and editing documents. Install The standard method to install and run TerminaI uses : Terminal window Once TerminaI is installed, run TerminaI from your command line: Terminal window For more installation options, see . Authenticate To begin using TerminaI, you must authenticate with a Google service. In most cases, you can log in with your existing Google account: 1. Run TerminaI after installation: Terminal window 2. When asked “How would you like to authenticate for this project?” select 1\\. Login with Google . 3. Select your Google a..."
   },
   {
     "slug": "docs/governance",
