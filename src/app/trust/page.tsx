@@ -119,6 +119,7 @@ export default function TrustPage() {
                 );
               })}
             </div>
+            {/* TODO: Audit Log Screenshot */}
           </div>
         </section>
 
