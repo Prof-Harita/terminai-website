@@ -18,29 +18,23 @@ export function SiteHeader() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium px-6">
-                    <Link href="/free" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Always Free
-                    </Link>
-                    <Link href="/intelligence" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Intelligence
-                    </Link>
-                    <Link href="/extensibility" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Extensibility
-                    </Link>
-                    <Link href="/safety" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Safety
+                    <Link href="/product" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Overview
                     </Link>
                     <Link href="/start" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Start Here
+                        Quickstart
                     </Link>
-                    <Link href="/use-cases" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Use Cases
+                    <Link href="/recipes" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Recipes
+                    </Link>
+                    <Link href="/trust" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Trust & Safety
                     </Link>
                     <Link href="/docs" className="opacity-70 hover:opacity-100 transition-opacity">
                         Docs
                     </Link>
-                    <Link href="/updates" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Updates
+                    <Link href="/contribute" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Contribute
                     </Link>
                 </nav>
 
@@ -85,29 +79,23 @@ export function SiteHeader() {
                     >
                         <nav className="container py-8 flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
-                                <Link href="/free" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Always Free
-                                </Link>
-                                <Link href="/intelligence" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Intelligence
-                                </Link>
-                                <Link href="/extensibility" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Extensibility
-                                </Link>
-                                <Link href="/safety" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Safety
+                                <Link href="/product" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Overview
                                 </Link>
                                 <Link href="/start" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Start Here
+                                    Quickstart
                                 </Link>
-                                <Link href="/use-cases" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Use Cases
+                                <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Recipes
+                                </Link>
+                                <Link href="/trust" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Trust & Safety
                                 </Link>
                                 <Link href="/docs" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Docs
                                 </Link>
-                                <Link href="/updates" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Updates
+                                <Link href="/contribute" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Contribute
                                 </Link>
                             </div>
                             <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
