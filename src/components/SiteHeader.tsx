@@ -21,7 +21,7 @@ export function SiteHeader() {
                     <Link href="/product" className="opacity-70 hover:opacity-100 transition-opacity">
                         Overview
                     </Link>
-                    <Link href="/start" className="opacity-70 hover:opacity-100 transition-opacity">
+                    <Link href="/docs/get-started/installation" className="opacity-70 hover:opacity-100 transition-opacity">
                         Quickstart
                     </Link>
                     <Link href="/recipes" className="opacity-70 hover:opacity-100 transition-opacity">
@@ -82,7 +82,7 @@ export function SiteHeader() {
                                 <Link href="/product" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Overview
                                 </Link>
-                                <Link href="/start" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                <Link href="/docs/get-started/installation" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Quickstart
                                 </Link>
                                 <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>

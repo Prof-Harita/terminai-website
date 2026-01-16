@@ -1,0 +1,128 @@
+
+> terminai-website@0.1.0 test:e2e
+> playwright test tests/e2e/smoke.spec.ts
+
+
+Running 4 tests using 1 worker
+
+  ✓  1 [chromium] › tests/e2e/smoke.spec.ts:3:5 › home routes to install (3.2s)
+  ✘  2 [chromium] › tests/e2e/smoke.spec.ts:10:5 › docs sidebar opens a doc (529ms)
+  ✘  3 [chromium] › tests/e2e/smoke.spec.ts:10:5 › docs sidebar opens a doc (retry #1) (438ms)
+  ✘  4 [chromium] › tests/e2e/smoke.spec.ts:10:5 › docs sidebar opens a doc (retry #2) (447ms)
+  ✓  5 [chromium] › tests/e2e/smoke.spec.ts:18:5 › 404 page renders (257ms)
+  ✓  6 [chromium] › tests/e2e/smoke.spec.ts:23:5 › mobile navigation opens and navigates (563ms)
+
+
+  1) [chromium] › tests/e2e/smoke.spec.ts:10:5 › docs sidebar opens a doc ──────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('aside').getByRole('link', { name: 'Quickstart' })
+    Expected: visible
+    Error: strict mode violation: locator('aside').getByRole('link', { name: 'Quickstart' }) resolved to 2 elements:
+        1) <a href="/docs/get-started/installation" class="block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px text-white/60 border-transparent hover:text-white hover:border-white/40">Quickstart</a> aka getByRole('complementary').getByRole('link', { name: 'Quickstart', exact: true })
+        2) <a href="/docs/get-started/quickstart-terminai" class="block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px text-white/60 border-transparent hover:text-white hover:border-white/40">Quickstart (TerminaI)</a> aka getByRole('link', { name: 'Quickstart (TerminaI)' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('aside').getByRole('link', { name: 'Quickstart' })[22m
+
+
+      11 |   await page.goto("/docs");
+      12 |   const quickstartLink = page.locator("aside").getByRole("link", { name: "Quickstart" });
+    > 13 |   await expect(quickstartLink).toBeVisible();
+         |                                ^
+      14 |   await page.goto("/docs/get-started/installation");
+      15 |   await expect(page.getByRole("heading", { name: /installation/i })).toBeVisible({ timeout: 15000 });
+      16 | });
+        at /home/profharita/Code/terminai-website/tests/e2e/smoke.spec.ts:13:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/smoke-docs-sidebar-opens-a-doc-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('aside').getByRole('link', { name: 'Quickstart' })
+    Expected: visible
+    Error: strict mode violation: locator('aside').getByRole('link', { name: 'Quickstart' }) resolved to 2 elements:
+        1) <a href="/docs/get-started/installation" class="block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px text-white/60 border-transparent hover:text-white hover:border-white/40">Quickstart</a> aka getByRole('complementary').getByRole('link', { name: 'Quickstart', exact: true })
+        2) <a href="/docs/get-started/quickstart-terminai" class="block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px text-white/60 border-transparent hover:text-white hover:border-white/40">Quickstart (TerminaI)</a> aka getByRole('link', { name: 'Quickstart (TerminaI)' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('aside').getByRole('link', { name: 'Quickstart' })[22m
+
+
+      11 |   await page.goto("/docs");
+      12 |   const quickstartLink = page.locator("aside").getByRole("link", { name: "Quickstart" });
+    > 13 |   await expect(quickstartLink).toBeVisible();
+         |                                ^
+      14 |   await page.goto("/docs/get-started/installation");
+      15 |   await expect(page.getByRole("heading", { name: /installation/i })).toBeVisible({ timeout: 15000 });
+      16 | });
+        at /home/profharita/Code/terminai-website/tests/e2e/smoke.spec.ts:13:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('aside').getByRole('link', { name: 'Quickstart' })
+    Expected: visible
+    Error: strict mode violation: locator('aside').getByRole('link', { name: 'Quickstart' }) resolved to 2 elements:
+        1) <a href="/docs/get-started/installation" class="block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px text-white/60 border-transparent hover:text-white hover:border-white/40">Quickstart</a> aka getByRole('complementary').getByRole('link', { name: 'Quickstart', exact: true })
+        2) <a href="/docs/get-started/quickstart-terminai" class="block pl-4 py-1.5 text-xs transition-colors border-l-2 -ml-px text-white/60 border-transparent hover:text-white hover:border-white/40">Quickstart (TerminaI)</a> aka getByRole('link', { name: 'Quickstart (TerminaI)' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('aside').getByRole('link', { name: 'Quickstart' })[22m
+
+
+      11 |   await page.goto("/docs");
+      12 |   const quickstartLink = page.locator("aside").getByRole("link", { name: "Quickstart" });
+    > 13 |   await expect(quickstartLink).toBeVisible();
+         |                                ^
+      14 |   await page.goto("/docs/get-started/installation");
+      15 |   await expect(page.getByRole("heading", { name: /installation/i })).toBeVisible({ timeout: 15000 });
+      16 | });
+        at /home/profharita/Code/terminai-website/tests/e2e/smoke.spec.ts:13:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry2/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/smoke-docs-sidebar-opens-a-doc-chromium-retry2/error-context.md
+
+  1 failed
+    [chromium] › tests/e2e/smoke.spec.ts:10:5 › docs sidebar opens a doc ───────────────────────────
+  3 passed (8.0s)
