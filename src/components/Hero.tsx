@@ -107,15 +107,13 @@ export function Hero() {
 
             {/* Main Headline */}
             <h1 className="mb-6 leading-tight tracking-tight text-[clamp(2.5rem,6vw,4.5rem)]">
-              Ask It Anything.{" "}
-              <span className="text-[var(--color-brand-red)]">Watch It Happen.</span>
+              Ask Anything –{" "}
+              <span className="text-[var(--color-brand-red)]">Execute with Confidence.</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl opacity-70 max-w-3xl mx-auto leading-relaxed mb-10">
-              Local-first. Human-approved. Auditable.
-              <br/>
-              The system operator for your terminal, apps, and screens.
+              An AI Operator for Your Entire OS, on Your Terms.
             </p>
 
             {/* Install Command (Primary CTA) */}
