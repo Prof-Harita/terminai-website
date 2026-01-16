@@ -41,3 +41,11 @@ yarn-error.log*
 next-env.d.ts
 .lighthouseci/
 test-results/
+
+# artifacts
+playwright-report/
+lint_output.txt
+*.log
+agent_b_prompt.md
+work.md
+tasks_website.md
