@@ -71,7 +71,34 @@ export default function InstallPage() {
         <section className="section pt-8">
           <div className="container max-w-4xl">
             <div className="space-y-8">
-              {/* Method 1: Build from Source */}
+              {/* Method 1: NPM Install (Recommended) */}
+              <div className="rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--color-brand-red)] flex items-center justify-center text-white">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
+                      <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H2.667v4h-1.33V8.667h5.329v5.331zm4 0H9.334v-4H6.667v4H5.334v-5.33h5.332v5.33zm4 0H13.334v-4H10.667v4H9.334v-5.33h5.332v5.33zM2.667 18.666h18.666v-1.332H2.667v1.332z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold">
+                      NPM Install (Recommended)
+                    </h2>
+                    <p className="text-sm opacity-60">
+                      Install globally via npm.
+                    </p>
+                  </div>
+                </div>
+                <div className="code-block text-sm">
+                  <div className="text-gray-500 mb-2">
+                    # Install globally
+                  </div>
+                  <div>npm install -g @terminai/cli</div>
+                  <div className="mt-3 text-gray-500"># Run</div>
+                  <div>terminai</div>
+                </div>
+              </div>
+
+              {/* Method 2: Build from Source */}
               <div className="rounded-2xl bg-white/[0.02] border border-white/10 p-8">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white">
@@ -79,7 +106,7 @@ export default function InstallPage() {
                   </div>
                   <div>
                     <h2 className="text-xl font-bold">
-                      Build from Source (Recommended)
+                      Build from Source
                     </h2>
                     <p className="text-sm opacity-60">
                       Independent open-source fork; not affiliated with Google.
