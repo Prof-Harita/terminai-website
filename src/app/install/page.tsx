@@ -26,8 +26,11 @@ export default function InstallPage() {
               Install{" "}
               <span className="text-[var(--color-brand-red)]">terminaI</span>
             </h1>
-            <p className="text-2xl opacity-70 max-w-2xl mx-auto">
+            <p className="text-2xl opacity-70 max-w-2xl mx-auto mb-4">
               Get started in under 2 minutes.
+            </p>
+            <p className="text-sm opacity-50 bg-white/5 inline-block px-4 py-2 rounded-full">
+              TerminaI is self-hosted. We don&apos;t operate cloud servers or telemetry.
             </p>
           </div>
         </section>
