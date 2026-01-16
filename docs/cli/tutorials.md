@@ -3,7 +3,7 @@
 These are hands-on, “operator style” tutorials for TerminaI.
 
 > Note on config paths: TerminaI is migrating toward `~/.terminai/` as the
-> primary home. Some installs may still read legacy `~/.gemini/` for
+> primary home. Some installs may still read legacy `~/.terminai/` for
 > compatibility.
 
 ---
@@ -83,7 +83,7 @@ https://github.com/github/github-mcp-server
 Create or open your settings file:
 
 - preferred: `~/.terminai/settings.json`
-- legacy fallback: `~/.gemini/settings.json`
+- legacy fallback: `~/.terminai/settings.json`
 
 Add:
 

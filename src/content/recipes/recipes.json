@@ -57,7 +57,7 @@
     "id": "policy-ladder",
     "title": "Policy Ladder Setup",
     "summary": "Map risky commands to approval levels and document the policy.",
-    "persona": "Enterprise",
+    "persona": "Teams",
     "risk": "High",
     "tags": ["policy", "safety", "governance"],
     "example": "Define approvals for rm, sudo, and network changes."
@@ -66,9 +66,9 @@
     "id": "audit-review",
     "title": "Audit Log Review",
     "summary": "Export approvals, summarize actions, and flag anomalies for review.",
-    "persona": "Enterprise",
+    "persona": "Teams",
     "risk": "Medium",
-    "tags": ["audit", "compliance"],
-    "example": "Summarize approvals from last week for compliance review."
+    "tags": ["audit", "review"],
+    "example": "Summarize approvals from last week for review."
   }
 ]

@@ -1,7 +1,7 @@
 # Provide context with GEMINI.md files
 
 Context files, which use the default name `GEMINI.md`, are a powerful feature
-for providing instructional context to the Gemini model. You can use these files
+for providing instructional context to the LLM. You can use these files
 to give project-specific instructions, define a persona, or provide coding style
 guides to make the AI's responses more accurate and tailored to your needs.
 
@@ -16,7 +16,7 @@ sends them to the model with every prompt. The CLI loads files in the following
 order:
 
 1.  **Global context file:**
-    - **Location:** `~/.gemini/GEMINI.md` (in your user home directory).
+    - **Location:** `~/.terminai/GEMINI.md` (in your user home directory).
     - **Scope:** Provides default instructions for all your projects.
 
 2.  **Project root and ancestor context files:**
@@ -66,7 +66,7 @@ You can interact with the loaded context files by using the `/memory` command.
 - **`/memory refresh`**: Forces a re-scan and reload of all `GEMINI.md` files
   from all configured locations.
 - **`/memory add <text>`**: Appends your text to your global
-  `~/.gemini/GEMINI.md` file. This lets you add persistent memories on the fly.
+  `~/.terminai/GEMINI.md` file. This lets you add persistent memories on the fly.
 
 ## Modularize context with imports
 

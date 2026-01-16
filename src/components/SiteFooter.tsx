@@ -11,7 +11,7 @@ export function SiteFooter() {
                             <BrandText />
                         </Link>
                         <p className="text-sm opacity-50 leading-relaxed mb-6">
-                            The first AI that helps operate your entire computer – with you in charge. 
+                            Local-first system operator with you in command.
                             Built for sovereignty, not surveillance.
                         </p>
                         <div className="flex gap-4 opacity-40">

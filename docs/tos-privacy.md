@@ -36,8 +36,8 @@ for further information.
 | Authentication Method    | Service(s)                   | Terms of Service                                                                                        | Privacy Notice                                                                                |
 | :----------------------- | :--------------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------- |
 | Google Account           | Gemini Code Assist services  | [Terms of Service](https://developers.google.com/gemini-code-assist/resources/privacy-notices)          | [Privacy Notices](https://developers.google.com/gemini-code-assist/resources/privacy-notices) |
-| Gemini Developer API Key | Gemini API - Unpaid Services | [Gemini API Terms of Service - Unpaid Services](https://ai.google.dev/gemini-api/terms#unpaid-services) | [Google Privacy Policy](https://policies.google.com/privacy)                                  |
-| Gemini Developer API Key | Gemini API - Paid Services   | [Gemini API Terms of Service - Paid Services](https://ai.google.dev/gemini-api/terms#paid-services)     | [Google Privacy Policy](https://policies.google.com/privacy)                                  |
+| Gemini Developer API Key | LLM API - Unpaid Services | [LLM API Terms of Service - Unpaid Services](https://ai.google.dev/gemini-api/terms#unpaid-services) | [Google Privacy Policy](https://policies.google.com/privacy)                                  |
+| Gemini Developer API Key | LLM API - Paid Services   | [LLM API Terms of Service - Paid Services](https://ai.google.dev/gemini-api/terms#paid-services)     | [Google Privacy Policy](https://policies.google.com/privacy)                                  |
 | Vertex AI GenAI API Key  | Vertex AI GenAI API          | [Google Cloud Platform Terms of Service](https://cloud.google.com/terms/service-terms/)                 | [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice)            |
 
 ## 1. If you have logged in with your Google account to Gemini Code Assist
@@ -62,25 +62,25 @@ Code Assist Standard or Enterprise edition, the terms and privacy policy of
 Gemini Code Assist Standard or Enterprise edition will apply to all your use of
 Gemini Code Assist._
 
-## 2. If you have logged in with a Gemini API key to the Gemini Developer API
+## 2. If you have logged in with a LLM API key to the Gemini Developer API
 
-If you are using a Gemini API key for authentication with the
+If you are using a LLM API key for authentication with the
 [Gemini Developer API](https://ai.google.dev/gemini-api/docs), these Terms of
 Service and Privacy Notice documents apply:
 
 - Terms of Service: Your use of the Gemini CLI is governed by the
-  [Gemini API Terms of Service](https://ai.google.dev/gemini-api/terms). These
+  [LLM API Terms of Service](https://ai.google.dev/gemini-api/terms). These
   terms may differ depending on whether you are using an unpaid or paid service:
   - For unpaid services, refer to the
-    [Gemini API Terms of Service - Unpaid Services](https://ai.google.dev/gemini-api/terms#unpaid-services).
+    [LLM API Terms of Service - Unpaid Services](https://ai.google.dev/gemini-api/terms#unpaid-services).
   - For paid services, refer to the
-    [Gemini API Terms of Service - Paid Services](https://ai.google.dev/gemini-api/terms#paid-services).
+    [LLM API Terms of Service - Paid Services](https://ai.google.dev/gemini-api/terms#paid-services).
 - Privacy Notice: The collection and use of your data is described in the
   [Google Privacy Policy](https://policies.google.com/privacy).
 
-## 3. If you have logged in with a Gemini API key to the Vertex AI GenAI API
+## 3. If you have logged in with a LLM API key to the Vertex AI GenAI API
 
-If you are using a Gemini API key for authentication with a
+If you are using a LLM API key for authentication with a
 [Vertex AI GenAI API](https://cloud.google.com/vertex-ai/generative-ai/docs/reference/rest)
 backend, these Terms of Service and Privacy Notice documents apply:
 

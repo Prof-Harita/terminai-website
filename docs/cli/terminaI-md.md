@@ -1,7 +1,7 @@
 # Provide context with terminaI.md files
 
 Context files, which use the default name `terminaI.md`, are a powerful feature
-for providing instructional context to the Gemini model. You can use these files
+for providing instructional context to the LLM. You can use these files
 to give project-specific instructions, define a persona, or provide coding style
 guides to make the AI's responses more accurate and tailored to your needs.
 

@@ -36,7 +36,7 @@ const caseStudies = [
   },
   {
     title: "Compliance Audit Snapshot",
-    environment: "Enterprise security team",
+    environment: "Security compliance team",
     approvals: "Level C for sensitive exports",
     outcome: "Generated audit summary and flagged anomalies.",
   },

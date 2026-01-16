@@ -33,7 +33,7 @@ This is the first bot you will interact with when you create an issue. Its job i
 *   **Workflow File**: `.github/workflows/gemini-automated-issue-triage.yml`
 *   **When it runs**: Immediately after an issue is created or reopened.
 *   **What it does**:
-    *   It uses a Gemini model to analyze the issue’s title and body against a detailed set of guidelines.
+    *   It uses a LLM to analyze the issue’s title and body against a detailed set of guidelines.
     *   **Applies one `area/*` label**: Categorizes the issue into a functional area of the project (e.g., `area/ux`, `area/models`, `area/platform`).
     *   **Applies one `kind/*` label**: Identifies the type of issue (e.g., `kind/bug`, `kind/enhancement`, `kind/question`).
     *   **Applies one `priority/*` label**: Assigns a priority from P0 (critical) to P3 (low) based on the described impact.

@@ -4,8 +4,8 @@ import { Layers, TerminalSquare } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 export const metadata: Metadata = {
-  title: "Positioning | TerminaI",
-  description: "How TerminaI differs from chatbots, terminals, and AI IDEs.",
+  title: "TerminaI vs Chat Assistants — Governed Operator Runtime",
+  description: "A governed operator runtime (PTY terminal) with explicit approvals + audit logs. Optional self-hosted remote review.",
 };
 
 const differentiators = [
@@ -19,7 +19,7 @@ const differentiators = [
   },
   {
     title: "Voice + remote view",
-    description: "Operate hands-free and observe sessions from any device.",
+    description: "Hands-free operation + optional self-hosted remote review (requires explicit pairing).",
   },
 ];
 

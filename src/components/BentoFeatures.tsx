@@ -92,7 +92,7 @@ const features = [
     icon: ShieldCheck,
     title: "Safety Ladder",
     description: "Three-tier approval. PIN verification for destructive commands.",
-    link: "/safety",
+    link: "/trust",
     gradient: "from-green-500/20 to-emerald-500/20",
   },
   {
@@ -128,7 +128,7 @@ const features = [
     icon: ScrollText,
     title: "Audit Trail",
     description: "Full logging of AI actions for trust and compliance.",
-    link: "/safety#audit-trail",
+    link: "/trust#audit-trail",
     gradient: "from-yellow-500/20 to-amber-500/20",
   },
   {

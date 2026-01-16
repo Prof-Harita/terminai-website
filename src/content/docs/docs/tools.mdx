@@ -6,15 +6,15 @@ description: ""
 # TerminaI tools
 
 
-The TerminaI includes built-in tools that the Gemini model uses to interact with your local environment, access information, and perform actions. These tools enhance the CLI’s capabilities, enabling it to go beyond text generation and assist with a wide range of tasks.
+The TerminaI includes built-in tools that the LLM uses to interact with your local environment, access information, and perform actions. These tools enhance the CLI’s capabilities, enabling it to go beyond text generation and assist with a wide range of tasks.
 
 ## Overview of TerminaI tools
 
 [Section titled “Overview of TerminaI tools”](#overview-of-terminai-tools)
 
-In the context of the TerminaI, tools are specific functions or modules that the Gemini model can request to be executed. For example, if you ask Gemini to “Summarize the contents of `my_document.txt`,” the model will likely identify the need to read that file and will request the execution of the `read_file` tool.
+In the context of the TerminaI, tools are specific functions or modules that the LLM can request to be executed. For example, if you ask Gemini to “Summarize the contents of `my_document.txt`,” the model will likely identify the need to read that file and will request the execution of the `read_file` tool.
 
-The core component (`packages/core`) manages these tools, presents their definitions (schemas) to the Gemini model, executes them when requested, and returns the results to the model for further processing into a user-facing response.
+The core component (`packages/core`) manages these tools, presents their definitions (schemas) to the LLM, executes them when requested, and returns the results to the model for further processing into a user-facing response.
 
 These tools provide the following capabilities:
 
@@ -32,11 +32,11 @@ To use TerminaI tools, provide a prompt to the TerminaI. The process works as fo
 
 1.  You provide a prompt to the TerminaI.
 2.  The CLI sends the prompt to the core.
-3.  The core, along with your prompt and conversation history, sends a list of available tools and their descriptions/schemas to the Gemini API.
-4.  The Gemini model analyzes your request. If it determines that a tool is needed, its response will include a request to execute a specific tool with certain parameters.
+3.  The core, along with your prompt and conversation history, sends a list of available tools and their descriptions/schemas to the LLM API.
+4.  The LLM analyzes your request. If it determines that a tool is needed, its response will include a request to execute a specific tool with certain parameters.
 5.  The core receives this tool request, validates it, and (often after user confirmation for sensitive operations) executes the tool.
-6.  The output from the tool is sent back to the Gemini model.
-7.  The Gemini model uses the tool’s output to formulate its final answer, which is then sent back through the core to the CLI and displayed to you.
+6.  The output from the tool is sent back to the LLM.
+7.  The LLM uses the tool’s output to formulate its final answer, which is then sent back through the core to the CLI and displayed to you.
 
 You will typically see messages in the CLI indicating when a tool is being called and whether it succeeded or failed.
 
@@ -66,5 +66,5 @@ TerminaI’s built-in tools can be broadly categorized as follows:
 
 Additionally, these tools incorporate:
 
-*   **[MCP servers](/docs/tools/mcp-server)**: MCP servers act as a bridge between the Gemini model and your local environment or other services like APIs.
+*   **[MCP servers](/docs/tools/mcp-server)**: MCP servers act as a bridge between the LLM and your local environment or other services like APIs.
 *   **[Sandboxing](/docs/cli/sandbox)**: Sandboxing isolates the model and its changes from your environment to reduce potential risk.

@@ -34,7 +34,7 @@ termai
 Pick one of the authentication methods when prompted on first run:
 
 - Google OAuth (recommended for most users)
-- Gemini API key
+- LLM API key
 - Vertex AI
 
 ## First commands

@@ -15,9 +15,9 @@ Select the authentication method that matches your situation in the table below:
 | :--------------------------------------------------------------------- | :--------------------------------------------------------------- | :---------------------------------------------------------- |
 | Individual Google accounts                                             | [Login with Google](#login-google)                               | No, with exceptions                                         |
 | Organization users with a company, school, or Google Workspace account | [Login with Google](#login-google)                               | [Yes](#set-gcp)                                             |
-| AI Studio user with a Gemini API key                                   | [Use Gemini API Key](#gemini-api)                                | No                                                          |
+| AI Studio user with a LLM API key                                   | [Use LLM API Key](#gemini-api)                                | No                                                          |
 | Google Cloud Vertex AI user                                            | [Vertex AI](#vertex-ai)                                          | [Yes](#set-gcp)                                             |
-| [Headless mode](#headless)                                             | [Use Gemini API Key](#gemini-api) or<br> [Vertex AI](#vertex-ai) | No (for Gemini API Key)<br> [Yes](#set-gcp) (for Vertex AI) |
+| [Headless mode](#headless)                                             | [Use LLM API Key](#gemini-api) or<br> [Vertex AI](#vertex-ai) | No (for LLM API Key)<br> [Yes](#set-gcp) (for Vertex AI) |
 
 ### What is my Google account type?
 
@@ -66,12 +66,12 @@ when you meet at least one of the following conditions:
 
 For instructions, see [Set your Google Cloud Project](#set-gcp).
 
-## Use Gemini API key <a id="gemini-api"></a>
+## Use LLM API key <a id="gemini-api"></a>
 
 If you don't want to authenticate using your Google account, you can use an API
 key from Google AI Studio.
 
-To authenticate and use Gemini CLI with a Gemini API key:
+To authenticate and use Gemini CLI with a LLM API key:
 
 1. Obtain your API key from
    [Google AI Studio](https://aistudio.google.com/app/apikey).
@@ -92,7 +92,7 @@ To authenticate and use Gemini CLI with a Gemini API key:
    gemini
    ```
 
-4. Select **Use Gemini API key**.
+4. Select **Use LLM API key**.
 
 > **Warning:** Treat API keys, especially for services like Gemini, as sensitive
 > credentials. Protect them to prevent unauthorized access and potential misuse
@@ -274,13 +274,13 @@ persist them with the following methods:
 2.  **Use a `.env` file:** Create a `.gemini/.env` file in your project
     directory or home directory. Gemini CLI automatically loads variables from
     the first `.env` file it finds, searching up from the current directory,
-    then in `~/.gemini/.env` or `~/.env`. `.gemini/.env` is recommended.
+    then in `~/.terminai/.env` or `~/.env`. `.gemini/.env` is recommended.
 
     Example for user-wide settings:
 
     ```bash
     mkdir -p ~/.gemini
-    cat >> ~/.gemini/.env <<'EOF'
+    cat >> ~/.terminai/.env <<'EOF'
     GOOGLE_CLOUD_PROJECT="your-project-id"
     # Add other variables like GEMINI_API_KEY as needed
     EOF
@@ -309,7 +309,7 @@ if an existing authentication credential is cached.
 If you have not already logged in with an authentication credential, you must
 configure authentication using environment variables:
 
-- [Use Gemini API Key](#gemini-api)
+- [Use LLM API Key](#gemini-api)
 - [Vertex AI](#vertex-ai)
 
 ## What's next?

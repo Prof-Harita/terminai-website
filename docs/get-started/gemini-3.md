@@ -7,7 +7,7 @@ Flash, including the following subscribers:
 - Google AI Pro and Google AI Ultra (excluding business customers).
 - Gemini Code Assist Standard and Enterprise (requires
   [administrative enablement](#administrator-instructions)).
-- Paid Gemini API and Vertex API key holders.
+- Paid LLM API and Vertex API key holders.
 
 For free tier users:
 

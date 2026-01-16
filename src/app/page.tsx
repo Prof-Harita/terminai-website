@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { FirstWin } from "@/components/FirstWin";
 import { BentoFeatures } from "@/components/BentoFeatures";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ManifestoHome } from "@/components/ManifestoHome";
@@ -17,6 +18,7 @@ export default function Home() {
            TerminaI = governed system operator (terminal + desktop automation) — open-source fork of Gemini CLI
         </div>
         <Hero />
+        <FirstWin />
         <DemoShowcase />
         <BentoFeatures />
         <HowItWorks />

@@ -169,7 +169,7 @@ export default function ExtensibilityPage() {
                       className="text-[var(--color-brand-red)]"
                     />
                     <code className="bg-white/5 px-2 py-1 rounded">
-                      ~/.gemini/settings.json
+                      ~/.terminai/settings.json
                     </code>
                     <span className="opacity-60">Global settings</span>
                   </li>
@@ -179,7 +179,7 @@ export default function ExtensibilityPage() {
                       className="text-[var(--color-brand-red)]"
                     />
                     <code className="bg-white/5 px-2 py-1 rounded">
-                      .gemini/settings.json
+                      .terminai/settings.json
                     </code>
                     <span className="opacity-60">Project settings</span>
                   </li>
@@ -187,10 +187,10 @@ export default function ExtensibilityPage() {
               </div>
               <div className="code-block text-sm">
                 <div className="text-gray-500 mb-2">
-                  {"// ~/.gemini/settings.json"}
+                  {"// ~/.terminai/settings.json"}
                 </div>
                 <pre className="text-green-400">{`{
-  "model": "gemini-2.5-pro",
+  "model": "gpt-4o",
   "voice": {
     "enabled": true,
     "pushToTalk": { "key": "space" }
@@ -229,10 +229,11 @@ export default function ExtensibilityPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="card">
-                <h3 className="mb-3">Remote Control</h3>
+                <h3 className="mb-3">Remote Review (Optional)</h3>
                 <p className="text-sm opacity-60 mb-4">
-                  Control your terminal from your phone or iPad. Check
-                  long-running builds from anywhere without SSH headaches.
+                  Optional self-hosted relay for remote session review. 
+                  No hosted relay—you run it. Requires explicit pairing. 
+                  Approvals still gate all mutations.
                 </p>
                 <code className="text-xs bg-white/5 px-2 py-1 rounded">
                   terminai --web-remote

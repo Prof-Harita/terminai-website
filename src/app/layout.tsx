@@ -14,35 +14,37 @@ const structuredData = {
     },
     {
       "@type": "SoftwareApplication",
-      name: "terminaI",
-      applicationCategory: "DeveloperApplication",
-      operatingSystem: "Linux, macOS, Windows (WSL)",
-      description:
-        "Open source AI terminal operator with voice control, web remote, and governed autonomy.",
-      url: "https://terminai.org",
+      "name": "TerminaI",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, macOS, Windows",
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "isAccessibleForFree": true,
+      "description":
+        "Local-first computer operator with governed execution, approvals, and local audit logs. Model-agnostic.",
+      "url": "https://terminai.org",
     },
   ],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://terminai.org"),
-  title: "terminaI | The Universal System Operator",
-  description: "Open source AI terminal agent with voice control, web remote, and system awareness.",
-  keywords: ["terminal", "AI", "agent", "voice control", "system operator", "open source"],
+  title: "TerminaI — Local-first computer operator with approvals + audit logs",
+  description: "Windows/Linux/macOS. Model-agnostic (OpenAI-compatible + local gateways). Governed execution, local audit logs.",
+  keywords: ["terminal", "AI", "agent", "system operator", "open source", "audit logs", "governed autonomy"],
   authors: [{ name: "terminaI Contributors" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://terminai.org",
     siteName: "terminaI",
-    title: "terminaI | The Universal System Operator",
-    description: "Open source AI terminal agent with voice control, web remote, and system awareness.",
+    title: "TerminaI — Local-first computer operator with approvals + audit logs",
+    description: "Windows/Linux/macOS. Model-agnostic. Governed execution, local audit logs.",
     images: ["/banner.svg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "terminaI | The Universal System Operator",
-    description: "Open source AI terminal agent with voice control, web remote, and system awareness.",
+    title: "TerminaI — Local-first computer operator with approvals + audit logs",
+    description: "Windows/Linux/macOS. Model-agnostic. Governed execution, local audit logs.",
     images: ["/banner.svg"],
   },
 };

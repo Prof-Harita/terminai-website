@@ -189,7 +189,7 @@ npm install -g @google/gemini-cli
   https://github.com/google-gemini/gemini-cli/pull/14756
 - fix(lint): upgrade pip and use public pypi for yamllint by @allenhutchison in
   https://github.com/google-gemini/gemini-cli/pull/14746
-- fix: use Gemini API supported image formats for clipboard by @jackwotherspoon
+- fix: use LLM API supported image formats for clipboard by @jackwotherspoon
   in https://github.com/google-gemini/gemini-cli/pull/14762
 - feat(a2a): Introduce restore command for a2a server by @cocosheng-g in
   https://github.com/google-gemini/gemini-cli/pull/13015

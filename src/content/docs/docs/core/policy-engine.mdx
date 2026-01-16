@@ -19,10 +19,10 @@ To create your first policy:
     Terminal window
     
     ```
-    mkdir -p ~/.gemini/policies
+    mkdir -p ~/.terminai/policies
     ```
     
-2.  **Create a new policy file** (e.g., `~/.gemini/policies/my-rules.toml`). You can use any filename ending in `.toml`; all such files in this directory will be loaded and combined:
+2.  **Create a new policy file** (e.g., `~/.terminai/policies/my-rules.toml`). You can use any filename ending in `.toml`; all such files in this directory will be loaded and combined:
     
     ```
     [[rule]]toolName = "run_shell_command"commandPrefix = "git status"decision = "allow"priority = 100

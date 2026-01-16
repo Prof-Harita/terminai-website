@@ -1,12 +1,12 @@
 # Welcome to Gemini CLI documentation
 
 This documentation provides a comprehensive guide to installing, using, and
-developing Gemini CLI, a tool that lets you interact with Gemini models through
+developing Gemini CLI, a tool that lets you interact with LLMs through
 a command-line interface.
 
 ## Gemini CLI overview
 
-Gemini CLI brings the capabilities of Gemini models to your terminal in an
+Gemini CLI brings the capabilities of LLMs to your terminal in an
 interactive Read-Eval-Print Loop (REPL) environment.
 
 > [!NOTE] **Using TerminaI?** This repository is home to **TerminaI**, an
@@ -20,7 +20,7 @@ interactive Read-Eval-Print Loop (REPL) environment.
 > - TerminaI-specific configuration
 
 The core CLI application (`packages/cli`) communicates with a local server
-(`packages/core`), which in turn manages requests to the Gemini API and its AI
+(`packages/core`), which in turn manages requests to the LLM API and its AI
 models. Gemini CLI also contains a variety of tools for tasks such as performing
 file system operations, running shells, and web fetching, which are managed by
 `packages/core`.

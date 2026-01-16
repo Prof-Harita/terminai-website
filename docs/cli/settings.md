@@ -8,7 +8,7 @@ Your Gemini CLI settings are stored in a `settings.json` file. In addition to
 using the `/settings` command, you can also edit them in one of the following
 locations:
 
-- **User settings**: `~/.gemini/settings.json`
+- **User settings**: `~/.terminai/settings.json`
 - **Workspace settings**: `your-project/.gemini/settings.json`
 
 Note: Workspace settings override user settings.

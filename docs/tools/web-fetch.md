@@ -24,9 +24,9 @@ response.
 
 To use `web_fetch` with the Gemini CLI, provide a natural language prompt that
 contains URLs. The tool will ask for confirmation before fetching any URLs. Once
-confirmed, the tool will process URLs through Gemini API's `urlContext`.
+confirmed, the tool will process URLs through LLM API's `urlContext`.
 
-If the Gemini API cannot access the URL, the tool will fall back to fetching
+If the LLM API cannot access the URL, the tool will fall back to fetching
 content directly from the local machine. The tool will format the response,
 including source attribution and citations where possible. The tool will then
 provide the response to the user.
@@ -43,7 +43,7 @@ web_fetch(prompt="Your prompt, including a URL such as https://google.com.")
   sources first, use `google_web_search`.
 - Ask for a concise answer and citations when accuracy matters (for example:
   "summarize in 3 bullets and cite sources").
-- If a URL is inaccessible to the Gemini API, `web_fetch` falls back to a local
+- If a URL is inaccessible to the LLM API, `web_fetch` falls back to a local
   fetch and then summarizes the content. Keep prompts clear and specific so the
   summary stays tight and relevant.
 
@@ -63,7 +63,7 @@ web_fetch(prompt="What are the differences in the conclusions of these two paper
 
 ## Important notes
 
-- **URL processing:** `web_fetch` relies on the Gemini API's ability to access
+- **URL processing:** `web_fetch` relies on the LLM API's ability to access
   and process the given URLs.
 - **Output quality:** The quality of the output will depend on the clarity of
   the instructions in the prompt.

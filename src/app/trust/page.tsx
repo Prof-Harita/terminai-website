@@ -13,8 +13,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Trust Center | TerminaI",
-  description: "Security, safety, and governance for the TerminaI system operator.",
+  title: "Trust Center — Approvals, Audit Logs, and Safety Architecture",
+  description: "Three-tier approval ladder. Local audit logs. Self-hosted remote review. Bring your own model keys.",
 };
 
 const pillars = [
@@ -186,6 +186,49 @@ export default function TrustPage() {
                   height={320}
                   className="w-full h-auto border border-white/10 rounded-2xl bg-black"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section border-t border-white/5">
+          <div className="container">
+            <h2 className="mb-6">Remote Review Threat Model</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div>
+                <p className="opacity-70 leading-relaxed mb-6">
+                  Remote viewing is <strong>disabled by default</strong>. When enabled (via <code className="text-xs bg-white/10 px-1 rounded">--web-remote</code>), 
+                  it creates a self-hosted relay point.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex gap-3">
+                    <div className="w-6 h-6 rounded bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle size={14} />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold">End-to-End Encryption</div>
+                      <div className="text-xs opacity-50">Session data is encrypted before leaving your machine.</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="w-6 h-6 rounded bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle size={14} />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold">Ephemeral Pairings</div>
+                      <div className="text-xs opacity-50">Remote keys are transient and valid only for the active session.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 rounded-2xl bg-amber-500/5 border border-amber-500/20">
+                <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                  <Lock size={18} className="text-amber-400" /> Bound by the Ladder
+                </h3>
+                <p className="text-sm opacity-70 leading-relaxed">
+                  Even when viewing remotely, <strong>all mutations</strong> (Level B and C actions) still require 
+                  explicit approval on the local terminal where the operator is running. Remote view is primarily 
+                  for <strong>observation and emergency stop</strong>.
+                </p>
               </div>
             </div>
           </div>

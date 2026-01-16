@@ -34,9 +34,9 @@ Organization users with a company, school, or Google Workspace account
 
 [Yes](#set-gcp)
 
-AI Studio user with a Gemini API key
+AI Studio user with a LLM API key
 
-[Use Gemini API Key](#gemini-api)
+[Use LLM API Key](#gemini-api)
 
 No
 
@@ -48,10 +48,10 @@ Google Cloud Vertex AI user
 
 [Headless mode](#headless)
 
-[Use Gemini API Key](#gemini-api) or  
+[Use LLM API Key](#gemini-api) or  
 [Vertex AI](#vertex-ai)
 
-No (for Gemini API Key)  
+No (for LLM API Key)  
 [Yes](#set-gcp) (for Vertex AI)
 
 ### What is my Google account type?
@@ -96,13 +96,13 @@ Most individual Google accounts (free and paid) don’t require a Google Cloud p
 
 For instructions, see [Set your Google Cloud Project](#set-gcp).
 
-## Use Gemini API key
+## Use LLM API key
 
-[Section titled “Use Gemini API key ”](#use-gemini-api-key)
+[Section titled “Use LLM API key ”](#use-gemini-api-key)
 
 If you don’t want to authenticate using your Google account, you can use an API key from Google AI Studio.
 
-To authenticate and use TerminaI with a Gemini API key:
+To authenticate and use TerminaI with a LLM API key:
 
 1.  Obtain your API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
     
@@ -124,7 +124,7 @@ To authenticate and use TerminaI with a Gemini API key:
     gemini
     ```
     
-4.  Select **Use Gemini API key**.
+4.  Select **Use LLM API key**.
     
 
 > **Warning:** Treat API keys, especially for services like Gemini, as sensitive credentials. Protect them to prevent unauthorized access and potential misuse of the service under your account.
@@ -305,14 +305,14 @@ To avoid setting environment variables for every terminal session, you can persi
     
     > **Warning:** Be aware that when you export API keys or service account paths in your shell configuration file, any process launched from that shell can read them.
     
-2.  **Use a `.env` file:** Create a `.gemini/.env` file in your project directory or home directory. TerminaI automatically loads variables from the first `.env` file it finds, searching up from the current directory, then in `~/.gemini/.env` or `~/.env`. `.gemini/.env` is recommended.
+2.  **Use a `.env` file:** Create a `.gemini/.env` file in your project directory or home directory. TerminaI automatically loads variables from the first `.env` file it finds, searching up from the current directory, then in `~/.terminai/.env` or `~/.env`. `.gemini/.env` is recommended.
     
     Example for user-wide settings:
     
     Terminal window
     
     ```
-    mkdir -p ~/.geminicat >> ~/.gemini/.env <<'EOF'GOOGLE_CLOUD_PROJECT="your-project-id"# Add other variables like GEMINI_API_KEY as neededEOF
+    mkdir -p ~/.geminicat >> ~/.terminai/.env <<'EOF'GOOGLE_CLOUD_PROJECT="your-project-id"# Add other variables like GEMINI_API_KEY as neededEOF
     ```
     
 
@@ -336,7 +336,7 @@ If automatic authentication fails, use one of the interactive methods described 
 
 If you have not already logged in with an authentication credential, you must configure authentication using environment variables:
 
-*   [Use Gemini API Key](#gemini-api)
+*   [Use LLM API Key](#gemini-api)
 *   [Vertex AI](#vertex-ai)
 
 ## What’s next?

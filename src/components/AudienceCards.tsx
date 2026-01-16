@@ -49,7 +49,7 @@ const audiences = [
       "Share automation recipes",
       "Maintain security while scaling",
     ],
-    note: "Enterprise-ready for growing teams.",
+    note: "Collaborative recipes for teams.",
     benefit: "Scale workflows without chaos"
   },
 ];
@@ -60,7 +60,7 @@ export function AudienceCards() {
       <div className="container">
         <h2 className="text-center mb-4">Built for Everyone</h2>
         <p className="text-center text-lg opacity-60 mb-12 max-w-2xl mx-auto">
-          From first-time terminal users to enterprise SRE teams.
+          From first-time terminal users to collaborative SRE teams.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {audiences.map((audience, index) => {

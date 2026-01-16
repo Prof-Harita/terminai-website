@@ -30,7 +30,7 @@ This guide provides solutions to common issues and debugging tips, including top
 *   **Error: `Failed to login. Message: Request contains an invalid argument`**
     
     *   **Cause:** Users with Google Workspace accounts or Google Cloud accounts associated with their Gmail accounts may not be able to activate the free tier of the Google Code Assist plan.
-    *   **Solution:** For Google Cloud accounts, you can work around this by setting `GOOGLE_CLOUD_PROJECT` to your project ID. Alternatively, you can obtain the Gemini API key from [Google AI Studio](http://aistudio.google.com/app/apikey), which also includes a separate free tier.
+    *   **Solution:** For Google Cloud accounts, you can work around this by setting `GOOGLE_CLOUD_PROJECT` to your project ID. Alternatively, you can obtain the LLM API key from [Google AI Studio](http://aistudio.google.com/app/apikey), which also includes a separate free tier.
 *   **Error: `UNABLE_TO_GET_ISSUER_CERT_LOCALLY` or `unable to get local issuer certificate`**
     
     *   **Cause:** You may be on a corporate network with a firewall that intercepts and inspects SSL/TLS traffic. This often requires a custom root CA certificate to be trusted by Node.js.

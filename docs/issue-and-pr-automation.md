@@ -32,7 +32,7 @@ is to perform an initial analysis and apply the correct labels.
 - **Workflow File**: `.github/workflows/gemini-automated-issue-triage.yml`
 - **When it runs**: Immediately after an issue is created or reopened.
 - **What it does**:
-  - It uses a Gemini model to analyze the issue's title and body against a
+  - It uses a LLM to analyze the issue's title and body against a
     detailed set of guidelines.
   - **Applies one `area/*` label**: Categorizes the issue into a functional area
     of the project (e.g., `area/ux`, `area/models`, `area/platform`).

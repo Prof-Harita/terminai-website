@@ -28,7 +28,7 @@ Slash commands provide meta-level control over the CLI itself.
       - **Usage:** `/chat save <tag>`
       - **Details on checkpoint location:** The default locations for saved chat
         checkpoints are:
-        - Linux/macOS: `~/.gemini/tmp/<project_hash>/`
+        - Linux/macOS: `~/.terminai/tmp/<project_hash>/`
         - Windows: `C:\Users\<YourUsername>\.gemini\tmp\<project_hash>\`
         - **Behavior:** Chats are saved into a project-specific directory,
           determined by where you run the CLI. Consequently, saved chats are
@@ -129,7 +129,7 @@ Slash commands provide meta-level control over the CLI itself.
         available tools.
 
 - [**`/model`**](./model.md)
-  - **Description:** Opens a dialog to choose your Gemini model.
+  - **Description:** Opens a dialog to choose your LLM.
 
 - **`/memory`**
   - **Description:** Manage the AI's instructional context (hierarchical memory
@@ -142,7 +142,7 @@ Slash commands provide meta-level control over the CLI itself.
       - **Description:** Display the full, concatenated content of the current
         hierarchical memory that has been loaded from all `terminaI.md` files.
         This lets you inspect the instructional context being provided to the
-        Gemini model.
+        LLM.
     - **`refresh`**:
       - **Description:** Reload the hierarchical instructional memory from all
         `terminaI.md` files found in the configured locations (global,
@@ -246,7 +246,7 @@ Slash commands provide meta-level control over the CLI itself.
     - **Count support:** Prefix commands with numbers (e.g., `3h`, `5w`, `10G`)
     - **Repeat last command:** Use `.` to repeat the last editing operation
     - **Persistent setting:** Vim mode preference is saved to
-      `~/.gemini/settings.json` and restored between sessions
+      `~/.terminai/settings.json` and restored between sessions
   - **Status indicator:** When enabled, shows `[NORMAL]` or `[INSERT]` in the
     footer
 
@@ -309,13 +309,13 @@ your prompt to Gemini. These commands include git-aware filtering.
 
 - **`@` (Lone at symbol)**
   - **Description:** If you type a lone `@` symbol without a path, the query is
-    passed as-is to the Gemini model. This might be useful if you are
+    passed as-is to the LLM. This might be useful if you are
     specifically talking _about_ the `@` symbol in your prompt.
 
 ### Error handling for `@` commands
 
 - If the path specified after `@` is not found or is invalid, an error message
-  will be displayed, and the query might not be sent to the Gemini model, or it
+  will be displayed, and the query might not be sent to the LLM, or it
   will be sent without the file content.
 - If the `read_many_files` tool encounters an error (e.g., permission issues),
   this will also be reported.

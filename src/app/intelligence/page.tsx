@@ -24,9 +24,17 @@ export default function IntelligencePage() {
                 Intelligence
               </span>
             </h1>
-            <p className="text-2xl opacity-70 max-w-3xl mx-auto">
-              An advanced agentic harness, powered by state-of-the-art AI models.
+            <p className="text-xl opacity-70 max-w-2xl mx-auto mb-6">
+              Full-strength reasoning and planning from your chosen model—execution 
+              remains approval-gated and audited.
             </p>
+            <div className="flex flex-col items-center gap-4 text-sm opacity-60 mb-12">
+              <div className="flex gap-8 flex-wrap justify-center">
+                <span className="flex items-center gap-2">✓ No intentional weakening of reasoning</span>
+                <span className="flex items-center gap-2">✓ Capability ≠ permission</span>
+                <span className="flex items-center gap-2">✓ Local, reviewable audit logs</span>
+              </div>
+            </div>
           </div>
         </section>
 

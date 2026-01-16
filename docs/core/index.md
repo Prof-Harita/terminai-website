@@ -1,7 +1,7 @@
 # Gemini CLI core
 
 Gemini CLI's core package (`packages/core`) is the backend portion of Gemini
-CLI, handling communication with the Gemini API, managing tools, and processing
+CLI, handling communication with the LLM API, managing tools, and processing
 requests sent from `packages/cli`. For a general overview of Gemini CLI, see the
 [main documentation page](../index.md).
 
@@ -19,17 +19,17 @@ requests sent from `packages/cli`. For a general overview of Gemini CLI, see the
 While the `packages/cli` portion of Gemini CLI provides the user interface,
 `packages/core` is responsible for:
 
-- **Gemini API interaction:** Securely communicating with the Google Gemini API,
+- **LLM API interaction:** Securely communicating with the Google LLM API,
   sending user prompts, and receiving model responses.
-- **Prompt engineering:** Constructing effective prompts for the Gemini model,
+- **Prompt engineering:** Constructing effective prompts for the LLM,
   potentially incorporating conversation history, tool definitions, and
   instructional context from `terminaI.md` files.
 - **Tool management & orchestration:**
   - Registering available tools (e.g., file system tools, shell command
     execution).
-  - Interpreting tool use requests from the Gemini model.
+  - Interpreting tool use requests from the LLM.
   - Executing the requested tools with the provided arguments.
-  - Returning tool execution results to the Gemini model for further processing.
+  - Returning tool execution results to the LLM for further processing.
 - **Session and state management:** Keeping track of the conversation state,
   including history and any relevant context required for coherent interactions.
 - **Configuration:** Managing core-specific configurations, such as API key
@@ -40,7 +40,7 @@ While the `packages/cli` portion of Gemini CLI provides the user interface,
 The core plays a vital role in security:
 
 - **API key management:** It handles the `GEMINI_API_KEY` and ensures it's used
-  securely when communicating with the Gemini API.
+  securely when communicating with the LLM API.
 - **Tool execution:** When tools interact with the local system (e.g.,
   `run_shell_command`), the core (and its underlying tool implementations) must
   do so with appropriate caution, often involving sandboxing mechanisms to

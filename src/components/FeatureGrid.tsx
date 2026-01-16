@@ -25,9 +25,9 @@ const features = [
     },
     {
         icon: Globe,
-        title: "Control from Anywhere",
+        title: "Optional Remote Review",
         description:
-            "Securely tunnel into your terminal from your phone or iPad. Check long-running builds from the dinner table without SSH headaches.",
+            "Self-hosted relay for remote session viewing (off by default). Explicit pairing required. Approvals still gate all actions.",
         colSpan: "md:col-span-1",
     },
     {

@@ -419,7 +419,7 @@ numbers run first):
 
 1.  **Project settings:** `.gemini/settings.json` in your project directory
     (highest priority)
-2.  **User settings:** `~/.gemini/settings.json`
+2.  **User settings:** `~/.terminai/settings.json`
 3.  **System settings:** `/etc/gemini-cli/settings.json`
 4.  **Extensions:** Internal hooks defined by installed extensions (lowest
     priority)
@@ -477,7 +477,7 @@ Hooks have access to:
 
 - `GEMINI_PROJECT_DIR`: Project root directory
 - `GEMINI_SESSION_ID`: Current session ID
-- `GEMINI_API_KEY`: Gemini API key (if configured)
+- `GEMINI_API_KEY`: LLM API key (if configured)
 - All other environment variables from the parent process
 
 ## Managing hooks
@@ -509,7 +509,7 @@ You can temporarily enable or disable individual hooks using commands:
 These commands allow you to control hook execution without editing configuration
 files. The hook name should match the `name` field in your hook configuration.
 Changes made via these commands are persisted to your global User settings
-(`~/.gemini/settings.json`).
+(`~/.terminai/settings.json`).
 
 ### Disabled hooks configuration
 

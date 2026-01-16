@@ -16,7 +16,7 @@ with `npm install -g @google/gemini-cli` or runs it directly with
 
 ## `@google/gemini-cli-core`
 
-This package contains the core logic for interacting with the Gemini API. It is
+This package contains the core logic for interacting with the LLM API. It is
 responsible for making API requests, handling authentication, and managing the
 local cache.
 

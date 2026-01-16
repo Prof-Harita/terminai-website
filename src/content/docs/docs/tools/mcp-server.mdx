@@ -12,7 +12,7 @@ This document provides a guide to configuring and using Model Context Protocol (
 
 [Section titled “What is an MCP server?”](#what-is-an-mcp-server)
 
-An MCP server is an application that exposes tools and resources to the TerminaI through the Model Context Protocol, allowing it to interact with external systems and data sources. MCP servers act as a bridge between the Gemini model and your local environment or other services like APIs.
+An MCP server is an application that exposes tools and resources to the TerminaI through the Model Context Protocol, allowing it to interact with external systems and data sources. MCP servers act as a bridge between the LLM and your local environment or other services like APIs.
 
 An MCP server enables the TerminaI to:
 
@@ -37,7 +37,7 @@ The discovery process is orchestrated by `discoverMcpTools()`, which:
 1.  **Iterates through configured servers** from your `settings.json` `mcpServers` configuration
 2.  **Establishes connections** using appropriate transport mechanisms (Stdio, SSE, or Streamable HTTP)
 3.  **Fetches tool definitions** from each server using the MCP protocol
-4.  **Sanitizes and validates** tool schemas for compatibility with the Gemini API
+4.  **Sanitizes and validates** tool schemas for compatibility with the LLM API
 5.  **Registers tools** in the global tool registry with conflict resolution
 6.  **Fetches and registers resources** if the server exposes any
 
@@ -247,7 +247,7 @@ Terminal window
 
 OAuth tokens are automatically:
 
-*   **Stored securely** in `~/.gemini/mcp-oauth-tokens.json`
+*   **Stored securely** in `~/.terminai/mcp-oauth-tokens.json`
 *   **Refreshed** when expired (if refresh tokens are available)
 *   **Validated** before each connection attempt
 *   **Cleaned up** when invalid or expired
@@ -382,7 +382,7 @@ Upon successful connection:
 1.  **Tool listing:** The client calls the MCP server’s tool listing endpoint
 2.  **Schema validation:** Each tool’s function declaration is validated
 3.  **Tool filtering:** Tools are filtered based on `includeTools` and `excludeTools` configuration
-4.  **Name sanitization:** Tool names are cleaned to meet Gemini API requirements:
+4.  **Name sanitization:** Tool names are cleaned to meet LLM API requirements:
     *   Invalid characters (non-alphanumeric, underscore, dot, hyphen) are replaced with underscores
     *   Names longer than 63 characters are truncated with middle replacement (`___`)
 
@@ -400,7 +400,7 @@ When multiple servers expose tools with the same name:
 
 [Section titled “4. Schema processing”](#4-schema-processing)
 
-Tool parameter schemas undergo sanitization for Gemini API compatibility:
+Tool parameter schemas undergo sanitization for LLM API compatibility:
 
 *   **`$schema` properties** are removed
 *   **`additionalProperties`** are stripped
@@ -421,7 +421,7 @@ After discovery:
 
 [Section titled “Tool execution flow”](#tool-execution-flow)
 
-When the Gemini model decides to use an MCP tool, the following execution flow occurs:
+When the LLM decides to use an MCP tool, the following execution flow occurs:
 
 ### 1\. Tool invocation
 
@@ -532,7 +532,7 @@ Discovery State: COMPLETED
 
 [Section titled “Tool usage”](#tool-usage)
 
-Once discovered, MCP tools are available to the Gemini model like built-in tools. The model will automatically:
+Once discovered, MCP tools are available to the LLM like built-in tools. The model will automatically:
 
 1.  **Select appropriate tools** based on your requests
 2.  **Present confirmation dialogs** (unless the server is trusted)
@@ -658,7 +658,7 @@ The MCP integration tracks several states:
 
 [Section titled “Schema compatibility”](#schema-compatibility)
 
-*   **Property stripping:** The system automatically removes certain schema properties (`$schema`, `additionalProperties`) for Gemini API compatibility
+*   **Property stripping:** The system automatically removes certain schema properties (`$schema`, `additionalProperties`) for LLM API compatibility
 *   **Name sanitization:** Tool names are automatically sanitized to meet API requirements
 *   **Conflict resolution:** Tool name conflicts between servers are resolved through automatic prefixing
 
@@ -702,7 +702,7 @@ When the TerminaI receives this response, it will:
 2.  Present the image data as a separate `inlineData` part.
 3.  Provide a clean, user-friendly summary in the CLI, indicating that both text and an image were received.
 
-This enables you to build sophisticated tools that can provide rich, multi-modal context to the Gemini model.
+This enables you to build sophisticated tools that can provide rich, multi-modal context to the LLM.
 
 ## MCP prompts as slash commands
 
@@ -761,7 +761,7 @@ While you can always configure MCP servers by manually editing your `settings.js
 
 [Section titled “Adding a server (gemini mcp add)”](#adding-a-server-gemini-mcp-add)
 
-The `add` command configures a new MCP server in your `settings.json`. Based on the scope (`-s, --scope`), it will be added to either the user config `~/.gemini/settings.json` or the project config `.gemini/settings.json` file.
+The `add` command configures a new MCP server in your `settings.json`. Based on the scope (`-s, --scope`), it will be added to either the user config `~/.terminai/settings.json` or the project config `.gemini/settings.json` file.
 
 **Command:**
 

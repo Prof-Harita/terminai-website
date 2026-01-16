@@ -37,7 +37,7 @@ If the problem persists, try deleting your `node_modules` directory and
 ### Why don't I see cached token counts in my stats output?
 
 Cached token information is only displayed when cached tokens are being used.
-This feature is available for API key users (Gemini API key or Google Cloud
+This feature is available for API key users (LLM API key or Google Cloud
 Vertex AI) but not for OAuth users (such as Google Personal/Enterprise accounts
 like Google Gmail or Google Workspace, respectively). This is because the Gemini
 Code Assist API does not support cached content creation. You can still view
@@ -101,7 +101,7 @@ To store your API keys securely, you can:
 
 The Gemini CLI configuration is stored in two `settings.json` files:
 
-1.  In your home directory: `~/.gemini/settings.json`.
+1.  In your home directory: `~/.terminai/settings.json`.
 2.  In your project's root directory: `./.gemini/settings.json`.
 
 Refer to [Gemini CLI Configuration](./get-started/configuration.md) for more

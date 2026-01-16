@@ -187,7 +187,7 @@ on GitHub.
 
     `gemini extensions install https://github.com/gemini-cli-extensions/datacommons`
 
-- **Model selection:** Choose the Gemini model for your session with `/model`.
+- **Model selection:** Choose the LLM for your session with `/model`.
   ([pic](https://imgur.com/a/ABFcWWw),
   [pr](https://github.com/google-gemini/gemini-cli/pull/8940) by
   [@abhipatel12](https://github.com/abhipatel12)).
@@ -219,7 +219,7 @@ on GitHub.
   ([pr](https://github.com/google-gemini/gemini-cli/pull/12317) by
   [@scidomino](https://github.com/scidomino)).
 - **API key authentication:** Users can now securely enter and store their
-  Gemini API key via a new dialog, eliminating the need for environment
+  LLM API key via a new dialog, eliminating the need for environment
   variables and repeated entry.
   ([pr](https://github.com/google-gemini/gemini-cli/pull/11760) by
   [@galz10](https://github.com/galz10)).

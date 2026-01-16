@@ -5,35 +5,36 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const roadmapItems = [
-    {
-        stage: "Currently Shipping",
-        status: "shipped",
-        items: [
-            { title: "Gemini 2.5 Pro 2M Context", desc: "Native support for massive context reasoning." },
-            { title: "A2A Protocol v1", desc: "Agent-to-agent delegation and remote viewing." },
-            { title: "MCP Tooling Hub", desc: "Plug-and-play with the Model Context Protocol." },
-            { title: "Approval Ladder", desc: "Three-tier safety governance architecture." }
-        ]
-    },
-    {
-        stage: "Q1 2025: GUI Revolution",
-        status: "current",
-        items: [
-            { title: "Desktop Automation Protocol", desc: "Native GUI control for Linux & Windows." },
-            { title: "Remote A2A Relay", desc: "Secure remote viewing without port forwarding." },
-            { title: "Local Voice (Whisper/Piper)", desc: "100% offline speech-to-system control." },
-            { title: "Pattern Library (Recipes)", desc: "Community-driven automation templates." }
-        ]
-    },
-    {
-        stage: "Q2 2025: Mobility & Mesh",
-        status: "future",
-        items: [
-            { title: "iOS / Android Operators", desc: "Control your machines via voice from your phone." },
-            { title: "Multi-Agent Mesh", desc: "Orchestrate complex tasks across a fleet of machines." },
-            { title: "Hardware Optimization", desc: "Native support for NPU-accelerated local models." }
-        ]
-    }
+  {
+    stage: "Now",
+    status: "shipped",
+    items: [
+      { title: "CLI-First Operator Loop", desc: "Real PTY execution with planning and recovery." },
+      { title: "Approvals Ladder", desc: "Three-tier safety governance (A/B/C levels)." },
+      { title: "Audit Logs", desc: "Local, exportable action logs." },
+      { title: "Provider Selection", desc: "OpenAI-compatible, Gemini, local gateways." },
+      { title: "Recipes Library Baseline", desc: "Community-contributed prompt patterns." },
+    ]
+  },
+  {
+    stage: "Next (Priority Focus)",
+    status: "current",
+    items: [
+      { title: "Desktop Polish", desc: "Stability, UX, and performance improvements." },
+      { title: "Recipe Submission Tooling", desc: "Automated validation for community recipes." },
+      { title: "macOS Support Hardening", desc: "Improved packaging and system integration." },
+      { title: "Self-Hosted Relay v2", desc: "Enhanced security for remote viewing." },
+    ]
+  },
+  {
+    stage: "Exploring",
+    status: "future",
+    items: [
+      { title: "Additional Auth Ecosystems", desc: "Integration with corporate SSO and cloud keys." },
+      { title: "A2A Multi-Agent Orchestration", desc: "Coordinating tasks across multiple systems." },
+      { title: "Mobile Review Clients", desc: "Native iOS/Android apps for tracking sessions." },
+    ]
+  }
 ];
 
 export default function RoadmapPage() {
@@ -45,15 +46,33 @@ export default function RoadmapPage() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mb-20 text-center"
+                        className="mb-12 text-center"
                     >
                         <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
                             The Roadmap
                         </h1>
-                        <p className="text-xl md:text-2xl opacity-60 leading-relaxed max-w-3xl mx-auto">
+                        <p className="text-xl md:text-2xl opacity-60 leading-relaxed max-w-3xl mx-auto mb-8">
                             Our mission is to build the universal system operator. 
                             Here is how we get there.
                         </p>
+                        
+                        <div className="inline-block px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm mb-12">
+                            Best-effort OSS: Priorities reflect current focus, not guarantees.
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-2 mb-12">
+                          {['desktop', 'recipes', 'macos', 'auth', 'a2a'].map(label => (
+                            <a 
+                              key={label}
+                              href={`https://github.com/Prof-Harita/terminaI/labels/area%3A${label}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-xs opacity-60 hover:opacity-100 transition-opacity hover:border-white/20"
+                            >
+                              area:{label}
+                            </a>
+                          ))}
+                        </div>
                     </motion.div>
 
                     <div className="grid grid-cols-1 gap-12 relative">

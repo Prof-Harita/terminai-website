@@ -1,8 +1,14 @@
+import { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Scroll, Plus, ShieldCheck, Tag, Users } from "lucide-react";
 import Link from "next/link";
 import recipes from "@/content/recipes/recipes.json";
+
+export const metadata: Metadata = {
+  title: "Recipes Library | TerminaI",
+  description: "Community-contributed prompt patterns and policy bundles for system automation. OSS best-effort.",
+};
 
 const riskStyles: Record<string, string> = {
   Low: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
@@ -18,8 +24,11 @@ export default function RecipesPage() {
         <div className="container">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h1 className="text-5xl font-bold mb-6">Recipes Library</h1>
-            <p className="text-xl opacity-70">
+            <p className="text-xl opacity-70 mb-4">
               Proven prompt patterns and policy bundles. Pick a recipe, run it safely, and adapt it to your workflow.
+            </p>
+            <p className="text-sm opacity-50">
+              Recipes are community contributions. Best-effort OSS.
             </p>
           </div>
 

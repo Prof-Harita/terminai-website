@@ -22,9 +22,9 @@ input:
 2.  **Core package (`packages/core`):**
     - **Purpose:** This acts as the backend for the Gemini CLI. It receives
       requests sent from `packages/cli`, orchestrates interactions with the
-      Gemini API, and manages the execution of available tools.
+      LLM API, and manages the execution of available tools.
     - **Key functions contained in the package:**
-      - API client for communicating with the Google Gemini API
+      - API client for communicating with the Google LLM API
       - Prompt construction and management
       - Tool registration and execution logic
       - State management for conversations or sessions
@@ -32,10 +32,10 @@ input:
 
 3.  **Tools (`packages/core/src/tools/`):**
     - **Purpose:** These are individual modules that extend the capabilities of
-      the Gemini model, allowing it to interact with the local environment
+      the LLM, allowing it to interact with the local environment
       (e.g., file system, shell commands, web fetching).
     - **Interaction:** `packages/core` invokes these tools based on requests
-      from the Gemini model.
+      from the LLM.
 
 ## Interaction flow
 
@@ -46,14 +46,14 @@ A typical interaction with the Gemini CLI follows this flow:
 2.  **Request to core:** `packages/cli` sends the user's input to
     `packages/core`.
 3.  **Request processed:** The core package:
-    - Constructs an appropriate prompt for the Gemini API, possibly including
+    - Constructs an appropriate prompt for the LLM API, possibly including
       conversation history and available tool definitions.
-    - Sends the prompt to the Gemini API.
-4.  **Gemini API response:** The Gemini API processes the prompt and returns a
+    - Sends the prompt to the LLM API.
+4.  **LLM API response:** The LLM API processes the prompt and returns a
     response. This response might be a direct answer or a request to use one of
     the available tools.
 5.  **Tool execution (if applicable):**
-    - When the Gemini API requests a tool, the core package prepares to execute
+    - When the LLM API requests a tool, the core package prepares to execute
       it.
     - If the requested tool can modify the file system or execute shell
       commands, the user is first given details of the tool and its arguments,
@@ -62,8 +62,8 @@ A typical interaction with the Gemini CLI follows this flow:
       user confirmation to proceed.
     - Once confirmed, or if confirmation is not required, the core package
       executes the relevant action within the relevant tool, and the result is
-      sent back to the Gemini API by the core package.
-    - The Gemini API processes the tool result and generates a final response.
+      sent back to the LLM API by the core package.
+    - The LLM API processes the tool result and generates a final response.
 6.  **Response to CLI:** The core package sends the final response back to the
     CLI package.
 7.  **Display to user:** The CLI package formats and displays the response to

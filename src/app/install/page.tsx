@@ -9,9 +9,9 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Install | terminaI",
+  title: "Install TerminaI — 2-Minute Setup on Linux, macOS, Windows",
   description:
-    "Install terminaI in under 2 minutes. NPM, source, or quick script.",
+    "Global npm install or build from source. Model-agnostic CLI with approval ladder. Self-hosted, no telemetry.",
 };
 
 export default function InstallPage() {
@@ -172,8 +172,8 @@ export default function InstallPage() {
                       </code>
                     </li>
                     <li>
-                      • <strong>Vertex AI:</strong> Configure Google Cloud
-                      project (enterprise)
+                      • <strong>Vertex AI:</strong> Support for Google Cloud 
+                      projects and Vertex endpoints.
                     </li>
                   </ul>
                 </div>

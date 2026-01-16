@@ -1,7 +1,7 @@
 # Gemini CLI file system tools
 
 The Gemini CLI provides a comprehensive suite of tools for interacting with the
-local file system. These tools allow the Gemini model to read from, write to,
+local file system. These tools allow the LLM to read from, write to,
 list, search, and modify files and directories, all under your control and
 typically with confirmation for sensitive operations.
 
@@ -199,7 +199,7 @@ context around the `old_string` to ensure it modifies the correct location.
     `old_string` might not be perfectly precise, the tool incorporates a
     multi-stage edit correction mechanism.
     - If the initial `old_string` isn't found or matches multiple locations, the
-      tool can leverage the Gemini model to iteratively refine `old_string` (and
+      tool can leverage the LLM to iteratively refine `old_string` (and
       potentially `new_string`).
     - This self-correction process attempts to identify the unique segment the
       model intended to modify, making the `replace` operation more robust even

@@ -37,7 +37,7 @@ flowchart TB
     end
 
     subgraph External["External APIs"]
-        GeminiAPI["Gemini API"]
+        GeminiAPI["LLM API"]
         OpenAIAPI["OpenAI-Compatible<br/>/chat/completions"]
     end
 
@@ -241,9 +241,9 @@ sequenceDiagram
 
 | Variable                   | Purpose                                     |
 | -------------------------- | ------------------------------------------- |
-| `TERMINAI_GEMINI_BASE_URL` | Override Gemini API base URL (validated)    |
+| `TERMINAI_GEMINI_BASE_URL` | Override LLM API base URL (validated)    |
 | `OPENAI_API_KEY`           | Default key for OpenAI-compatible providers |
-| `GEMINI_API_KEY`           | Gemini API key                              |
+| `GEMINI_API_KEY`           | LLM API key                              |
 
 ## Testing Strategy
 

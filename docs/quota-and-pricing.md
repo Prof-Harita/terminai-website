@@ -35,15 +35,15 @@ Assist for individuals. This includes:
 
 - 1000 model requests / user / day
 - 60 model requests / user / minute
-- Model requests will be made across the Gemini model family as determined by
+- Model requests will be made across the LLM family as determined by
   Gemini CLI.
 
 Learn more at
 [Gemini Code Assist for Individuals Limits](https://developers.google.com/gemini-code-assist/resources/quotas#quotas-for-agent-mode-gemini-cli).
 
-### Log in with Gemini API Key (unpaid)
+### Log in with LLM API Key (unpaid)
 
-If you are using a Gemini API key, you can also benefit from a free tier. This
+If you are using a LLM API key, you can also benefit from a free tier. This
 includes:
 
 - 250 model requests / user / day
@@ -51,7 +51,7 @@ includes:
 - Model requests to Flash model only.
 
 Learn more at
-[Gemini API Rate Limits](https://ai.google.dev/gemini-api/docs/rate-limits).
+[LLM API Rate Limits](https://ai.google.dev/gemini-api/docs/rate-limits).
 
 ### Log in with Vertex AI (Express Mode)
 
@@ -92,7 +92,7 @@ Gemini CLI by upgrading to one of the following subscriptions:
   - Gemini Code Assist Enterprise edition:
     - 2000 model requests / user / day
     - 120 model requests / user / minute
-  - Model requests will be made across the Gemini model family as determined by
+  - Model requests will be made across the LLM family as determined by
     Gemini CLI.
 
   [Learn more about Gemini Code Assist Standard and Enterprise license limits](https://developers.google.com/gemini-code-assist/resources/quotas#quotas-for-agent-mode-gemini-cli).
@@ -104,7 +104,7 @@ upgrading, the most flexible solution is to switch to a pay-as-you-go model,
 where you pay for the specific amount of processing you use. This is the
 recommended path for uninterrupted access.
 
-To do this, log in using a Gemini API key or Vertex AI.
+To do this, log in using a LLM API key or Vertex AI.
 
 - Vertex AI (Regular Mode):
   - Quota: Governed by a dynamic shared quota system or pre-purchased
@@ -115,13 +115,13 @@ Learn more at
 [Vertex AI Dynamic Shared Quota](https://cloud.google.com/vertex-ai/generative-ai/docs/resources/dynamic-shared-quota)
 and [Vertex AI Pricing](https://cloud.google.com/vertex-ai/pricing).
 
-- Gemini API key:
+- LLM API key:
   - Quota: Varies by pricing tier.
   - Cost: Varies by pricing tier and model/token usage.
 
 Learn more at
-[Gemini API Rate Limits](https://ai.google.dev/gemini-api/docs/rate-limits),
-[Gemini API Pricing](https://ai.google.dev/gemini-api/docs/pricing)
+[LLM API Rate Limits](https://ai.google.dev/gemini-api/docs/rate-limits),
+[LLM API Pricing](https://ai.google.dev/gemini-api/docs/pricing)
 
 It’s important to highlight that when using an API key, you pay per token/call.
 This can be more expensive for many small calls with few tokens, but it's the
@@ -145,12 +145,12 @@ costs.
 - Be intentional with your prompts and commands. You are paying per call, so
   think about the most efficient way to get the job done.
 
-## Gemini API vs. Vertex
+## LLM API vs. Vertex
 
-- Gemini API (gemini developer api): This is the fastest way to use the Gemini
+- LLM API (gemini developer api): This is the fastest way to use the Gemini
   models directly.
 - Vertex AI: This is the enterprise-grade platform for building, deploying, and
-  managing Gemini models with specific security and control requirements.
+  managing LLMs with specific security and control requirements.
 
 ## Understanding your usage
 

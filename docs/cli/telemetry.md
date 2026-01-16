@@ -202,7 +202,7 @@ forward data to Google Cloud.
    - Start a local OTEL collector that forwards to Google Cloud
    - Configure your workspace
    - Provide links to view traces, metrics, and logs in Google Cloud Console
-   - Save collector logs to `~/.gemini/tmp/<projectHash>/otel/collector-gcp.log`
+   - Save collector logs to `~/.terminai/tmp/<projectHash>/otel/collector-gcp.log`
    - Stop collector on exit (e.g. `Ctrl+C`)
 3. Run Gemini CLI and send prompts.
 4. View logs and metrics:
@@ -210,7 +210,7 @@ forward data to Google Cloud.
      - Logs: https://console.cloud.google.com/logs/
      - Metrics: https://console.cloud.google.com/monitoring/metrics-explorer
      - Traces: https://console.cloud.google.com/traces/list
-   - Open `~/.gemini/tmp/<projectHash>/otel/collector-gcp.log` to view local
+   - Open `~/.terminai/tmp/<projectHash>/otel/collector-gcp.log` to view local
      collector logs.
 
 ## Local telemetry
@@ -243,7 +243,7 @@ For local development and debugging, you can capture telemetry data locally:
    - Download and start Jaeger and OTEL collector
    - Configure your workspace for local telemetry
    - Provide a Jaeger UI at http://localhost:16686
-   - Save logs/metrics to `~/.gemini/tmp/<projectHash>/otel/collector.log`
+   - Save logs/metrics to `~/.terminai/tmp/<projectHash>/otel/collector.log`
    - Stop collector on exit (e.g. `Ctrl+C`)
 2. Run Gemini CLI and send prompts.
 3. View traces at http://localhost:16686 and logs/metrics in the collector log
@@ -368,15 +368,15 @@ Tracks file operations performed by tools.
 
 #### API
 
-Captures Gemini API requests, responses, and errors.
+Captures LLM API requests, responses, and errors.
 
-- `gemini_cli.api_request`: Request sent to Gemini API.
+- `gemini_cli.api_request`: Request sent to LLM API.
   - **Attributes**:
     - `model` (string)
     - `prompt_id` (string)
     - `request_text` (string, optional)
 
-- `gemini_cli.api_response`: Response received from Gemini API.
+- `gemini_cli.api_response`: Response received from LLM API.
   - **Attributes**:
     - `model` (string)
     - `status_code` (int|string)

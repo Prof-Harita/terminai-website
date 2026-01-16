@@ -9,7 +9,7 @@ all your projects, streamlining your workflow and ensuring consistency.
 
 Gemini CLI discovers commands from two locations, loaded in a specific order:
 
-1.  **User commands (global):** Located in `~/.gemini/commands/`. These commands
+1.  **User commands (global):** Located in `~/.terminai/commands/`. These commands
     are available in any project you are working on.
 2.  **Project commands (local):** Located in
     `<your-project-root>/.gemini/commands/`. These commands are specific to the
@@ -26,7 +26,7 @@ The name of a command is determined by its file path relative to its `commands`
 directory. Subdirectories are used to create namespaced commands, with the path
 separator (`/` or `\`) being converted to a colon (`:`).
 
-- A file at `~/.gemini/commands/test.toml` becomes the command `/test`.
+- A file at `~/.terminai/commands/test.toml` becomes the command `/test`.
 - A file at `<project>/.gemini/commands/git/commit.toml` becomes the namespaced
   command `/git:commit`.
 
@@ -37,7 +37,7 @@ Your command definition files must be written in the TOML format and use the
 
 ### Required fields
 
-- `prompt` (String): The prompt that will be sent to the Gemini model when the
+- `prompt` (String): The prompt that will be sent to the LLM when the
   command is executed. This can be a single-line or multi-line string.
 
 ### Optional fields
@@ -346,18 +346,18 @@ First, ensure the user commands directory exists, then create a `refactor`
 subdirectory for organization and the final TOML file.
 
 ```bash
-mkdir -p ~/.gemini/commands/refactor
-touch ~/.gemini/commands/refactor/pure.toml
+mkdir -p ~/.terminai/commands/refactor
+touch ~/.terminai/commands/refactor/pure.toml
 ```
 
 **2. Add the content to the file:**
 
-Open `~/.gemini/commands/refactor/pure.toml` in your editor and add the
+Open `~/.terminai/commands/refactor/pure.toml` in your editor and add the
 following content. We are including the optional `description` for best
 practice.
 
 ```toml
-# In: ~/.gemini/commands/refactor/pure.toml
+# In: ~/.terminai/commands/refactor/pure.toml
 # This command will be invoked via: /refactor:pure
 
 description = "Asks the model to refactor the current context into a pure function."

@@ -26,7 +26,7 @@ Settings are merged from four files. The precedence order for single-value
 settings (like `theme`) is:
 
 1. System Defaults (`system-defaults.json`)
-2. User Settings (`~/.gemini/settings.json`)
+2. User Settings (`~/.terminai/settings.json`)
 3. Workspace Settings (`<project>/.gemini/settings.json`)
 4. System Overrides (`settings.json`)
 
@@ -50,7 +50,7 @@ Here is how settings from different levels are combined.
   }
   ```
 
-- **User `settings.json` (`~/.gemini/settings.json`):**
+- **User `settings.json` (`~/.terminai/settings.json`):**
 
   ```json
   {
