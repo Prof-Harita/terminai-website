@@ -19,7 +19,7 @@ export default function ContributePage() {
            >
              <h1 className="text-5xl font-bold mb-6">Unbound Potential. Always FOSS.</h1>
              <p className="text-xl opacity-70">
-               We embrace the best of innovation to give unfiltered, unbridled AI to the users.
+               We embrace the best of innovation to give powerful open AI for users.
                Join us in building the ecosystem.
              </p>
            </motion.div>
