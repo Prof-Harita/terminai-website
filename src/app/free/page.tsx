@@ -35,6 +35,7 @@ const themes = [
     details: [
       "Generous daily request limits",
       "Access to Gemini 2.5 Pro & Flash models",
+      "Works with OpenAI & Local Models",
       "Bring your own API key (free to obtain)",
       "Optional upgrade for heavy usage",
     ],

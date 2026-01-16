@@ -232,6 +232,7 @@ export default function IntelligencePage() {
                   <li>✓ Uses official Gemini API</li>
                   <li>✓ Available via Vertex AI for enterprise users</li>
                   <li>✓ Continuous model improvements from Google</li>
+                  <li>✓ Work with Gemini, OpenAI, or Local Models</li>
                 </ul>
               </div>
             </div>
