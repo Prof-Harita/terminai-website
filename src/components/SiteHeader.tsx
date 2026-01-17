@@ -22,8 +22,8 @@ export function SiteHeader() {
                         Overview
                     </Link>
 
-                    <Link href="/recipes" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Recipes
+                    <Link href="/extensions" className="opacity-70 hover:opacity-100 transition-opacity">
+                        Extensions
                     </Link>
                     <Link href="/trust" className="opacity-70 hover:opacity-100 transition-opacity">
                         Trust & Safety
@@ -81,8 +81,8 @@ export function SiteHeader() {
                                     Overview
                                 </Link>
 
-                                <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Recipes
+                                <Link href="/extensions" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Extensions
                                 </Link>
                                 <Link href="/trust" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Trust & Safety
@@ -95,8 +95,8 @@ export function SiteHeader() {
                                 </Link>
                             </div>
                             <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-                                <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Recipes
+                                <Link href="/extensions" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Extensions
                                 </Link>
                                 <Link href="/free" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Pricing

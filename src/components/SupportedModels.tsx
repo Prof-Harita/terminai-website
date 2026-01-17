@@ -38,7 +38,7 @@ export function SupportedModels() {
         >
           <h2 className="text-4xl font-bold mb-4">Choose Your Intelligence</h2>
           <p className="text-xl opacity-60 max-w-2xl mx-auto">
-            Flexible support for the world's best models.
+            Flexible support for the world&apos;s best models.
           </p>
         </motion.div>
 

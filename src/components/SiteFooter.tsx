@@ -44,7 +44,7 @@ export function SiteFooter() {
                         <Link href="/start" className="opacity-60 hover:opacity-100 transition-opacity">Start Here</Link>
                         <Link href="/docs" className="opacity-60 hover:opacity-100 transition-opacity">Documentation</Link>
                         <Link href="/updates" className="opacity-60 hover:opacity-100 transition-opacity">Updates</Link>
-                        <Link href="/recipes" className="opacity-60 hover:opacity-100 transition-opacity">Recipes</Link>
+                        <Link href="/extensions" className="opacity-60 hover:opacity-100 transition-opacity">Extensions</Link>
                         <Link href="/case-studies" className="opacity-60 hover:opacity-100 transition-opacity">Case Studies</Link>
                         <Link href="/comparison" className="opacity-60 hover:opacity-100 transition-opacity">Comparison</Link>
                         <Link href="/trust" className="opacity-60 hover:opacity-100 transition-opacity">Trust Center</Link>
