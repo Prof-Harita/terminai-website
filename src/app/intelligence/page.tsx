@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Intelligence | terminaI",
   description:
-    "The most capable agentic harness, cutting-edge technology, and Gemini's state-of-the-art models.",
+    "The most capable agentic harness, cutting-edge technology, and support for state-of-the-art models.",
 };
 
 export default function IntelligencePage() {
@@ -174,7 +174,7 @@ export default function IntelligencePage() {
           </div>
         </section>
 
-        {/* Theme 3: Gemini Foundation */}
+        {/* Theme 3: SOTA Model Foundation */}
         <section className="section border-t border-white/5">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -229,18 +229,18 @@ export default function IntelligencePage() {
                     Theme 3
                   </span>
                 </div>
-                <h2 className="mb-6">Powered by Google&apos;s Most Advanced AI</h2>
+                <h2 className="mb-6">Powered by the World&apos;s Most Advanced Models</h2>
                 <p className="text-lg opacity-70 mb-6 leading-relaxed">
-                  Gemini 2.5 Pro delivers SOTA performance with a massive 2M
-                  token context window. Reason over entire repositories, not
-                  just snippets.
+                  Support for leading models like Gemini 1.5 Pro, GPT-4o, and 
+                  Llama 3. Reason over entire repositories with massive 
+                  context windows.
                 </p>
                 <ul className="space-y-2 text-sm opacity-60">
-                  <li>✓ Fork of official Google Gemini CLI</li>
-                  <li>✓ Uses official Gemini API</li>
-                  <li>✓ Available via Vertex AI for enterprise users</li>
-                  <li>✓ Continuous model improvements from Google</li>
-                  <li>✓ Work with Gemini, OpenAI, or Local Models</li>
+                  <li>✓ Compatible with OpenAI, Anthropic, and Google APIs</li>
+                  <li>✓ Native support for local models (Ollama, LM Studio)</li>
+                  <li>✓ Large context window handling</li>
+                  <li>✓ Optimized for tool-calling and code generation</li>
+                  <li>✓ Pure OSS—no model-specific lock-in</li>
                 </ul>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function IntelligencePage() {
               <Link href="/install" className="btn btn-primary">
                 Install terminaI
               </Link>
-              <Link href="/safety" className="btn btn-outline">
+              <Link href="/trust" className="btn btn-outline">
                 See how it&apos;s governed →
               </Link>
             </div>

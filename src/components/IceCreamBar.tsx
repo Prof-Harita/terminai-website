@@ -13,7 +13,7 @@ const pillars = [
   {
     icon: Zap,
     title: "Unbridled Intelligence",
-    description: "Unfiltered AI. No guardrails on capability.",
+    description: "Full-strength capability, safety-gated execution.",
     gradient: "from-pink-500 to-rose-500",
   },
   {

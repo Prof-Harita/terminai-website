@@ -39,7 +39,7 @@ export default function TermsPage() {
               <p>
                 terminaI is an open-source, sovereign terminal operator AI that provides governed autonomy
                 for system operations. It combines AI capabilities with strict safety controls to help users
-                operate their computers more effectively.
+                operate their systems more effectively.
               </p>
 
               <h2>2. Open Source License</h2>

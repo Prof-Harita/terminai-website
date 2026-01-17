@@ -3,9 +3,11 @@ import { DemoScriptPlayer } from "@/components/DemoScriptPlayer";
 import { CheckCircle2, ShieldCheck, Video } from "lucide-react";
 
 const highlights = [
-  "Voice-first requests with offline speech models",
-  "Approval ladder gates every risky command",
-  "Remote view for long-running jobs",
+  "True PTY Integration: Unlike script-only assistants, TerminaI handles interactive sessions—sudo prompts, SSH, and TUI apps—natively.",
+  "Local-First & Private: All audit logs and session history stay on your machine. Zero telemetry. Fully auditable.",
+  "System Operator, Not Just Code: Your intelligent Computer Operator for disk cleanup, network fixes, and environment debugging.",
+  "Multi-Tiered Reasoning: Advisor consensus, System-2 critique, and a Plan-Act-Check loop verify real-world outcomes match your intent.",
+  "Context-Aware Grounding: A dynamic System Spec of your OS and historical risk adjustments personalize intelligence to your machine.",
 ];
 
 export function DemoShowcase() {
@@ -31,11 +33,11 @@ export function DemoShowcase() {
                 Safety Ladder
               </Link>
             </div>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-4">
               {highlights.map((item) => (
-                <div key={item} className="flex items-center gap-2 text-white/70">
-                  <CheckCircle2 size={16} className="text-emerald-400" />
-                  {item}
+                <div key={item} className="flex items-start gap-3 text-lg text-white/70">
+                  <CheckCircle2 size={20} className="text-emerald-400 mt-1 flex-shrink-0" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>

@@ -21,8 +21,8 @@ const privacyFeatures = [
     },
     {
         icon: Server,
-        title: "Enterprise Ready",
-        description: "Deploy with Vertex AI to keep all data within your VPC.",
+        title: "Self-Hosted Ready",
+        description: "Deploy with Vertex AI or local gateways to keep all data within your VPC.",
     },
 ];
 
@@ -42,7 +42,7 @@ export function PrivacySection() {
                         <div className="p-6 border border-white/10 bg-white/5 font-mono text-sm leading-relaxed">
                             <span className="text-green-500">✔</span> No code storage<br />
                             <span className="text-green-500">✔</span> No model training<br />
-                            <span className="text-green-500">✔</span> SOC2 Compliance (via Vertex AI)<br />
+                            <span className="text-green-500">✔</span> SOC2 Ready (via major cloud providers)<br />
                             <span className="text-green-500">✔</span> Open Source Auditability
                         </div>
                     </div>

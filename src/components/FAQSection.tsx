@@ -11,7 +11,7 @@ const faqs = [
     },
     {
         question: "Do you store my data?",
-        answer: "No. Conversations happen on your device. Logs are stored locally. If you use Enterprise features, data is handled according to your Vertex AI agreement.",
+        answer: "No. Conversations happen on your device. Logs are stored locally. If you use self-hosted features (like Vertex AI), data is handled according to your agreement with the provider.",
     },
     {
         question: "Does it work on Windows?",

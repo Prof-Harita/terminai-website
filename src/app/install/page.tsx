@@ -61,7 +61,7 @@ export default function InstallPage() {
                     </li>
                     <li>
                       • <strong>Supported platforms:</strong> Linux, macOS,
-                      Windows (via WSL)
+                      Windows
                     </li>
                   </ul>
                 </div>
@@ -135,72 +135,79 @@ export default function InstallPage() {
           </div>
         </section>
 
-        {/* First Run */}
+        {/* Quick start (providers) */}
         <section className="section border-t border-white/5">
           <div className="container max-w-4xl">
-            <h2 className="mb-8 text-center">First Run</h2>
+            <h2 className="mb-4 text-center">Quick start (providers)</h2>
+            <p className="text-center text-lg opacity-70 mb-12">
+              Run <code className="bg-white/10 px-1.5 py-0.5 rounded text-sm mx-1">terminai</code> and the wizard guides you through setup.
+            </p>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-brand-red)] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                  1
+              {/* Google Gemini */}
+              <div className="rounded-xl bg-white/[0.02] border border-white/10 p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold flex items-center gap-2">
+                    Google Gemini
+                    <span className="text-xs bg-[var(--color-brand-red)] text-white px-2 py-0.5 rounded-full">Default</span>
+                  </h3>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold mb-2">Start terminaI</h3>
+                <p className="opacity-70 mb-4">Fastest path for many users.</p>
+                <div className="code-block text-sm">
+                  <div>terminai</div>
+                  <div className="text-gray-500 mt-2"># Select &quot;Google Gemini&quot; → browser opens → sign in</div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-white/5">
+                  <p className="text-sm opacity-60 mb-2">Or use an API key:</p>
                   <div className="code-block text-sm">
-                    <code>terminai</code>
+                    <div>export TERMINAI_API_KEY=&quot;your-gemini-key&quot;</div>
+                    <div>terminai</div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-brand-red)] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                  2
+              {/* ChatGPT sign-in (OAuth) */}
+              <div className="rounded-xl bg-white/[0.02] border border-white/10 p-6">
+                 <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-xl font-bold flex items-center gap-2">
+                    ChatGPT sign-in (OAuth)
+                    <span className="text-xs border border-yellow-500 text-yellow-500 px-2 py-0.5 rounded-full">Preview</span>
+                  </h3>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold mb-2">Authenticate</h3>
-                  <p className="text-sm opacity-70 mb-2">Choose one:</p>
-                  <ul className="text-sm opacity-60 space-y-1">
-                    <li>
-                      • <strong>OAuth:</strong> Follow the browser prompt
-                      (recommended for personal use)
-                    </li>
-                    <li>
-                      • <strong>API Key:</strong>{" "}
-                      <code className="bg-white/5 px-1 rounded">
-                        export GEMINI_API_KEY=your_key
-                      </code>
-                    </li>
-                    <li>
-                      • <strong>Vertex AI:</strong> Support for Google Cloud 
-                      projects and Vertex endpoints.
-                    </li>
-                  </ul>
+                <p className="opacity-70 mb-4">
+                  Use an OpenAI browser sign-in flow (similar to how Codex tooling supports &quot;Sign in with ChatGPT&quot;).
+                </p>
+                <div className="code-block text-sm mb-4">
+                  <div>terminai</div>
+                  <div className="text-gray-500 mt-2"># Select &quot;ChatGPT Sign-in (OAuth)&quot; → sign in with OpenAI</div>
+                </div>
+                <div className="flex items-start gap-2 text-sm text-yellow-400 bg-yellow-500/10 p-3 rounded-lg">
+                  <AlertCircle size={16} className="mt-0.5 flex-shrink-0" />
+                  <p>Note: this is still being hardened. If anything fails, attach logs (see below) and open an issue.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-brand-red)] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                  3
+              {/* OpenAI-Compatible */}
+              <div className="rounded-xl bg-white/[0.02] border border-white/10 p-6">
+                <h3 className="text-xl font-bold mb-4">OpenAI-Compatible</h3>
+                <p className="opacity-70 mb-4">
+                  Connect to OpenAI Platform, OpenRouter, Ollama gateways, or any <code className="bg-white/5 px-1 rounded text-xs">/chat/completions</code> endpoint.
+                </p>
+                 <div className="code-block text-sm mb-4">
+                  <div>export OPENAI_API_KEY=&quot;sk-...&quot;</div>
+                  <div>terminai</div>
+                  <div className="text-gray-500 mt-2"># Select &quot;OpenAI Compatible&quot; → enter base URL and model</div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold mb-2">Ask anything</h3>
-                  <div className="code-block text-sm">
-                    <div>
-                      <span className="text-gray-500">$</span> terminai
-                    </div>
-                    <div className="mt-2">
-                      <span className="text-[var(--color-brand-red)]">
-                        &gt;
-                      </span>{" "}
-                      What&apos;s using my disk space?
-                    </div>
-                    <div className="text-green-400 mt-2">
-                      Scanning file system...
-                    </div>
-                  </div>
+                <div className="text-sm bg-black/20 p-4 rounded-lg">
+                    <p className="opacity-60 mb-2 font-semibold">Popular configurations:</p>
+                    <ul className="space-y-1 opacity-70 font-mono text-xs">
+                        <li><span className="opacity-50 inline-block w-24">OpenAI:</span> https://api.openai.com/v1</li>
+                        <li><span className="opacity-50 inline-block w-24">OpenRouter:</span> https://openrouter.ai/api/v1</li>
+                        <li><span className="opacity-50 inline-block w-24">Local LLM:</span> http://localhost:11434/v1</li>
+                    </ul>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -227,58 +234,7 @@ export default function InstallPage() {
           </div>
         </section>
 
-        {/* Troubleshooting */}
-        <section className="section border-t border-white/5">
-          <div className="container max-w-4xl">
-            <h2 className="mb-6">Troubleshooting</h2>
-            <div className="space-y-4">
-              <details className="group rounded-xl bg-white/[0.02] border border-white/10">
-                <summary className="cursor-pointer p-4 font-medium">
-                  API error: 429 - Resource exhausted
-                </summary>
-                <div className="px-4 pb-4 text-sm opacity-70">
-                  You&apos;ve exceeded rate limits. Check usage in Google AI Studio,
-                  optimize prompts, or upgrade to Google AI Pro/Ultra.
-                </div>
-              </details>
-              <details className="group rounded-xl bg-white/[0.02] border border-white/10">
-                <summary className="cursor-pointer p-4 font-medium">
-                  ERR_REQUIRE_ESM error
-                </summary>
-                <div className="px-4 pb-4 text-sm opacity-70">
-                  Ensure package.json has{" "}
-                  <code className="bg-white/5 px-1 rounded">
-                    &quot;type&quot;: &quot;module&quot;
-                  </code>
-                  . Delete node_modules and package-lock.json, then npm install
-                  again.
-                </div>
-              </details>
-              <details className="group rounded-xl bg-white/[0.02] border border-white/10">
-                <summary className="cursor-pointer p-4 font-medium">
-                  Windows: chmod command not found
-                </summary>
-                <div className="px-4 pb-4 text-sm opacity-70">
-                  Use Windows Subsystem for Linux (WSL) or Git Bash for full
-                  compatibility.
-                </div>
-              </details>
-            </div>
-            <p className="text-sm opacity-50 mt-6">
-              More help:{" "}
-              <Link href="/docs/troubleshooting" className="text-[var(--color-brand-red)]">
-                Full Troubleshooting Guide
-              </Link>{" "}
-              •
-              <a
-                href="https://github.com/Prof-Harita/terminaI/issues"
-                className="text-[var(--color-brand-red)] ml-2"
-              >
-                GitHub Issues
-              </a>
-            </p>
-          </div>
-        </section>
+
 
         {/* CTA */}
         <section className="section border-t border-white/5">

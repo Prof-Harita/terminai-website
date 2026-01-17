@@ -30,8 +30,8 @@ const pillars = [
   },
   {
     icon: Lock,
-    title: "Sovereign by Default",
-    description: "Local-first execution keeps data within your trust boundary.",
+    title: "Privacy by default",
+    description: "Local-first execution keeps data within your trust boundary. Zero telemetry.",
   },
   {
     icon: KeyRound,
@@ -59,6 +59,7 @@ const ladder = [
 ];
 
 const boundaries = [
+  "Zero telemetry.",
   "Local sessions stay on-device unless you explicitly enable remote access.",
   "Remote viewing uses a separate relay with end-to-end encryption.",
   "Every action can be traced back to the approval decision.",

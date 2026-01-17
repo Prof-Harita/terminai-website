@@ -32,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies',
     '/comparison',
     '/trust',
-    '/alternatives',
     '/terms',
   ].map((route) => ({
     url: `${baseUrl}${route}`,

@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { FirstWin } from "@/components/FirstWin";
 import { BentoFeatures } from "@/components/BentoFeatures";
-import { HowItWorks } from "@/components/HowItWorks";
+import { SupportedModels } from "@/components/SupportedModels";
 import { ManifestoHome } from "@/components/ManifestoHome";
 import { FinalCTA } from "@/components/FinalCTA";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -21,7 +21,7 @@ export default function Home() {
         <FirstWin />
         <DemoShowcase />
         <BentoFeatures />
-        <HowItWorks />
+        <SupportedModels />
         <PersonaPathways />
         <ManifestoHome />
         <FinalCTA />

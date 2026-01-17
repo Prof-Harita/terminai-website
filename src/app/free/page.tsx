@@ -28,16 +28,16 @@ const themes = [
   },
   {
     icon: Gift,
-    title: "Gemini's Generous Free Tier",
-    subtitle: "No Credit Card Required",
+    title: "Intelligence for All",
+    subtitle: "Universal Access",
     description:
-      "Built on Google's Gemini API which offers substantial free usage. Most users will never need to pay.",
+      "We believe access to intelligence is a fundamental right. TerminaI is architected to work by default with free tiers and local models. Leverage Google's generous free tier, OpenRouter's ecosystem, or your own hardware. Need more power? Plug in any paid provider instantly.",
     details: [
-      "Generous daily request limits",
-      "Access to Gemini 2.5 Pro & Flash models",
-      "Works with OpenAI & Local Models",
-      "Bring your own API key (free to obtain)",
-      "Optional upgrade for heavy usage",
+      "Google Gemini Free Tier (Default)",
+      "OpenRouter & Community Models",
+      "Local LLMs (Ollama, LM Studio)",
+      "Universal OpenAI Compatibility",
+      "Seamless Provider Switching",
     ],
     gradient: "from-blue-500 to-cyan-500",
     link: "https://aistudio.google.com/apikey",
@@ -45,14 +45,14 @@ const themes = [
   {
     icon: Users,
     title: "Community-Driven",
-    subtitle: "Free from Enterprise Constraints",
+    subtitle: "Built by the People, For the People",
     description:
-      "Direction set by contributors, not corporate priorities. The community decides where terminaI goes.",
+      "No VCs. No corporate overlords. No hidden agendas. TerminaI is 100% community-owned and operated. We answer only to our users and contributors.",
     details: [
       "Roadmap driven by community needs",
       "Open governance process",
-      "Fork it if you disagree",
       "No corporate interference",
+      "Purely community funded & built",
     ],
     gradient: "from-green-500 to-emerald-500",
     link: "https://github.com/Prof-Harita/terminaI/blob/main/CONTRIBUTING.md",
@@ -65,21 +65,15 @@ export default function FreePage() {
       <SiteHeader />
       <main className="pt-32">
         {/* Hero */}
-        <section className="section pb-16">
+        <section className="section pb-0">
           <div className="container text-center">
-            <h1 className="mb-6">
+            <h1 className="mb-0">
               Always Free.{" "}
-              <span className="text-[var(--color-brand-red)]">Truly Free.</span>
+              <span className="text-[var(--color-brand-red)]">Always Open.</span>
             </h1>
-            <p className="text-2xl opacity-70 max-w-3xl mx-auto mb-4">
-              Free as in freedom. Free as in beer.
-            </p>
-            <p className="text-lg opacity-50 max-w-2xl mx-auto">
-              terminaI is built on three pillars of freedom: open source code,
-              Gemini&apos;s generous free tier, and community-driven development.
-            </p>
           </div>
         </section>
+
 
         {/* Three Themes */}
         <section className="section pt-0">

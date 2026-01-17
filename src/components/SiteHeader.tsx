@@ -18,12 +18,10 @@ export function SiteHeader() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium px-6">
-                    <Link href="/product" className="opacity-70 hover:opacity-100 transition-opacity">
+                    <Link href="/manifesto" className="opacity-70 hover:opacity-100 transition-opacity">
                         Overview
                     </Link>
-                    <Link href="/docs/get-started/installation" className="opacity-70 hover:opacity-100 transition-opacity">
-                        Quickstart
-                    </Link>
+
                     <Link href="/recipes" className="opacity-70 hover:opacity-100 transition-opacity">
                         Recipes
                     </Link>
@@ -49,8 +47,8 @@ export function SiteHeader() {
                         Star
                     </a>
                     
-                    <Link href="/manifesto" className="hidden sm:block text-xs uppercase font-bold tracking-widest opacity-60 hover:opacity-100 hover:text-brand-red transition-all">
-                        Manifesto
+                    <Link href="/free" className="hidden sm:block text-xs uppercase font-bold tracking-widest opacity-60 hover:opacity-100 hover:text-brand-red transition-all">
+                        Pricing
                     </Link>
                     
                     <Link href="/install" className="btn btn-primary text-sm py-2 px-6">
@@ -79,12 +77,10 @@ export function SiteHeader() {
                     >
                         <nav className="container py-8 flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
-                                <Link href="/product" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                <Link href="/manifesto" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Overview
                                 </Link>
-                                <Link href="/docs/get-started/installation" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Quickstart
-                                </Link>
+
                                 <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Recipes
                                 </Link>
@@ -102,8 +98,8 @@ export function SiteHeader() {
                                 <Link href="/recipes" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Recipes
                                 </Link>
-                                <Link href="/manifesto" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
-                                    Manifesto
+                                <Link href="/free" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
+                                    Pricing
                                 </Link>
                                 <Link href="/contact" className="text-lg py-2 opacity-80" onClick={() => setMobileMenuOpen(false)}>
                                     Contact
