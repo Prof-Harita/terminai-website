@@ -45,6 +45,14 @@
   }
 }
 
+/* Explicit dark mode class support */
+.dark {
+  --background: var(--bg-dark);
+  --foreground: var(--color-text-dark);
+  --muted: var(--color-muted-dark);
+  --border: var(--color-border-dark);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

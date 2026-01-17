@@ -209,13 +209,7 @@ export default function ExtensionsPage() {
     }, [searchQuery]);
 
     return (
-        <div style={{
-            // @ts-expect-error - CSS variables for dynamic theme overrides
-            "--background": "var(--bg-dark)",
-            "--foreground": "var(--color-text-dark)",
-            color: "var(--foreground)",
-            background: "var(--background)"
-        }} className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col">
             <SiteHeader />
             <main className="flex-1 pt-32 pb-16">
             <div className="container max-w-7xl mx-auto px-6">
